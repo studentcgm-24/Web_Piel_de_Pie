@@ -1,0 +1,344 @@
+    <!doctype html>
+    <html lang="es">
+    <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Catálogo - Calzado Artesanal (Carrito)</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="../client/css/catalogo.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <style>
+        .text-shadow{ text-shadow: 0 6px 18px rgba(0,0,0,0.35); }
+        .cart-badge{ position: absolute; top: -6px; right: -6px; }
+        .cart-icon-wrap{ position: relative; }
+    </style>
+    </head>
+    <body class="bg-light text-body">
+
+    <div class="d-flex flex-column min-vh-100">
+    <!-- Header -->
+    <header class="sticky-top bg-light border-bottom" style="backdrop-filter: blur(6px);">
+        <div class="container-fluid">
+        <div class="d-flex align-items-center justify-content-between py-3 px-3 px-sm-4">
+            <div class="d-flex align-items-center gap-3">
+            <div style="width:36px;height:36px;" class="text-primary d-flex align-items-center justify-content-center">
+                <svg width="28" height="28" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill-rule="evenodd"></path></svg>
+            </div>
+            <h1 class="h5 mb-0 fw-bold">Calzado Artesanal</h1>
+            </div>
+
+            <div class="d-flex align-items-center gap-3 flex-grow-1 justify-content-end">
+            <nav class="d-none d-lg-flex align-items-center gap-3 me-3">
+                <a class="small text-decoration-none text-body" href="../client/index.html">Inicio</a>
+                <a class="small text-decoration-none text-body" href="../client/quienes_somos.html">Quiénes Somos</a>
+                <a class="small text-decoration-none text-body fw-bold" href="../client/catalogo.html">Catálogo</a>
+                <a class="small text-decoration-none text-body" href="../client/servicios.html">Servicios</a>
+            </nav>
+
+            <div class="d-flex gap-2 align-items-center">
+                <button class="btn btn-light rounded-circle d-flex align-items-center justify-content-center" style="width:40px;height:40px;" aria-label="perfil">
+                <span class="material-symbols-outlined">person</span>
+                </button>
+
+                <div class="position-relative">
+                <button id="cartButton" class="btn btn-light rounded-circle d-flex align-items-center justify-content-center cart-icon-wrap" style="width:44px;height:44px;" aria-label="carrito">
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                </button>
+                <span id="cartCountBadge" class="badge bg-danger rounded-pill cart-badge" style="display:none;">0</span>
+                </div>
+
+                <button class="btn btn-light rounded-circle d-flex align-items-center justify-content-center" style="width:40px;height:40px;" aria-label="soporte">
+                <span class="material-symbols-outlined">support_agent</span>
+                </button>
+            </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <main class="flex-grow-1">
+        <section class="hero-60vh position-relative bg-cover" style="background-image: url('https://images.unsplash.com/photo-1519758364993-50f44582775f?q=80&w=1974&auto=format&fit=crop')">
+        <div class="position-absolute inset-0" style="background:rgba(0,0,0,0.2);"></div>
+        <div class="container h-100 position-relative z-1 d-flex flex-column align-items-center justify-content-center text-center text-white px-3">
+            <h2 class="display-6 fw-bold text-shadow">Catálogo de Calzado</h2>
+            <p class="mt-3 lead">Descubre diseños únicos que combinan comodidad y sofisticación para cada ocasión.</p>
+        </div>
+        </section>
+
+        <section class="py-5">
+        <div class="container">
+            <div class="row g-4" id="productGrid">
+
+            <!-- Product card (repeatable) -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <a href="#" class="text-decoration-none text-body" data-product data-image="https://lh3.googleusercontent.com/aida-public/AB6AXuDm9L_ZlPvyEpGuRtr0e8FA2vqnzHgmdM14DDYy_kzJ5Ih5WIyoeQI2iz36I2k-aKoRv-EWij3lld1joShja-ZaKR7FXkjY8XnxkHdg1PKkT38NWyW-OEKIhLohnud6RZlO0F_c7zoNuQpxfvRngVDl59MS1t4GqUG-dArxcg5gJSQJf1ITRi8Ms9CLrULqbSta0QbKxeRic3tLCjZW31sHp-Pb3DAAGCrunJUlWkSenXfzYkJEAhUu0Bih_yIFoEiKLfODVfLHSHSS" data-title="Tacones Rosados Clásicos" data-brand="Marca A" data-price="120,00 €" data-description="Zapato clásico de tacón alto en rosa empolvado, forro interior acolchado." data-sizes="36,37,38,39,40,41" data-colors="#f2dce6,#e7b6c9,#cfa3b8">
+                <div class="card border-0 bg-transparent card-hover-zoom">
+                    <div class="ratio ratio-4x5 rounded-lg overflow-hidden">
+                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDm9L_ZlPvyEpGuRtr0e8FA2vqnzHgmdM14DDYy_kzJ5Ih5WIyoeQI2iz36I2k-aKoRv-EWij3lld1joShja-ZaKR7FXkjY8XnxkHdg1PKkT38NWyW-OEKIhLohnud6RZlO0F_c7zoNuQpxfvRngVDl59MS1t4GqUG-dArxcg5gJSQJf1ITRi8Ms9CLrULqbSta0QbKxeRic3tLCjZW31sHp-Pb3DAAGCrunJUlWkSenXfzYkJEAhUu0Bih_yIFoEiKLfODVfLHSHSS" alt="Tacones Rosados Clásicos" class="w-100 h-100 object-fit-cover">
+                    </div>
+                    <div class="mt-3 text-center">
+                    <h5 class="mb-1 fw-semibold">Tacones Rosados Clásicos</h5>
+                    <p class="small text-muted mb-1">Marca A</p>
+                    <p class="fw-bold mb-0">120,00 €</p>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            </div>
+        </div>
+        </section>
+    </main>
+
+    <!-- Product details Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="productOffcanvas" aria-labelledby="productOffcanvasLabel">
+        <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="productOffcanvasLabel">Detalle del producto</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body">
+        <div class="container-fluid">
+            <div class="row g-0">
+            <div class="col-md-6 d-flex align-items-center justify-content-center p-3 bg-light">
+                <img id="offImage" src="" alt="" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6 p-4">
+                <h4 id="offTitle" class="fw-bold mb-1"></h4>
+                <p id="offBrand" class="small text-muted mb-2"></p>
+                <p id="offPrice" class="h5 fw-bold text-primary mb-3"></p>
+                <p id="offDescription" class="mb-3"></p>
+
+                <div class="mb-3">
+                <label class="form-label small mb-2">Tallas</label>
+                <div id="offSizes" class="d-flex gap-2 flex-wrap"></div>
+                </div>
+
+                <div class="mb-3">
+                <label class="form-label small mb-2">Colores</label>
+                <div id="offColors" class="d-flex gap-2 flex-wrap"></div>
+                </div>
+
+                <div class="d-flex gap-2 align-items-center">
+                <button id="offAddToCart" class="btn btn-primary-theme btn-lg">Agregar al carrito</button>
+                <div class="ms-3">
+                    <label class="small">Cantidad</label>
+                    <input id="offQuantity" type="number" min="1" value="1" class="form-control form-control-sm" style="width:80px;">
+                </div>
+                </div>
+
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Cart Offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+        <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="cartOffcanvasLabel">Tu carrito</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body">
+        <div id="cartItemsContainer" class="container-fluid"></div>
+        <div class="d-flex justify-content-between align-items-center mt-4">
+            <div>
+            <p class="mb-0 small text-muted">Total:</p>
+            <p id="cartTotal" class="h5 fw-bold mb-0">0,00 €</p>
+            </div>
+            <div>
+            <button id="clearCartBtn" class="btn btn-outline-secondary me-2">Vaciar</button>
+            <button id="checkoutBtn" class="btn btn-primary-theme">Pagar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div id="cartToast" class="toast align-items-center text-bg-success border-0" role="status" aria-live="polite" aria-atomic="true">
+        <div class="d-flex">
+        <div class="toast-body">Agregado al carrito</div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+        </div>
+    </div>
+
+    <footer class="mt-auto py-5 bg-light">
+        <div class="container text-center">
+        <p class="text-muted small mb-0">© 2024 Calzado Artesanal. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    // Offcanvas instances
+    const productOffcanvasEl = document.getElementById('productOffcanvas');
+    const productOffcanvas = new bootstrap.Offcanvas(productOffcanvasEl);
+    const cartOffcanvasEl = document.getElementById('cartOffcanvas');
+    const cartOffcanvas = new bootstrap.Offcanvas(cartOffcanvasEl);
+
+    // Cart helpers
+    function getCart(){ try{ return JSON.parse(localStorage.getItem('cart')||'[]'); }catch{ return []; } }
+    function saveCart(cart){ localStorage.setItem('cart', JSON.stringify(cart)); updateCartCounter(); }
+    function addToCartItem(item){
+    const cart = getCart();
+    cart.push(item);
+    saveCart(cart);
+    const toastEl = document.getElementById('cartToast');
+    const toast = new bootstrap.Toast(toastEl);
+    toast.show();
+    }
+    function clearCart(){ saveCart([]); renderCart(); }
+
+    // Cart counter
+    function updateCartCounter(){
+    const cart = getCart();
+    const count = cart.reduce((s,i)=>s+ (i.qty||0), 0);
+    const badge = document.getElementById('cartCountBadge');
+    if(count>0){ badge.style.display='inline-block'; badge.textContent = count; } else { badge.style.display='none'; }
+    }
+
+    // Render cart offcanvas
+    function renderCart(){
+    const container = document.getElementById('cartItemsContainer');
+    const cart = getCart();
+    container.innerHTML = '';
+    if(cart.length===0){ container.innerHTML = '<p class="text-center text-muted">Tu carrito está vacío.</p>'; document.getElementById('cartTotal').textContent = '0,00 €'; return; }
+
+    let total = 0;
+    cart.forEach((item, idx) =>{
+        total += parseFloat(String(item.price).replace(/[€,\s]/g,'').replace(',','.')) * (item.qty||1);
+        const row = document.createElement('div'); row.className = 'd-flex align-items-center gap-3 mb-3';
+        row.innerHTML = `
+        <img src="${item.image}" alt="" style="width:84px;height:84px;object-fit:cover;border-radius:.5rem;" />
+        <div class="flex-grow-1">
+            <div class="d-flex justify-content-between align-items-start">
+            <div>
+                <div class="fw-semibold">${item.title}</div>
+                <div class="small text-muted">${item.brand||''}</div>
+            </div>
+            <div class="text-end">
+                <div class="fw-bold">${item.price}</div>
+                <button class="btn btn-sm btn-link text-danger remove-item" data-idx="${idx}">Eliminar</button>
+            </div>
+            </div>
+            <div class="d-flex gap-2 align-items-center mt-2">
+            <div class="small text-muted">Talla: ${item.size||'-'}</div>
+            <div class="small text-muted">| Color: <span style="display:inline-block;width:16px;height:16px;background:${item.color||'transparent'};border-radius:50%;margin-left:6px;border:1px solid rgba(0,0,0,0.08);"></span></div>
+            <div class="ms-auto d-flex align-items-center gap-2">
+                <input type="number" min="1" value="${item.qty||1}" class="form-control form-control-sm qty-input" style="width:72px;" data-idx="${idx}" />
+            </div>
+            </div>
+        </div>
+        `;
+        container.appendChild(row);
+    });
+    // format total with comma
+    const totalStr = total.toFixed(2).replace('.',',') + ' €';
+    document.getElementById('cartTotal').textContent = totalStr;
+
+    // attach remove handlers
+    container.querySelectorAll('.remove-item').forEach(btn=> btn.addEventListener('click', (e)=>{
+        const idx = parseInt(e.currentTarget.dataset.idx);
+        const cart = getCart(); cart.splice(idx,1); saveCart(cart); renderCart();
+    }));
+
+    // attach qty change
+    container.querySelectorAll('.qty-input').forEach(input => input.addEventListener('change', (e)=>{
+        const idx = parseInt(e.currentTarget.dataset.idx);
+        const val = parseInt(e.currentTarget.value) || 1;
+        const cart = getCart(); cart[idx].qty = val; saveCart(cart); renderCart();
+    }));
+    }
+
+    // Checkout behavior
+    function handleCheckout(){
+    const user = localStorage.getItem('user');
+    if(!user){
+        // redirect to login
+        window.location.href = 'login.html';
+        return;
+    }
+    // if logged, proceed to checkout page (placeholder)
+    window.location.href = 'checkout.html';
+    }
+
+    // Attach events
+    document.getElementById('cartButton').addEventListener('click', ()=>{
+    renderCart();
+    cartOffcanvas.show();
+    });
+
+    document.getElementById('clearCartBtn').addEventListener('click', ()=>{ if(confirm('¿Vaciar el carrito?')){ clearCart(); } });
+    document.getElementById('checkoutBtn').addEventListener('click', handleCheckout);
+
+    // Hook product offcanvas code (open from cards)
+    function renderProductOffcanvas(product){
+    document.getElementById('offImage').src = product.image;
+    document.getElementById('offImage').alt = product.title;
+    document.getElementById('offTitle').textContent = product.title;
+    document.getElementById('offBrand').textContent = product.brand || '';
+    document.getElementById('offPrice').textContent = product.price || '';
+    document.getElementById('offDescription').textContent = product.description || '';
+
+    const sizesContainer = document.getElementById('offSizes'); sizesContainer.innerHTML='';
+    (product.sizes || []).forEach(size => {
+        const btn = document.createElement('button');
+        btn.type='button'; btn.className='btn btn-outline-secondary btn-sm'; btn.textContent = size; btn.dataset.size = size;
+        btn.addEventListener('click', ()=>{ Array.from(sizesContainer.children).forEach(c=>c.classList.remove('active')); btn.classList.add('active'); const sel = getLastSelection(); sel.size = size; saveLastSelection(sel); });
+        sizesContainer.appendChild(btn);
+    });
+
+    const colorsContainer = document.getElementById('offColors'); colorsContainer.innerHTML='';
+    (product.colors || []).forEach(color => {
+        const sw = document.createElement('button'); sw.type='button'; sw.className='btn p-0'; sw.innerHTML = `<span class="color-swatch" style="background:${color}"></span>`;
+        sw.addEventListener('click', ()=>{ Array.from(colorsContainer.querySelectorAll('.color-swatch')).forEach(c=>c.classList.remove('selected')); sw.querySelector('.color-swatch').classList.add('selected'); const sel = getLastSelection(); sel.color = color; saveLastSelection(sel); });
+        colorsContainer.appendChild(sw);
+    });
+
+    document.getElementById('offQuantity').value = 1;
+
+    const offAdd = document.getElementById('offAddToCart');
+    offAdd.onclick = ()=>{
+        const qty = parseInt(document.getElementById('offQuantity').value) || 1;
+        const sizeBtn = document.querySelector('#offSizes .active');
+        const colorSw = document.querySelector('#offColors .color-swatch.selected');
+        const item = { id: product.title, title: product.title, brand: product.brand, price: product.price, qty, size: sizeBtn?sizeBtn.dataset.size:null, color: colorSw?colorSw.style.backgroundColor:null, image: product.image };
+        addToCartItem(item);
+    };
+
+    productOffcanvas.show();
+    }
+
+    // Persist last selection helpers
+    function saveLastSelection(selection){ localStorage.setItem('lastSelection', JSON.stringify(selection||{})); }
+    function getLastSelection(){ try{ return JSON.parse(localStorage.getItem('lastSelection')||'{}'); }catch{ return {}; } }
+
+    // Attach click handlers to product links
+    function attachProductCardHandlers(){
+    document.querySelectorAll('[data-product]').forEach(el=>{ el.removeEventListener('click', el._handler);
+        const handler = (e)=>{
+        e.preventDefault();
+        const dataset = e.currentTarget.dataset;
+        const product = { image: dataset.image, title: dataset.title, brand: dataset.brand, price: dataset.price, description: dataset.description, sizes: dataset.sizes?dataset.sizes.split(','):[], colors: dataset.colors?dataset.colors.split(','):[] };
+        renderProductOffcanvas(product);
+        };
+        el._handler = handler;
+        el.addEventListener('click', handler);
+    });
+    }
+
+    // init
+    updateCartCounter(); attachProductCardHandlers();
+
+    </script>
+    </body>
+    </html>

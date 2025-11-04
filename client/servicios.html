@@ -1,0 +1,192 @@
+    <!doctype html>
+    <html lang="es">
+    <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Servicios - Calzado Artesanal</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <!-- Project styles (shared) -->
+    <link href="styles.css" rel="stylesheet">
+
+    <style>
+        body{ font-family: 'Manrope', sans-serif; }
+        .hero-visual{ min-height:480px; background-size:cover; background-position:center; border-radius:1rem; }
+        .service-card .bg-img{ height:220px; background-size:cover; background-position:center; border-radius:.6rem; }
+        .subscribe-input{ border-radius: .6rem 0 0 .6rem; }
+        .subscribe-btn{ border-radius: 0 .6rem .6rem 0; }
+    </style>
+    </head>
+    <body class="bg-light text-body">
+    <header class="sticky-top bg-light border-bottom" style="backdrop-filter: blur(6px);">
+        <div class="container-fluid">
+        <div class="d-flex align-items-center justify-content-between py-3 px-3 px-sm-4">
+            <div class="d-flex align-items-center gap-3">
+            <div style="width:36px;height:36px;" class="text-primary d-flex align-items-center justify-content-center">
+                <svg width="28" height="28" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill-rule="evenodd"></path></svg>
+            </div>
+            <h1 class="h5 mb-0 fw-bold">Calzado Artesanal</h1>
+            </div>
+
+            <div class="d-flex align-items-center gap-3 flex-grow-1 justify-content-end">
+            <nav class="d-none d-lg-flex align-items-center gap-3 me-3">
+                <a class="small text-decoration-none text-body" href="../client/index.html">Inicio</a>
+                <a class="small text-decoration-none text-body" href="../client/quienes_somos.html">Quiénes Somos</a>
+                <a class="small text-decoration-none text-body " href="../client/catalogo.html">Catálogo</a>
+                <a class="small text-decoration-none text-body fw-bold" href="../client/servicios.html">Servicios</a>
+            </nav>
+
+            <div class="d-flex gap-2 align-items-center">
+                <button class="btn btn-light rounded-circle d-flex align-items-center justify-content-center" style="width:40px;height:40px;" aria-label="perfil">
+                <span class="material-symbols-outlined">person</span>
+                </button>
+
+                <div class="position-relative">
+                <button id="cartButton" class="btn btn-light rounded-circle d-flex align-items-center justify-content-center cart-icon-wrap" style="width:44px;height:44px;" aria-label="carrito">
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                </button>
+                <span id="cartCountBadge" class="badge bg-danger rounded-pill cart-badge" style="display:none;">0</span>
+                </div>
+
+                <button class="btn btn-light rounded-circle d-flex align-items-center justify-content-center" style="width:40px;height:40px;" aria-label="soporte">
+                <span class="material-symbols-outlined">support_agent</span>
+                </button>
+            </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <main class="py-5">
+        <div class="container">
+
+        <!-- Hero -->
+        <section class="mb-5">
+            <div class="hero-visual p-4 d-flex flex-column align-items-center justify-content-center text-center text-white" style="background-image: linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.45)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuBfdYzVawx1Kb8lsWgyP3s3xdWocOCB0wQqUuRWpCeuSFl_B8n2D0vZ3KvMthvJ2NB2GGw6ZRNHVG_y41geKQOGNjiosowR3Nbet2deIr3eIw-hEWOkGL90eA5XAxT4JD9XsO2Vu7dBuC8vF4iQJRSunNg8h858v34haPkTFVeC1vhpNZXjE8L--R7wlsReooIsWmknEvva80OQDVizc6hqVfJBg9cEVvJxa4hLKS3Js6yM-DvhIM3bfPYMiIGrqJvuor6jGn0hbWbM');">
+            <div class="mb-3">
+                <h1 class="display-6 fw-bold">Personalized Experiences, Exceptional Shoes</h1>
+                <p class="lead">Discover our commitment to quality, craftsmanship, and customer satisfaction with our exclusive services.</p>
+            </div>
+            <a href="#services" class="btn btn-danger btn-lg">Explore Our Services</a>
+            </div>
+        </section>
+
+        <!-- Services grid -->
+        <section id="services" class="mb-5">
+            <div class="text-center mb-4">
+            <h2 class="h3 fw-bold">Our Services</h2>
+            </div>
+            <div class="row g-4">
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="service-card">
+                <div class="bg-img" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuDhMaf7CQ6GuegXa8bLkUG_wDVcPDYrKJ2lnQi6-aDV6IGziRbOd7QOo6E5pZIatrSvWQtFa3lza6OqCxIWPzoZ98EzTlNOUZZHv_ol49gW1C3Ub2rhvT-0IbUn5oXvobm_CQkzE4iEtAFVYCTnDGRCF2U9QpPZnFdkd4918cEflG4QDHc24c1nO9KVulDDtjnf4z96FKhtPb3kukHa_nyPbuT1f-cTBoXFtuGvQimEqA89PuHigsjow16Hjb-csQmK9D53q_0qXkTo');"></div>
+                <div class="mt-3">
+                    <h5 class="fw-bold">Personalized Fitting</h5>
+                    <p class="text-muted small">Experience our in-store or virtual fitting consultation to find the perfect size and style for you.</p>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="service-card">
+                <div class="bg-img" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuDZQnmo0er883pMSUK7nRBxvtg8zdo77Bd4RnLQQmTHfqqYA0lN-mZH7juF9Rexj6x2XBmG3hWbTPROB1nH3lzSr1bzLBoA06Q3Jyl90v3H4VHF6hU2badExkUZmp3pAM7EPORzWXR5ZYpHmX8ToQ3cLwVHO0GAj5_yoTmNwNPAhhHWXCVcCNkRaAC9HUKqkKEsmKm_9YxhV9q_dQAdKBveBUZLApqQolr-ZOqrSN_m0FZKl0qxn2yAm5WAY3WQdrB-UM8oHonebAoc');"></div>
+                <div class="mt-3">
+                    <h5 class="fw-bold">Custom Design</h5>
+                    <p class="text-muted small">Bring your vision to life with our bespoke shoe design service, from material selection to final creation.</p>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="service-card">
+                <div class="bg-img" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuBKVz2ld3zdFanx0-_oz_zM8_uGyx6O4R5JGpBhphBLJrhuSk_8haqIL2jy0CKZO0aHgJ_Gax0Lj46EGjvKe9E91xypiOsJjVaOtlzh4SPLICh0HRcuquhlb7rOoKs2lUGWXoVr-RWPjsKbx7bsakZGW-sLwg4HS09Ja23Ii-GSiuQaSjmgCev0U1c2BSRO9VbrIhqajMMUIfDm0wpas1cSThkwq6_axJGgHqkn7kFIdjy7gir6WYbBmngiIObK1xQ3HAqzhTGFYh1n');"></div>
+                <div class="mt-3">
+                    <h5 class="fw-bold">Shoe Care &amp; Repair</h5>
+                    <p class="text-muted small">Prolong the life of your footwear with our professional cleaning, maintenance, and repair services.</p>
+                </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="service-card">
+                <div class="bg-img" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuA01XHyYROLcRqyqYGZ2nEr98g0FZ-C9JQcBbxaYJjAtECz6G6BShRemE4MZjsCQ7F8VS3ogJF4Yc_zAmbwV3I06SJO1UuouUvVgwSRkYijd6alb9Y3syJsra5NTKKP_PFcjYIEzN8Q-qG0WmqQZLPn6FReMXY0zI9V_94ll9GV49nVtn_5-9ga6uksnRpaj0pOWLLMF5gH0TWO0SPg6FTM7XoZKClyCKlkky2FEDRLUnY-8-HBufLXe0O_3CPnM8OQiE5s4M0Hgama');"></div>
+                <div class="mt-3">
+                    <h5 class="fw-bold">Private Showings</h5>
+                    <p class="text-muted small">Book an exclusive appointment for a private and personalized shopping experience with our stylists.</p>
+                </div>
+                </div>
+            </div>
+
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="bg-white rounded-3 p-4">
+            <div class="d-flex flex-column align-items-center text-center gap-3 p-3">
+            <h3 class="h4 fw-bold mb-0">Stay in the know</h3>
+            <p class="text-muted small mb-0">Sign up for our newsletter to get the latest news, updates, and special offers.</p>
+            <form class="d-flex mt-3 w-100 justify-content-center">
+                <div class="input-group w-100 w-md-50" style="max-width:520px;">
+                <input type="email" class="form-control subscribe-input" placeholder="Enter your email" aria-label="Correo" />
+                <button class="btn btn-danger subscribe-btn" type="submit">Subscribe</button>
+                </div>
+            </form>
+            </div>
+        </section>
+
+        </div>
+    </main>
+
+    <footer class="bg-light text-muted mt-5">
+        <div class="container py-5">
+        <div class="row gy-4">
+            <div class="col-6 col-md-3">
+            <h6 class="fw-bold text-dark">Shop</h6>
+            <ul class="list-unstyled small">
+                <li><a class="text-muted text-decoration-none" href="#">New Arrivals</a></li>
+                <li><a class="text-muted text-decoration-none" href="#">Best Sellers</a></li>
+                <li><a class="text-muted text-decoration-none" href="#">Heels</a></li>
+                <li><a class="text-muted text-decoration-none" href="#">Flats</a></li>
+            </ul>
+            </div>
+            <div class="col-6 col-md-3">
+            <h6 class="fw-bold text-dark">About</h6>
+            <ul class="list-unstyled small">
+                <li><a class="text-muted text-decoration-none" href="#">Our Story</a></li>
+                <li><a class="text-muted text-decoration-none" href="#">Craftsmanship</a></li>
+                <li><a class="text-muted text-decoration-none" href="#">Careers</a></li>
+            </ul>
+            </div>
+            <div class="col-6 col-md-3">
+            <h6 class="fw-bold text-dark">Support</h6>
+            <ul class="list-unstyled small">
+                <li><a class="text-muted text-decoration-none" href="#">FAQ</a></li>
+                <li><a class="text-muted text-decoration-none" href="#">Shipping &amp; Returns</a></li>
+                <li><a class="text-muted text-decoration-none" href="#">Contact Us</a></li>
+            </ul>
+            </div>
+            <div class="col-6 col-md-3">
+            <h6 class="fw-bold text-dark">Follow Us</h6>
+            <div class="d-flex gap-3 mt-2">
+                <a class="text-muted" href="#" aria-label="facebook"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg></a>
+                <a class="text-muted" href="#" aria-label="twitter"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg></a>
+                <a class="text-muted" href="#" aria-label="instagram"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zM12 7.177a4.823 4.823 0 100 9.646 4.823 4.823 0 000-9.646zM12 15a3 3 0 110-6 3 3 0 010 6zm4.885-9.44a1.323 1.323 0 11-2.646 0 1.323 1.323 0 012.646 0z" fill-rule="evenodd"></path></svg></a>
+            </div>
+            </div>
+        </div>
+        <div class="border-top pt-4 text-center small text-muted">© 2024 Calzado Artesanal. All Rights Reserved.</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+    </html>
