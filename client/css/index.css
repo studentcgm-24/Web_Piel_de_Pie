@@ -68,8 +68,49 @@
     background-color: #8B5E3C; 
     color: #fff;
     }
+    
+    .category-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    }
+
+    .category-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .category-card .card-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    transition: background 0.4s ease;
+    }
+
+    .category-card:hover .card-overlay {
+    background: rgba(0, 0, 0, 0.15);
+    }
+    
+    .card-img-hover {
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    }
+
+    /* Efecto al pasar el mouse */
+    .card-img-hover:hover {
+    transform: scale(0.95); /* se aleja ligeramente */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* sombra elegante */
+    }
 
 
+    .footer-custom {
+    background-color: #042c18; 
+    color: #fff;
+    width: 100%;
+    }
+
+    .footer-custom a:hover {
+    text-decoration: underline;
+    color: #fff; 
+    }
 
     html.light { background-color: var(--background-light); color: var(--text-main); }
     html.dark  { background-color: var(--background-dark); color: var(--text-main-dark); }
@@ -80,26 +121,20 @@
     .rounded-xl { border-radius: 1rem !important; }
     .rounded-2xl { border-radius: 1.5rem !important; }
     .text-accent { color: var(--accent) !important; }
-    .bg-primary-20 { background-color: rgba(234,210,211,0.20); }
+    .bg-primary-20 { background-color: rgba(234, 210, 211, 0.412); }
     .bg-primary-40 { background-color: rgba(234,210,211,0.40); }
     .bg-accent { background-color: var(--accent) !important; }
     .text-nude { color: var(--nude) !important; }
     .border-primary-50 { border-color: rgba(234,210,211,0.5) !important; }
-    /* Ratios not provided by Bootstrap for 3/4, 16/9 custom: */
     .ratio-3-4 { position: relative; width: 100%; padding-top: calc(4 / 3 * 100%); }
     .ratio-3-4 > * { position: absolute; inset: 0; }
     .ratio-16-9 { position: relative; width: 100%; padding-top: calc(9 / 16 * 100%); }
     .ratio-16-9 > * { position: absolute; inset: 0; }
-    /* Helper to mimic aspect-[3/4] and aspect-[16/9] backgrounds */
     .bg-aspect-cover { background-repeat: no-repeat; }
-    /* small transitions */
     .transition-colors { transition: background-color .2s, color .2s, opacity .2s; }
-    /* Utility to dim overlay on hover (group) */
     .card-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.30); transition: background .2s; }
     .card:hover .card-overlay { background: rgba(0,0,0,0.10); }
-    /* Footer input focus mimic */
     .footer-input:focus { outline: none; box-shadow: 0 0 0 0.2rem rgba(178,187,161,0.25); border-color: var(--accent); }
-    /* Small responsive tweaks */
     @media (min-width: 480px) { .fs-5-responsive { font-size: 2.5rem; } }
     @media (min-width: 864px) { .two-col-lg { display: flex; gap: 2rem; } }
 

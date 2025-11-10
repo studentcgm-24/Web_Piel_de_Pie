@@ -8,227 +8,238 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="../client/css/index.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
     </head>
 
 
     <body class="bg-light text-body">
-        <div class="d-flex min-vh-100 flex-column overflow-hidden" style="background-color: #FAF8F5;">
+    <div class="d-flex min-vh-100 flex-column overflow-hidden" style="background-color: #FAF8F5;">
 
-        <div class="container-fluid px-4 px-sm-5 px-md-5 px-lg-5 flex-grow-1">
-            <div class="d-flex justify-content-center py-4">
-                <div class="w-100" style="max-width:1200px;">
+            <div class="container-fluid px-4 px-sm-5 px-md-5 px-lg-5 flex-grow-1">
+                <div class="d-flex justify-content-center py-4">
+                    <div class="w-100" style="max-width:1200px;">
 
-        <header class="w-100 position-fixed top-0 start-0 z-3" style="background-color: #042c18;">
-            <div class="container-fluid">
-                <div class="d-flex align-items-center justify-content-between py-2 px-3">
+                        <header class="w-100 position-fixed top-0 start-0 z-3" style="background-color: #042c18;">
+                            <div class="container-fluid">
+                                <div class="d-flex align-items-center justify-content-between py-2 px-3">
 
-                        <div class="d-flex align-items-center gap-2">
-                        <a href="index.html" class="d-flex align-items-center logo-container">
-                            <img 
-                            src="../client/assets/img/logooriginal.webp" 
-                            alt="Logo Piel de Pie" 
-                            class="navbar-logo"></a>
-                        </div>
+                                        <div class="d-flex align-items-center gap-2">
+                                        <a href="index.html" class="d-flex align-items-center logo-container">
+                                            <img 
+                                            src="../client/assets/img/logooriginal.webp" 
+                                            alt="Logo Piel de Pie" 
+                                            class="navbar-logo"></a>
+                                        </div>
 
-                    <div class="d-flex align-items-center gap-4">
-                        <nav class="d-none d-lg-flex align-items-center gap-4">
-                            <a class="small text-decoration-none text-white fw-bold border-bottom border-2 border-white pb-1" href="../client/index.html">Inicio</a>
-                            <a class="small text-decoration-none text-white" href="../client/quienes_somos.html">Quiénes Somos</a>
-                            <a class="small text-decoration-none text-white " href="../client/catalogo.html">Catálogo</a>
-                            <a class="small text-decoration-none text-white" href="../client/servicios.html">Servicios</a>
-                        </nav>
+                                    <div class="d-flex align-items-center gap-4">
+                                        <nav class="d-none d-lg-flex align-items-center gap-4">
+                                            <a class="small text-decoration-none text-white fw-bold border-bottom border-2 border-white pb-1" href="../client/index.html">Inicio</a>
+                                            <a class="small text-decoration-none text-white" href="../client/quienes_somos.html">Quiénes Somos</a>
+                                            <a class="small text-decoration-none text-white " href="../client/catalogo.html">Catálogo</a>
+                                            <a class="small text-decoration-none text-white" href="../client/servicios.html">Servicios</a>
+                                        </nav>
 
-                        <div class="d-flex gap-2 align-items-center">
+                                        <div class="d-flex gap-2 align-items-center">
 
-                            <button id="loginButton" class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
-                                <span class="material-symbols-outlined text-white">person</span>
-                            </button>
+                                            <button id="loginButton" class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
+                                                <span class="material-symbols-outlined text-white">person</span>
+                                            </button>
 
-                            <div class="position-relative">
-                                <button id="cartButton" class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
-                                    <span class="material-symbols-outlined text-white">shopping_bag</span>
-                                </button>
-                                    <span id="cartCountBadge" class="badge bg-danger rounded-pill position-absolute top-0 end-0 translate-middle" style="display:none;">0</span>
+                                            <div class="position-relative">
+                                                <button id="cartButton" class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
+                                                    <span class="material-symbols-outlined text-white">shopping_bag</span>
+                                                </button>
+                                                    <span id="cartCountBadge" class="badge bg-danger rounded-pill position-absolute top-0 end-0 translate-middle" style="display:none;">0</span>
+                                            </div>
+
+                                            <button class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
+                                                <span class="material-symbols-outlined text-white">support_agent</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                        </header>
 
-                            <button class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
-                                <span class="material-symbols-outlined text-white">support_agent</span>
-                            </button>
-                        </div>
+                            <!-- Nos ayuda al espaciado para que el contenido no quede detrás del navbar -->
+                            <div style="height:70px;"></div>
+
+                            <section class="mt-4">
+                                <div class="d-flex flex-column gap-3 p-3 p-md-4 p-lg-0 flex-lg-row align-items-center">
+                                    <div class="w-100 w-lg-50 ratio-16-9 me-lg-3 bg-cover rounded-xl" style="background-image: url(../client/assets/img/catalogo/img1index.webp);"></div>
+
+                                    <div class="w-100 w-lg-50 text-center text-lg-start">
+                                        <h1 class="display-5 fw-bold">El arte de vestir tus pasos</h1>
+                                        <p class="lead">En <strong>Piel de Pie</strong>, transformamos cada par de zapatos en una expresión de estilo y elegancia. Elaborados con materiales de alta calidad y diseñados para resaltar la presencia de la mujer, nuestros zapatos te acompañan con comodidad y distinción en cada paso.</p>
+                                        <a href="../client/catalogo.html"><button class="btn btn-primary-theme rounded-pill mt-4 px-4 py-2">Ver Colección</button></a>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="mt-4">
+                                    <h2 class="h3 text-center fw-bold">Categorías Destacadas</h2>
+                                <div class="row justify-content-center g-3 mt-3">
+
+                                        <div class="col-10 col-sm-6 col-lg-4">
+                                            <div class="category-card position-relative rounded-xl overflow-hidden"
+                                                style="background-image:url(../client/assets/img/catalogo/index2catego.webp);
+                                                background-size:cover; background-position:center; padding-top:133.33%;">
+                                                <div class="card-overlay"></div>
+                                                <div class="position-absolute bottom-0 start-0 p-3 text-white">
+                                                    <strong class="h5">Tacones</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-10 col-sm-6 col-lg-4">
+                                            <div class="category-card position-relative rounded-xl overflow-hidden"
+                                                style="background-image:url(../client/assets/img/catalogo/imgindex3catego.webp);
+                                                background-size:cover; background-position:center; padding-top:133.33%;">
+                                                <div class="card-overlay"></div>
+                                                <div class="position-absolute bottom-0 start-0 p-3 text-white">
+                                                    <strong class="h5">Calzado Plano</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </section>
+
+                            <section class="mt-4">
+                                    <h2 class="h3 text-center fw-bold">Novedades</h2>
+                                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3 mt-3">
+
+                                    <div class="col">
+                                        <div class="d-flex flex-column gap-2">
+                                            <div class="rounded-xl overflow-hidden card-img-hover"
+                                            style="background-image:url(../client/assets/img/catalogo/tacon\ corto\ color\ café.webp); 
+                                            background-size:cover; 
+                                            background-position:center; 
+                                            padding-top:133.33%;">
+                                            </div>
+                                            <div>
+                                                <h3 class="h6 mb-0">Tacón Ámbar</h3>
+                                                <p class="small text-muted">$160.000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="d-flex flex-column gap-2">
+                                            <div class="rounded-xl overflow-hidden card-img-hover"
+                                            style="background-image:url(../client/assets/img/catalogo/zapato\ de\ tocon\ corto\ blanco.webp); 
+                                            background-size:cover; 
+                                            background-position:center; 
+                                            padding-top:133.33%;">
+                                            </div>
+                                            <div>
+                                                <h3 class="h6 mb-0">Tacón Delizia</h3>
+                                                <p class="small text-muted">$180.000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="d-flex flex-column gap-2">
+                                            <div class="rounded-xl overflow-hidden card-img-hover"
+                                            style="background-image:url(../client/assets/img/catalogo/zapato\ plano\ colo\ veige\ con\ blanco.webp); 
+                                            background-size:cover; 
+                                            background-position:center; 
+                                            padding-top:133.33%;">
+                                            </div>
+                                            <div>
+                                                <h3 class="h6 mb-0">Plano Perla</h3>
+                                                <p class="small text-muted">$140.000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col">
+                                        <div class="d-flex flex-column gap-2">
+                                                <div class="rounded-xl overflow-hidden card-img-hover"
+                                                style="background-image:url(../client/assets/img/catalogo/tacon\ negro.webp); 
+                                                background-size:cover; 
+                                                background-position:center; 
+                                                padding-top:133.33%;">
+                                                </div>
+                                            <div>
+                                                <h3 class="h6 mb-0">Tacón Eleganza</h3>
+                                                <p class="small text-muted">$130.000</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+
+                            <section class="mt-4 bg-primary-20 rounded-2xl p-4 p-md-5">
+                                    <h2 class="h3 text-center fw-bold mb-4">Lo que dicen nuestras clientas</h2>
+                                <div class="row text-center">
+                                    <div class="col-12 col-md-4 mb-3">
+                                        <p class="fst-italic">“Nunca había encontrado unos zapatos que combinaran tanta elegancia con comodidad. Los tacones de Piel de Pie son perfectos para mi día a día, puedo usarlos todo el día sin cansarme.”</p>
+                                        <p class="mt-3 fw-bold mb-0">Ana Gutierrez</p>
+                                    </div>
+                                    <div class="col-12 col-md-4 mb-3">
+                                        <p class="fst-italic">“La calidad se nota desde el primer momento. El material, los acabados y el diseño son impecables. Realmente se siente que están hechos por grandes artesanos.”</p>
+                                        <p class="mt-3 fw-bold mb-0">Laura Martínez</p>
+                                    </div>
+                                    <div class="col-12 col-md-4 mb-3">
+                                        <p class="fst-italic">“Desde que descubrí Piel de Pie, siento que cada paso refleja mi estilo. Los zapatos son hermosos, cómodos y se ven tan elegantes que siempre me preguntan dónde los compré.”</p>
+                                        <p class="mt-3 fw-bold mb-0">Sofía Ruiz</p>
+                                    </div>
+                                </div>
+                            </section>
                     </div>
                 </div>
             </div>
-        </header>
+        
 
-<!-- Ayuda al espaciado para que el contenido no quede detrás del navbar -->
-<div style="height:70px;"></div>
-
-
-            <!-- Hero section -->
-            <section class="mt-4">
-            <div class="d-flex flex-column gap-3 p-3 p-md-4 p-lg-0 flex-lg-row align-items-center">
-                <div class="w-100 w-lg-50 ratio-16-9 me-lg-3 bg-cover rounded-xl" style="background-image: url(../client/assets/img/catalogo/img1index.webp);"></div>
-
-                <div class="w-100 w-lg-50 text-center text-lg-start">
-                <h1 class="display-5 fw-bold">El arte de vestir tus pasos</h1>
-                <p class="lead">En <strong>Piel de Pie</strong>, transformamos cada par de zapatos en una expresión de estilo y elegancia. Elaborados con materiales de alta calidad y diseñados para resaltar la presencia de la mujer, nuestros zapatos te acompañan con comodidad y distinción en cada paso.</p>
-                <a href="../client/catalogo.html"><button class="btn btn-primary-theme rounded-pill mt-4 px-4 py-2">Ver Colección</button></a>
-
+            <footer class="footer-custom mt-5">
+            <div class="container py-5">
+                <div class="row gy-4">
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold text-white">Tienda</h6>
+                    <ul class="list-unstyled small">
+                    <li><a class="text-white text-decoration-none" href="#">Novedades</a></li>
+                    <li><a class="text-white text-decoration-none" href="#">Más vendido</a></li>
+                    <li><a class="text-white text-decoration-none" href="#">Tacones</a></li>
+                    <li><a class="text-white text-decoration-none" href="#">Calzado Plano</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold text-white">Acerca de</h6>
+                    <ul class="list-unstyled small">
+                    <li><a class="text-white text-decoration-none" href="#">Nuestra Historia</a></li>
+                    <li><a class="text-white text-decoration-none" href="#">Artesanos</a></li>
+                    <li><a class="text-white text-decoration-none" href="#">Trabaja con nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold text-white">Soporte</h6>
+                    <ul class="list-unstyled small">
+                    <li><a class="text-white text-decoration-none" href="#">PQRS</a></li>
+                    <li><a class="text-white text-decoration-none" href="#">Envío &amp; Devoluciones</a></li>
+                    <li><a class="text-white text-decoration-none" href="#">Contactos</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold text-white">Síguenos</h6>
+                    <div class="d-flex gap-3 mt-2">
+                    <a class="text-white" href="#"><i class="bi bi-facebook"></i></a>
+                    <a class="text-white" href="#"><i class="bi bi-twitter"></i></a>
+                    <a class="text-white" href="#"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                </div>
+                <div class="border-top border-light pt-4 text-center small text-white-50">
+                © 2025 Piel de Pie. Todos los derechos reservados.
                 </div>
             </div>
-            </section>
+            </footer>
 
-            <!-- Categorías -->
-            <section class="mt-4">
-            <h2 class="h3 text-center fw-bold">Categorías Destacadas</h2>
-            <div class="row g-3 mt-3">
-                <div class="col-12 col-sm-6 col-lg-4">
-                <div class="position-relative rounded-xl overflow-hidden" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuC2WBzqAyxkixWI_aJItX8h0QhrO8vNyuV3QNhi_jhZV_Gqx1OBMtyxz_vsk9Gdr-BZWGZUr0mzboSXZzoWlajoQPmZuQxypBJ47yn_e5FbvyIcL1jrY2mS0BMo-n_BjxO--gZ1cJEiSQXNBWZmJ5ktWuLE_89QT2vQnuO--WhvGCovdZ3ccHTyw1IoQRRQ5KKuRZyD3vIb6GBxcIJ0M91LArfYYdrO-0i2nrPPjBEM2JPocKDSjuYcQ3TFRxLW4OK4GrYkLGFL5Y24'); background-size:cover; background-position:center; padding-top:133.33%;">
-                    <div class="card-overlay"></div>
-                    <div class="position-absolute bottom-0 start-0 p-3 text-white"><strong class="h5">Tacones</strong></div>
-                </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-4">
-                <div class="position-relative rounded-xl overflow-hidden" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuDG-4RBKpY_dJWMrkVzJS4KmGvcOQnb0Jjf3fu7X0QbM7tS0EK6DvzaFZwLP5RTmaZd9V9HsMqOW2p3QMJ4etgZX2YDt8AdsX5tBY2Z4w-zzELvpP2t-_omCrY5njxpDHjPzKpfPgaIxOY0dfCCwymtkwkj1TVg0t5kfmlsaPiKbLtSZmWROX1k_sP0tHJmIeEG_aoGXC6zBefBFwtXp2zIBqdQ2c72ViAsHZ0qJLrL-eqSfvQbq01Q3hHwivgjevUfGhJREoxJ8moc'); background-size:cover; background-position:center; padding-top:133.33%;">
-                    <div class="card-overlay"></div>
-                    <div class="position-absolute bottom-0 start-0 p-3 text-white"><strong class="h5">Botas</strong></div>
-                </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-4">
-                <div class="position-relative rounded-xl overflow-hidden" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuBnb96c8w3z6fhzasgiRlSbojUS3W5PMWmpQnZss5Sfu0vv2pcZhEJg0fklHtAWJ5PGpX7aE0-ZSmwdvhKOyxV-_y_T_yFq758TPbDkDzujLwH5IUAswSaBC-Fgn7U5Gj2qfZdjnvbeYnhpbHiCW-tDRTL69Rp026jeThlLiaTH5Xbe4m6GtG_JvQw2pG3YNCrNQ8s2e4USUIi-D1maOVnR4yKsqGdL3fjDaFHqDqhn5mO_oYnfNYYUnKQ3SHunfV62kr_hht0d-ao9'); background-size:cover; background-position:center; padding-top:133.33%;">
-                    <div class="card-overlay"></div>
-                    <div class="position-absolute bottom-0 start-0 p-3 text-white"><strong class="h5">Zapatos Planos</strong></div>
-                </div>
-                </div>
-
-            </div>
-            </section>
-
-            <!-- Novedades -->
-            <section class="mt-4">
-            <h2 class="h3 text-center fw-bold">Novedades</h2>
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3 mt-3">
-
-                <div class="col">
-                <div class="d-flex flex-column gap-2">
-                    <div class="rounded-xl overflow-hidden" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuDNHn9JBP0aQSm_viNispTemKX_WJcaiaFnZqX1x4Jncwusol1P1XfYLTFUdQY6BaLRLia1s-51rHDqzTyIQFjokuauoJ_trcv590Wu4aavfealrA-xfxTXLzty06qIEikjF_SVT9PHshKXpaad9pZKKZB9nLA_62IqvwDVZ0OG89X8rW3s0w0m3kLubW9i3Wfbp_iViHJK42sJtEUoCIecGgRW685bxvK0UF4OrgZK6RX_ZHY7KEinik7e_r9BZjiNObii3VwYmXXb'); background-size:cover; background-position:center; padding-top:133.33%;">
-                    </div>
-                    <div>
-                    <h3 class="h6 mb-0">Salón Borgoña</h3>
-                    <p class="small text-muted">$2,500.00</p>
-                    </div>
-                </div>
-                </div>
-
-                <div class="col">
-                <div class="d-flex flex-column gap-2">
-                    <div class="rounded-xl overflow-hidden" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuC7zZrIot94EoyGkDn-5QYDlfMQJCuGey8S8r_gthHCUCjn_QSbBld2nyyhPyTrmA7MDNZjpEpS798nnd51rmrSFDiWpsuktpXdAT106ewihRaqLPNgD7HdAsujiYgBBvYtgrOkD2TunXaJJ7NSnEgIGn5Yq1MjK3qH3WPDVCQNFh9-dG7xz1TAqqSpK5ycnKmi0wIn_CjMo2WFuklLLaAgsxWfHjflrooWtjjRG27QvXiD0Em9FOQ3WCI442xRUVQFgqW2ANVYoPtL'); background-size:cover; background-position:center; padding-top:133.33%;">
-                    </div>
-                    <div>
-                    <h3 class="h6 mb-0">Sandalia Atenea</h3>
-                    <p class="small text-muted">$1,800.00</p>
-                    </div>
-                </div>
-                </div>
-
-                <div class="col">
-                <div class="d-flex flex-column gap-2">
-                    <div class="rounded-xl overflow-hidden" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuCblMJ-WvNKUFZNCRAtVxPOXS9UVohBEJQJUtY8iXXGmZBsD0V36kg9e2B_ueqdFw8TA5slpMY7jTCkEsALW4RVnbNSbXPtX4Ee_UHBqjklau7o2_6DNfd78p4Uj9nAnLQ2Q33fpCnhTdtp6tniyxgtUxy_Xz8sGPnYqT0-ZU1FX5r2e0OLLnJIRyHnc4aCHH_gxUfrRrqFhJxgXwkVUyI6dYEMs_O9M_TVX6Fa7Fh3S2ksnJUvVr7B_AoaeWYhCVcVBYrSrKJeSi19'); background-size:cover; background-position:center; padding-top:133.33%;">
-                    </div>
-                    <div>
-                    <h3 class="h6 mb-0">Botín Chelsea</h3>
-                    <p class="small text-muted">$3,200.00</p>
-                    </div>
-                </div>
-                </div>
-
-                <div class="col">
-                <div class="d-flex flex-column gap-2">
-                    <div class="rounded-xl overflow-hidden" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuBgGMWN9NM743DdoQ70vyE7-uiB4620ig1C7DSUHt2EsQ-bTJNmZ1Ty8S4Jk_N3Cp-1pmofwuXsst9Zx9woHV9sgisvZ8TlBqM0ngGmhV1HeEYUBBJBo-rDvt2z70wo67IL2SZZSzTxcn5gOWgEscrhJmVc6EpU7TTtrRPNn8Lgz9n6gUJfi2epg8bfZ7RfAFVOc1fG1Hs9fRmioMdRBFntglWLg9BRQohB_VthynvRAIKIZBXMWY2H2ISZakHiJZ8nFuOz_MXrzzj6'); background-size:cover; background-position:center; padding-top:133.33%;">
-                    </div>
-                    <div>
-                    <h3 class="h6 mb-0">Mocasín Sienna</h3>
-                    <p class="small text-muted">$2,100.00</p>
-                    </div>
-                </div>
-                </div>
-
-            </div>
-            </section>
-
-            <!-- Testimonials -->
-            <section class="mt-4 bg-primary-20 rounded-2xl p-4 p-md-5">
-            <h2 class="h3 text-center fw-bold mb-4">Lo que dicen nuestras clientas</h2>
-            <div class="row text-center">
-                <div class="col-12 col-md-4 mb-3">
-                <p class="fst-italic">"La calidad es increíble y son los zapatos más cómodos que he tenido. ¡Totalmente enamorada!"</p>
-                <p class="mt-3 fw-bold mb-0">- Ana G.</p>
-                </div>
-                <div class="col-12 col-md-4 mb-3">
-                <p class="fst-italic">"Recibí mi pedido súper rápido y el empaque es precioso. Se nota el cuidado en cada detalle."</p>
-                <p class="mt-3 fw-bold mb-0">- Laura M.</p>
-                </div>
-                <div class="col-12 col-md-4 mb-3">
-                <p class="fst-italic">"Elegancia y comodidad en un solo zapato. Valen cada centavo. ¡Ya estoy pensando en mi próximo par!"</p>
-                <p class="mt-3 fw-bold mb-0">- Sofía R.</p>
-                </div>
-            </div>
-            </section>
-
-        </div>
-        </div>
     </div>
-
-   <footer class="bg-light text-muted mt-5">
-        <div class="container py-5">
-        <div class="row gy-4">
-            <div class="col-6 col-md-3">
-            <h6 class="fw-bold text-dark">Shop</h6>
-            <ul class="list-unstyled small">
-                <li><a class="text-muted text-decoration-none" href="#">New Arrivals</a></li>
-                <li><a class="text-muted text-decoration-none" href="#">Best Sellers</a></li>
-                <li><a class="text-muted text-decoration-none" href="#">Heels</a></li>
-                <li><a class="text-muted text-decoration-none" href="#">Flats</a></li>
-            </ul>
-            </div>
-            <div class="col-6 col-md-3">
-            <h6 class="fw-bold text-dark">About</h6>
-            <ul class="list-unstyled small">
-                <li><a class="text-muted text-decoration-none" href="#">Our Story</a></li>
-                <li><a class="text-muted text-decoration-none" href="#">Craftsmanship</a></li>
-                <li><a class="text-muted text-decoration-none" href="#">Careers</a></li>
-            </ul>
-            </div>
-            <div class="col-6 col-md-3">
-            <h6 class="fw-bold text-dark">Support</h6>
-            <ul class="list-unstyled small">
-                <li><a class="text-muted text-decoration-none" href="#">FAQ</a></li>
-                <li><a class="text-muted text-decoration-none" href="#">Shipping &amp; Returns</a></li>
-                <li><a class="text-muted text-decoration-none" href="#">Contact Us</a></li>
-            </ul>
-            </div>
-            <div class="col-6 col-md-3">
-            <h6 class="fw-bold text-dark">Follow Us</h6>
-            <div class="d-flex gap-3 mt-2">
-                <a class="text-muted" href="#" aria-label="facebook"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg></a>
-                <a class="text-muted" href="#" aria-label="twitter"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg></a>
-                <a class="text-muted" href="#" aria-label="instagram"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zM12 7.177a4.823 4.823 0 100 9.646 4.823 4.823 0 000-9.646zM12 15a3 3 0 110-6 3 3 0 010 6zm4.885-9.44a1.323 1.323 0 11-2.646 0 1.323 1.323 0 012.646 0z" fill-rule="evenodd"></path></svg></a>
-            </div>
-            </div>
-        </div>
-        <div class="border-top pt-4 text-center small text-muted">© 2024 Calzado Artesanal. All Rights Reserved.</div>
-        </div>
-    </footer>
-
-    </div>
-
-    <!-- Bootstrap Bundle JS (includes Popper) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Nota: mantuve la lógica JavaScript existente (si tienes scripts personalizados, añádelos debajo) -->
+    <script></script>
     </body>
     </html>

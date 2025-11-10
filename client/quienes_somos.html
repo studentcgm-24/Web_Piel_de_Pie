@@ -6,6 +6,7 @@
     <title>Quiénes Somos</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="../client/css/quienes_somos.css">
     <link rel="stylesheet" href="../client/css/index.css">
@@ -17,179 +18,234 @@
     <body class="bg-light text-body">
 
     <div class="d-flex flex-column min-vh-100">
-    <!-- Header -->
-    <!-- NAVBAR -->
-    <header class="w-100 position-fixed top-0 start-0 z-3" style="background-color: #042c18;">
-    <div class="container-fluid">
-        <div class="d-flex align-items-center justify-content-between py-2 px-3">
-        
+            <header class="w-100 position-fixed top-0 start-0 z-3" style="background-color: #042c18;">
+                <div class="container-fluid">
+                    <div class="d-flex align-items-center justify-content-between py-2 px-3">
+                
                         <div class="d-flex align-items-center gap-2">
-                        <a href="index.html" class="d-flex align-items-center logo-container">
-                            <img 
-                            src="../client/assets/img/logooriginal.webp" 
-                            alt="Logo Piel de Pie" 
-                            class="navbar-logo"></a>
+                            <a href="index.html" class="d-flex align-items-center logo-container">
+                                <img src="../client/assets/img/logooriginal.webp" alt="Logo Piel de Pie" 
+                                class="navbar-logo"></a>
                         </div>
 
-        <!-- Navegación -->
-        <div class="d-flex align-items-center gap-4">
-            <nav class="d-none d-lg-flex align-items-center gap-4">
-            <a class="small text-decoration-none text-white" href="../client/index.html">Inicio</a>
-            <a class="small text-decoration-none text-white fw-bold border-bottom border-2 border-white pb-1" href="../client/quienes_somos.html">Quiénes Somos</a>
-            <a class="small text-decoration-none text-white" href="../client/catalogo.html">Catálogo</a>
-            <a class="small text-decoration-none text-white" href="../client/servicios.html">Servicios</a>
-            </nav>
+                        <div class="d-flex align-items-center gap-4">
+                            <nav class="d-none d-lg-flex align-items-center gap-4">
+                            <a class="small text-decoration-none text-white" href="../client/index.html">Inicio</a>
+                            <a class="small text-decoration-none text-white fw-bold border-bottom border-2 border-white pb-1" href="../client/quienes_somos.html">Quiénes Somos</a>
+                            <a class="small text-decoration-none text-white" href="../client/catalogo.html">Catálogo</a>
+                            <a class="small text-decoration-none text-white" href="../client/servicios.html">Servicios</a>
+                            </nav>
 
-        <div class="d-flex gap-2 align-items-center">
-        <!-- Botón de usuario -->
-        <button id="loginButton" class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
-            <span class="material-symbols-outlined text-white">person</span>
-        </button>
+                            <div class="d-flex gap-2 align-items-center">
+                                <button id="loginButton" class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
+                                    <span class="material-symbols-outlined text-white">person</span>
+                                </button>
 
-        <!-- Botón del carrito -->
-        <div class="position-relative">
-            <button id="cartButton" class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
-            <span class="material-symbols-outlined text-white">shopping_bag</span>
-            </button>
-            <span id="cartCountBadge" class="badge bg-danger rounded-pill position-absolute top-0 end-0 translate-middle" style="display:none;">0</span>
-        </div>
+                                <div class="position-relative">
+                                    <button id="cartButton" class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
+                                    <span class="material-symbols-outlined text-white">shopping_bag</span>
+                                    </button>
+                                    <span id="cartCountBadge" class="badge bg-danger rounded-pill position-absolute top-0 end-0 translate-middle" style="display:none;">0</span>
+                                </div>
 
-        <!-- Botón de soporte -->
-        <button class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
-            <span class="material-symbols-outlined text-white">support_agent</span>
-        </button>
-        </div>
+                                <button class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
+                                    <span class="material-symbols-outlined text-white">support_agent</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
 
-        </div>
-        </div>
+            <!-- Nos ayuda al espaciado para que el contenido no quede detrás del navbar -->
+            <div style="height:70px;"></div>
+
+            <div class="banner-carousel-wrapper">
+                <div id="pielDePieCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000" data-bs-pause="hover">
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <div class="carousel-bg" style="background-image: url('../client/assets/img/catalogo/quienessomos1.webp');">
+                            </div>
+                                <div class="carousel-overlay container-fluid">
+                                    <div class="carousel-content row gx-0 align-items-center">
+                                        <div class="col-12 col-md-6">
+                                        </div>
+                                        <div class="col-12 col-md-6 d-none d-md-block">
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <main class="container py-5 flex-grow-1" style="background-color: #FAF8F5;">
+
+                <section class="d-flex flex-column flex-md-row gap-4 align-items-center py-4">
+                    <div class="flex-fill">
+                        <h2 class="h3 fw-bold">Historia</h2>
+                        <p class="mt-3 text-muted-70">Piel de Pie, nace con la compra a los señores HALFON KORGUIDE, de nacionalidad judíos, en el año de 1981, por un valor de diez millones de pesos colombianos $10.000.000. Se inician labores con excelentes resultados, hasta que el presidente Gaviria decreto e hizo efectivo lo que el denomino como la gran apertura económica, en la que muchos <br> productores artesanos de diferentes ramos no pudieron sostener una competencia completamente desigual; razón por la cual, Piel de Pie se vio en la necesidad de cerrar operaciones.
+                        </p>
+                    </div>
+
+                    <div class="flex-fill d-grid gap-3" style="grid-template-columns:repeat(2,1fr);">
+                        <div>
+                            <div class="ratio-4-5 rounded-xl bg-cover" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuD8BsW0qCq2ZVsOEVV56_qzUSZdMj0jIea8fp--vZ0__fF6S2n5emBtf566Dw8NwTQE9mUA3QzO37caTdaghRrxV9sJtleAQ3O3Yk2kZ6PTyVtrAyNH27-4eXa0mN3t_EuNRLnxztrWlo9n2F_Fro8SqcZuMvo_RojO8r9SvEs_nEYWh51gEt80eiNXuj85MySPSGlbo61sxz5sTLzMX_a5GUxEwimMUAt0_EflDcTX9sQgOqpJZhTuIzVplKu0a4EZTDIaXCTPVTWV');"></div>
+                            <div class="mt-2">
+                                <p class="mb-1 fw-medium">Hecho a Mano</p>
+                                <p class="small text-muted-70 mb-0">Nuestros artesanos dedican horas de trabajo para asegurar que cada zapato sea una obra de arte.</p>
+                            </div>
+                        </div>
+
+                        <div class="pt-4">
+                                <div class="ratio-4-5 rounded-xl bg-cover" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuCSbqk-c4A8IMb2qIY6HTawFlEuce3rAkNsv85oscKuhPXA0gqRvMwqDHClpXDfbxhfYYz8dPYGQp7hHVrOWQeZtG7IpAYwByPa9GVjPE56c6twr-XQ4ubq2txvU4lg0WgXIl9i0dBxsZI_iR4tEPEqjQGbSQ6HGetuoPHcAkNc4xOLVTmazZU0ogOgMGgxm20iQzyjvEniUN1O7kBc6NiuFGks1hvJrujKu2G5hEkoG9rD-z4lo_z1cSoQ_C4nEIzWZ5-Iiu0Qhxro');"></div>
+                            <div class="mt-2">
+                                <p class="mb-1 fw-medium">Diseño Exclusivo y Atemporal</p>
+                                <p class="small text-muted-70 mb-0">Creamos piezas que trascienden, combinando comodidad y estilo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="text-center mt-5">
+                    <h2 class="h3 fw-bold mb-3">Nuestra Filosofía</h2>
+
+                    <div class="row g-3 mt-4 justify-content-center">
+
+                        <!-- Misión -->
+                        <div class="col-12 col-md-4 d-flex">
+                        <div class="flip-card" role="button" tabindex="0" aria-pressed="false" aria-label="Misión - hacer clic para ver más">
+                            <div class="flip-card-inner">
+                            <div class="flip-card-front d-flex flex-column align-items-center justify-content-center p-4">
+                                <div class="text-primary mb-2">
+                                <span class="material-symbols-outlined fs-2">rocket_launch</span>
+                                </div>
+                                <h3 class="h6 fw-bold mb-0">Misión</h3>
+                            </div>
+                            <div class="flip-card-back p-4 d-flex flex-column justify-content-center">
+                                <p class="small text-muted-70 mb-0">Es diseñar, producir y comercializar calzado de alta calidad exclusivo para dama, que combine comodidad, durabilidad y estilo, satisfaciendo las necesidades de nuestros clientes y contribuyendo al desarrollo del sector manufacturero nacional.</p>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+
+                        <!-- Visión -->
+                        <div class="col-12 col-md-4 d-flex">
+                        <div class="flip-card" role="button" tabindex="0" aria-pressed="false" aria-label="Visión - hacer clic para ver más">
+                            <div class="flip-card-inner">
+                            <div class="flip-card-front d-flex flex-column align-items-center justify-content-center p-4">
+                                <div class="text-primary mb-2">
+                                <span class="material-symbols-outlined fs-2">visibility</span>
+                                </div>
+                                <h3 class="h6 fw-bold mb-0">Visión</h3>
+                            </div>
+                            <div class="flip-card-back p-4 d-flex flex-column justify-content-center">
+                                <p class="small text-muted-70 mb-0">Ser una empresa líder en la industria manufacturera del calzado, reconocida a nivel nacional e internacional por la excelencia de nuestros productos, la innovación en el diseño y la sostenibilidad en nuestros procesos productivos. </p>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex">
+                        <div class="flip-card" role="button" tabindex="0" aria-pressed="false" aria-label="Valores - hacer clic para ver más">
+                            <div class="flip-card-inner">
+                            <div class="flip-card-front d-flex flex-column align-items-center justify-content-center p-4">
+                                <div class="text-primary mb-2">
+                                <span class="material-symbols-outlined fs-2">favorite</span>
+                                </div>
+                                <h3 class="h6 fw-bold mb-0">Valores</h3>
+                            </div>
+                            <div class="flip-card-back p-4 d-flex flex-column justify-content-center">
+                                <p class="small text-muted-70 mb-0">Calidad, innovación, responsabilidad y compromiso con nuestra clientela y colaboradores. Trabajamos con honestidad y respeto, promoviendo el trabajo en equipo y la mejora continua en cada etapa del proceso productivo.</p>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+
+                    </div>
+                </section>
+
+
+                <section class="text-center my-5 py-5">
+                    <h2 class="h3 fw-bold">Descubre tu Próximo Par Favorito</h2>
+                    <p class="text-muted-70 mt-3 mx-auto" style="max-width:800px;">Explora nuestra colección y encuentra el calzado que define tu estilo. Cada par es una promesa de calidad y diseño excepcional.</p>
+                    <a href="../client/catalogo.html"><button class="btn btn-primary-theme rounded-pill mt-4 px-4 py-2">Ver Nuestros Diseños</button></a>
+                </section>
+
+            </main>
+
+            <footer class="footer-custom mt-5">
+                <div class="container py-5">
+                    <div class="row gy-4">
+                    <div class="col-6 col-md-3">
+                        <h6 class="fw-bold text-white">Tienda</h6>
+                        <ul class="list-unstyled small">
+                        <li><a class="text-white text-decoration-none" href="#">Novedades</a></li>
+                        <li><a class="text-white text-decoration-none" href="#">Más vendido</a></li>
+                        <li><a class="text-white text-decoration-none" href="#">Tacones</a></li>
+                        <li><a class="text-white text-decoration-none" href="#">Calzado Plano</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <h6 class="fw-bold text-white">Acerca de</h6>
+                        <ul class="list-unstyled small">
+                        <li><a class="text-white text-decoration-none" href="#">Nuestra Historia</a></li>
+                        <li><a class="text-white text-decoration-none" href="#">Artesanos</a></li>
+                        <li><a class="text-white text-decoration-none" href="#">Trabaja con nosotros</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <h6 class="fw-bold text-white">Soporte</h6>
+                        <ul class="list-unstyled small">
+                        <li><a class="text-white text-decoration-none" href="#">PQRS</a></li>
+                        <li><a class="text-white text-decoration-none" href="#">Envío &amp; Devoluciones</a></li>
+                        <li><a class="text-white text-decoration-none" href="#">Contactos</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <h6 class="fw-bold text-white">Síguenos</h6>
+                        <div class="d-flex gap-3 mt-2">
+                        <a class="text-white" href="#"><i class="bi bi-facebook"></i></a>
+                        <a class="text-white" href="#"><i class="bi bi-twitter"></i></a>
+                        <a class="text-white" href="#"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="border-top border-light pt-4 text-center small text-white-50">
+                    © 2025 Piel de Pie. Todos los derechos reservados.
+                    </div>
+                </div>
+                </footer>
     </div>
-    </header>
 
-<!-- Espaciado para que el contenido no quede detrás del navbar -->
-<div style="height:70px;"></div>
 
-    <!-- Main content container -->
-    <main class="container py-5 flex-grow-1">
+            <script>
+            //flip de las cartas
+            (function () {
+                const cards = document.querySelectorAll('.flip-card');
 
-        <!-- Hero grid -->
-        <section class="mb-5">
-        <div class="hero-grid rounded-xl overflow-hidden">
-            <div class="hero-left bg-cover" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuBgEIZTmswgdWfYlEPJGuj4o1GBe9V_ZaKPvSU6VMY8DZC8ifts6aGY5DkiN2WhnWHvuVje4JEOMHSyi4AusvG35XNHLdrbzpfMnnTV-WmvpT6uD0qvAiZz114y_YtnRFVgTPe0Q6Ywe5Z4U02b5eu7PPJ1aaV2m6SyAVYfqjo5LwFcjFHTJCpM3IX3QkkR9B98yh5MMydhgBAPFMPzscYU6FtUQUoP2VuyVl3z91tNHc4s1IMzBP-X7s5weV0GQiotFo5DraqR8fCo');"></div>
-            <div class="hero-top-right bg-cover" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuCngVOu2NB9CfeSVoigos0k52kuQ-VAKyFgmDXOxCWuzeC_mKofbziMnw7Y4pU1AaDzUtVhfUDvV9LT5ymy7vmSz76ywC2BaiSnHmpQ56RyYK9i2c6pEls9NP7Xo_CMBnY45hixTvkljpRlc8jggwg2Gg7PnRWuf9MC1Z9egTwV4WsPBy6zQyZVs6vWGIj0UHBFVPaYAEJfu4eZfPPEV8vJu-db1P0ii0nfVWwTuhGqaZh6Nbj2GSWuRHQnzOQHDFeuYlXCgY3-A8Y8');"></div>
-            <div class="hero-bottom-right overlay-dark bg-cover d-flex align-items-end p-4" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuCu5vxhmQP6spA8X1NT3Boy4XohmSt5eNPdJY9dRUEOawbtRgu_YKMNXuv31sAhkQE7JTAZ3gy4mKtuG3f2pVyt2duqtwt9e3m9I-zZrw4i8IHaliVFEBx6r3FawugNFAWbwOWysesOo1tUGBUt4uKuTHYiIkDdTY7_5cqVz4S-W5w69RQG6Oun3jrQCFzmRbBl6d0FbXNpgZndRtL9f7ZlVdBOWB5oUshqSrwaWabW5ssGqe6qy0KmEIanEuTIKbfMZJ7ivC9z1MhH');">
-            <h1 class="h3 text-white mb-0">Nuestra Historia: Pasión en Cada Paso</h1>
-            </div>
-        </div>
-        </section>
+                cards.forEach(card => {
+                card.addEventListener('click', function (e) {
+                    if (e.target.tagName.toLowerCase() === 'a') return;
+                    this.classList.toggle('is-flipped');
+                    const pressed = this.classList.contains('is-flipped');
+                    this.setAttribute('aria-pressed', pressed);
+                });
 
-        <!-- Feature + images -->
-        <section class="d-flex flex-column flex-md-row gap-4 align-items-center py-4">
-        <div class="flex-fill">
-            <h2 class="h3 fw-bold">El Arte de Crear Calzado Único</h2>
-            <p class="mt-3 text-muted-70">Nacimos de la pasión por el diseño atemporal y la artesanía de calidad. Cada par de zapatos cuenta una historia de dedicación, desde la selección de los mejores materiales hasta el último detalle hecho a mano, creados para la mujer moderna que valora la elegancia y la autenticidad.</p>
-        </div>
+                card.addEventListener('keydown', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    this.classList.toggle('is-flipped');
+                    const pressed = this.classList.contains('is-flipped');
+                    this.setAttribute('aria-pressed', pressed);
+                    }
+                    if (e.key === 'Escape') {
+                    this.classList.remove('is-flipped');
+                    this.setAttribute('aria-pressed', false);
+                    }
+                });
+                });
+            })();
+            </script>
 
-        <div class="flex-fill d-grid gap-3" style="grid-template-columns:repeat(2,1fr);">
-            <div>
-            <div class="ratio-4-5 rounded-xl bg-cover" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuD8BsW0qCq2ZVsOEVV56_qzUSZdMj0jIea8fp--vZ0__fF6S2n5emBtf566Dw8NwTQE9mUA3QzO37caTdaghRrxV9sJtleAQ3O3Yk2kZ6PTyVtrAyNH27-4eXa0mN3t_EuNRLnxztrWlo9n2F_Fro8SqcZuMvo_RojO8r9SvEs_nEYWh51gEt80eiNXuj85MySPSGlbo61sxz5sTLzMX_a5GUxEwimMUAt0_EflDcTX9sQgOqpJZhTuIzVplKu0a4EZTDIaXCTPVTWV');"></div>
-            <div class="mt-2">
-                <p class="mb-1 fw-medium">Hecho a Mano con Amor</p>
-                <p class="small text-muted-70 mb-0">Nuestros artesanos dedican horas de trabajo para asegurar que cada zapato sea una obra de arte.</p>
-            </div>
-            </div>
-
-            <div class="pt-4">
-            <div class="ratio-4-5 rounded-xl bg-cover" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuCSbqk-c4A8IMb2qIY6HTawFlEuce3rAkNsv85oscKuhPXA0gqRvMwqDHClpXDfbxhfYYz8dPYGQp7hHVrOWQeZtG7IpAYwByPa9GVjPE56c6twr-XQ4ubq2txvU4lg0WgXIl9i0dBxsZI_iR4tEPEqjQGbSQ6HGetuoPHcAkNc4xOLVTmazZU0ogOgMGgxm20iQzyjvEniUN1O7kBc6NiuFGks1hvJrujKu2G5hEkoG9rD-z4lo_z1cSoQ_C4nEIzWZ5-Iiu0Qhxro');"></div>
-            <div class="mt-2">
-                <p class="mb-1 fw-medium">Diseño Exclusivo y Atemporal</p>
-                <p class="small text-muted-70 mb-0">Creamos piezas que trascienden las temporadas, combinando comodidad y estilo.</p>
-            </div>
-            </div>
-        </div>
-        </section>
-
-        <!-- Philosophy cards -->
-        <section class="text-center mt-5">
-        <h2 class="h3 fw-bold mb-3">Nuestra Filosofía</h2>
-        <div class="row g-3 mt-4">
-            <div class="col-12 col-md-4">
-            <div class="border rounded-xl p-4 h-100 border-theme bg-transparent d-flex flex-column align-items-center text-center">
-                <div class="text-primary mb-2"><span class="material-symbols-outlined fs-2">rocket_launch</span></div>
-                <h3 class="h6 fw-bold">Misión</h3>
-                <p class="small text-muted-70">Empoderar a la mujer a través de un calzado cómodo y elegante que la acompañe en cada paso de su vida.</p>
-            </div>
-            </div>
-            <div class="col-12 col-md-4">
-            <div class="border rounded-xl p-4 h-100 border-theme d-flex flex-column align-items-center text-center">
-                <div class="text-primary mb-2"><span class="material-symbols-outlined fs-2">visibility</span></div>
-                <h3 class="h6 fw-bold">Visión</h3>
-                <p class="small text-muted-70">Ser un referente global en calzado artesanal sostenible, reconocido por nuestra calidad e innovación.</p>
-            </div>
-            </div>
-            <div class="col-12 col-md-4">
-            <div class="border rounded-xl p-4 h-100 border-theme d-flex flex-column align-items-center text-center">
-                <div class="text-primary mb-2"><span class="material-symbols-outlined fs-2">favorite</span></div>
-                <h3 class="h6 fw-bold">Valores</h3>
-                <p class="small text-muted-70">Calidad, Artesanía, Sostenibilidad y Pasión son los pilares que definen cada una de nuestras creaciones.</p>
-            </div>
-            </div>
-        </div>
-        </section>
-
-        <!-- CTA -->
-        <section class="text-center my-5 py-5">
-        <h2 class="h3 fw-bold">Descubre tu Próximo Par Favorito</h2>
-        <p class="text-muted-70 mt-3 mx-auto" style="max-width:800px;">Explora nuestra última colección y encuentra el calzado que define tu estilo. Cada par es una promesa de calidad y diseño excepcional.</p>
-        <button class="btn btn-primary-theme rounded-pill mt-4 px-4 py-2">Ver Nuestros Diseños</button>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-light text-muted mt-5">
-        <div class="container py-5">
-        <div class="row gy-4">
-            <div class="col-6 col-md-3">
-            <h6 class="fw-bold text-dark">Shop</h6>
-            <ul class="list-unstyled small">
-                <li><a class="text-muted text-decoration-none" href="#">New Arrivals</a></li>
-                <li><a class="text-muted text-decoration-none" href="#">Best Sellers</a></li>
-                <li><a class="text-muted text-decoration-none" href="#">Heels</a></li>
-                <li><a class="text-muted text-decoration-none" href="#">Flats</a></li>
-            </ul>
-            </div>
-            <div class="col-6 col-md-3">
-            <h6 class="fw-bold text-dark">About</h6>
-            <ul class="list-unstyled small">
-                <li><a class="text-muted text-decoration-none" href="#">Our Story</a></li>
-                <li><a class="text-muted text-decoration-none" href="#">Craftsmanship</a></li>
-                <li><a class="text-muted text-decoration-none" href="#">Careers</a></li>
-            </ul>
-            </div>
-            <div class="col-6 col-md-3">
-            <h6 class="fw-bold text-dark">Support</h6>
-            <ul class="list-unstyled small">
-                <li><a class="text-muted text-decoration-none" href="#">FAQ</a></li>
-                <li><a class="text-muted text-decoration-none" href="#">Shipping &amp; Returns</a></li>
-                <li><a class="text-muted text-decoration-none" href="#">Contact Us</a></li>
-            </ul>
-            </div>
-            <div class="col-6 col-md-3">
-            <h6 class="fw-bold text-dark">Follow Us</h6>
-            <div class="d-flex gap-3 mt-2">
-                <a class="text-muted" href="#" aria-label="facebook"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg></a>
-                <a class="text-muted" href="#" aria-label="twitter"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.71v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"></path></svg></a>
-                <a class="text-muted" href="#" aria-label="instagram"><svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 016.08 2.525c.636-.247 1.363-.416 2.427-.465C9.53 2.013 9.884 2 12.315 2zM12 7.177a4.823 4.823 0 100 9.646 4.823 4.823 0 000-9.646zM12 15a3 3 0 110-6 3 3 0 010 6zm4.885-9.44a1.323 1.323 0 11-2.646 0 1.323 1.323 0 012.646 0z" fill-rule="evenodd"></path></svg></a>
-            </div>
-            </div>
-        </div>
-        <div class="border-top pt-4 text-center small text-muted">© 2024 Calzado Artesanal. All Rights Reserved.</div>
-        </div>
-    </footer>
-
-    </div>
-
-    <!-- Bootstrap Bundle JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     </body>
     </html>
