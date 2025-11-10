@@ -9,142 +9,143 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="../client/css/index.css">
-    <link rel="stylesheet" href="../client/css/index.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
     <style>
+
         body{ font-family: 'Manrope', sans-serif; }
         .hero-visual{ min-height:480px; background-size:cover; background-position:center; border-radius:1rem; }
         .service-card .bg-img{ height:220px; background-size:cover; background-position:center; border-radius:.6rem; }
         .subscribe-input{ border-radius: .6rem 0 0 .6rem; }
         .subscribe-btn{ border-radius: 0 .6rem .6rem 0; }
+        .btn-primary-theme {
+        background-color: #8B5E3C; 
+        color: #fff; 
+        border: none; 
+        transition: all 0.3s ease; 
+        }
+
+        .btn-primary-theme:hover {
+        background-color: #042c18; 
+        color: #fff;
+        }
+
     </style>
     </head>
     <body class="bg-light text-body">
         <header class="w-100 position-fixed top-0 start-0 z-3" style="background-color: #042c18;">
-    <div class="container-fluid">
-        <div class="d-flex align-items-center justify-content-between py-2 px-3">
+            <div class="container-fluid">
+                <div class="d-flex align-items-center justify-content-between py-2 px-3">
         
-                        <div class="d-flex align-items-center gap-2">
+                    <div class="d-flex align-items-center gap-2">
                         <a href="index.html" class="d-flex align-items-center logo-container">
                             <img 
                             src="../client/assets/img/logooriginal.webp" 
                             alt="Logo Piel de Pie" 
                             class="navbar-logo"></a>
+                    </div>
+                    <div class="d-flex align-items-center gap-4">
+                        <nav class="d-none d-lg-flex align-items-center gap-4">
+                        <a class="small text-decoration-none text-white" href="../client/index.html">Inicio</a>
+                        <a class="small text-decoration-none text-white" href="../client/quienes_somos.html">Quiénes Somos</a>
+                        <a class="small text-decoration-none text-white" href="../client/catalogo.html">Catálogo</a>
+                        <a class="small text-decoration-none text-white fw-bold border-bottom border-2 border-white pb-1" href="../client/servicios.html">Servicios</a>
+                        </nav>
+
+                        <div class="d-flex gap-2 align-items-center">
+                            <button id="loginButton" class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
+                                <span class="material-symbols-outlined text-white">person</span>
+                            </button>
+
+                            <div class="position-relative">
+                                <button id="cartButton" class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
+                                <span class="material-symbols-outlined text-white">shopping_bag</span>
+                                </button>
+                                <span id="cartCountBadge" class="badge bg-danger rounded-pill position-absolute top-0 end-0 translate-middle" style="display:none;">0</span>
+                            </div>
+
+                            <button class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
+                            <span class="material-symbols-outlined text-white">support_agent</span>
+                            </button>
                         </div>
 
-        <!-- Navegación -->
-        <div class="d-flex align-items-center gap-4">
-            <nav class="d-none d-lg-flex align-items-center gap-4">
-            <a class="small text-decoration-none text-white" href="../client/index.html">Inicio</a>
-            <a class="small text-decoration-none text-white" href="../client/quienes_somos.html">Quiénes Somos</a>
-            <a class="small text-decoration-none text-white" href="../client/catalogo.html">Catálogo</a>
-            <a class="small text-decoration-none text-white fw-bold border-bottom border-2 border-white pb-1" href="../client/servicios.html">Servicios</a>
-            </nav>
-
-        <div class="d-flex gap-2 align-items-center">
-        <!-- Botón de usuario -->
-        <button id="loginButton" class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
-            <span class="material-symbols-outlined text-white">person</span>
-        </button>
-
-        <!-- Botón del carrito -->
-        <div class="position-relative">
-            <button id="cartButton" class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
-            <span class="material-symbols-outlined text-white">shopping_bag</span>
-            </button>
-            <span id="cartCountBadge" class="badge bg-danger rounded-pill position-absolute top-0 end-0 translate-middle" style="display:none;">0</span>
-        </div>
-
-        <!-- Botón de soporte -->
-        <button class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
-            <span class="material-symbols-outlined text-white">support_agent</span>
-        </button>
-        </div>
-
-        </div>
-        </div>
-    </div>
-    </header>
+                    </div>
+                </div>
+            </div>
+        </header>
 
 <!-- Espaciado para que el contenido no quede detrás del navbar -->
 <div style="height:70px;"></div>
     <main class="py-5">
         <div class="container">
 
-        <!-- Hero -->
-        <section class="mb-5">
-            <div class="hero-visual p-4 d-flex flex-column align-items-center justify-content-center text-center text-white" style="background-image: linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.45)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuBfdYzVawx1Kb8lsWgyP3s3xdWocOCB0wQqUuRWpCeuSFl_B8n2D0vZ3KvMthvJ2NB2GGw6ZRNHVG_y41geKQOGNjiosowR3Nbet2deIr3eIw-hEWOkGL90eA5XAxT4JD9XsO2Vu7dBuC8vF4iQJRSunNg8h858v34haPkTFVeC1vhpNZXjE8L--R7wlsReooIsWmknEvva80OQDVizc6hqVfJBg9cEVvJxa4hLKS3Js6yM-DvhIM3bfPYMiIGrqJvuor6jGn0hbWbM');">
-            <div class="mb-3">
-                <h1 class="display-6 fw-bold">Personalized Experiences, Exceptional Shoes</h1>
-                <p class="lead">Discover our commitment to quality, craftsmanship, and customer satisfaction with our exclusive services.</p>
-            </div>
-            <a href="#services" class="btn btn-danger btn-lg">Explore Our Services</a>
-            </div>
-        </section>
+            <section class="mb-5">
+                <div class="hero-visual p-4 d-flex flex-column align-items-center justify-content-center text-center text-white" style="background-image: linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.45)), url(../client/assets/img/catalogo/servicios1.webp);">
+                    <div class="mb-3">
+                        <h1 class="display-6 fw-bold">Experiencias personalizadas, zapatos excepcionales</h1>
+                        <p class="lead">Descubre nuestro compromiso con la calidad, la artesanía y la satisfacción del cliente con nuestros servicios.</p>
+                    </div>
+                    <a href="#services"><button class="btn btn-primary-theme rounded-pill mt-4 px-4 py-2">Ver Nuestros Diseños</button></a>
+                </div>
+            </section>
 
-        <!-- Services grid -->
-        <section id="services" class="mb-5">
-            <div class="text-center mb-4">
-            <h2 class="h3 fw-bold">Our Services</h2>
-            </div>
-            <div class="row g-4">
+            <section id="services" class="mb-5">
+                <div class="text-center mb-4">
+                    <h2 class="h3 fw-bold">Nuestros Servicios</h2>
+                </div>
 
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="service-card">
-                <div class="bg-img" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuDhMaf7CQ6GuegXa8bLkUG_wDVcPDYrKJ2lnQi6-aDV6IGziRbOd7QOo6E5pZIatrSvWQtFa3lza6OqCxIWPzoZ98EzTlNOUZZHv_ol49gW1C3Ub2rhvT-0IbUn5oXvobm_CQkzE4iEtAFVYCTnDGRCF2U9QpPZnFdkd4918cEflG4QDHc24c1nO9KVulDDtjnf4z96FKhtPb3kukHa_nyPbuT1f-cTBoXFtuGvQimEqA89PuHigsjow16Hjb-csQmK9D53q_0qXkTo');"></div>
-                <div class="mt-3">
-                    <h5 class="fw-bold">Personalized Fitting</h5>
-                    <p class="text-muted small">Experience our in-store or virtual fitting consultation to find the perfect size and style for you.</p>
-                </div>
-                </div>
-            </div>
+                <div class="row g-4 justify-content-center text-center">
 
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="service-card">
-                <div class="bg-img" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuDZQnmo0er883pMSUK7nRBxvtg8zdo77Bd4RnLQQmTHfqqYA0lN-mZH7juF9Rexj6x2XBmG3hWbTPROB1nH3lzSr1bzLBoA06Q3Jyl90v3H4VHF6hU2badExkUZmp3pAM7EPORzWXR5ZYpHmX8ToQ3cLwVHO0GAj5_yoTmNwNPAhhHWXCVcCNkRaAC9HUKqkKEsmKm_9YxhV9q_dQAdKBveBUZLApqQolr-ZOqrSN_m0FZKl0qxn2yAm5WAY3WQdrB-UM8oHonebAoc');"></div>
-                <div class="mt-3">
-                    <h5 class="fw-bold">Custom Design</h5>
-                    <p class="text-muted small">Bring your vision to life with our bespoke shoe design service, from material selection to final creation.</p>
-                </div>
-                </div>
-            </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="service-card">
+                            <div class="bg-img"
+                            style="background-image:url(../client/assets/img/catalogo/servicios2.webp);">
+                            </div>
+                            <div class="mt-4">
+                            <h5 class="fw-bold">Ajuste Personalizado</h5>
+                            <p class="text-muted small">Consultas de ajuste de forma presencial o virtual para determinar estilos, colores y talla.</p>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="service-card">
-                <div class="bg-img" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuBKVz2ld3zdFanx0-_oz_zM8_uGyx6O4R5JGpBhphBLJrhuSk_8haqIL2jy0CKZO0aHgJ_Gax0Lj46EGjvKe9E91xypiOsJjVaOtlzh4SPLICh0HRcuquhlb7rOoKs2lUGWXoVr-RWPjsKbx7bsakZGW-sLwg4HS09Ja23Ii-GSiuQaSjmgCev0U1c2BSRO9VbrIhqajMMUIfDm0wpas1cSThkwq6_axJGgHqkn7kFIdjy7gir6WYbBmngiIObK1xQ3HAqzhTGFYh1n');"></div>
-                <div class="mt-3">
-                    <h5 class="fw-bold">Shoe Care &amp; Repair</h5>
-                    <p class="text-muted small">Prolong the life of your footwear with our professional cleaning, maintenance, and repair services.</p>
-                </div>
-                </div>
-            </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="service-card">
+                            <div class="bg-img"
+                            style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuDZQnmo0er883pMSUK7nRBxvtg8zdo77Bd4RnLQQmTHfqqYA0lN-mZH7juF9Rexj6x2XBmG3hWbTPROB1nH3lzSr1bzLBoA06Q3Jyl90v3H4VHF6hU2badExkUZmp3pAM7EPORzWXR5ZYpHmX8ToQ3cLwVHO0GAj5_yoTmNwNPAhhHWXCVcCNkRaAC9HUKqkKEsmKm_9YxhV9q_dQAdKBveBUZLApqQolr-ZOqrSN_m0FZKl0qxn2yAm5WAY3WQdrB-UM8oHonebAoc');">
+                            </div>
+                            <div class="mt-4">
+                            <h5 class="fw-bold">Diseño a medida</h5>
+                            <p class="text-muted small">Se hace realidad su visión con nuestro servicio de diseño a la medida, un desarrollo en conjunto con el cliente.</p>
+                            </div>
+                        </div>
+                    </div>
 
-            <div class="col-12 col-sm-6 col-lg-3">
-                <div class="service-card">
-                <div class="bg-img" style="background-image:url('https://lh3.googleusercontent.com/aida-public/AB6AXuA01XHyYROLcRqyqYGZ2nEr98g0FZ-C9JQcBbxaYJjAtECz6G6BShRemE4MZjsCQ7F8VS3ogJF4Yc_zAmbwV3I06SJO1UuouUvVgwSRkYijd6alb9Y3syJsra5NTKKP_PFcjYIEzN8Q-qG0WmqQZLPn6FReMXY0zI9V_94ll9GV49nVtn_5-9ga6uksnRpaj0pOWLLMF5gH0TWO0SPg6FTM7XoZKClyCKlkky2FEDRLUnY-8-HBufLXe0O_3CPnM8OQiE5s4M0Hgama');"></div>
-                <div class="mt-3">
-                    <h5 class="fw-bold">Private Showings</h5>
-                    <p class="text-muted small">Book an exclusive appointment for a private and personalized shopping experience with our stylists.</p>
-                </div>
-                </div>
-            </div>
+                    <div class="col-12 col-sm-6 col-lg-3">
+                        <div class="service-card">
+                            <div class="bg-img"
+                            style="background-image:url(../client/assets/img/catalogo/servicios3.webp);">
+                            </div>
+                            <div class="mt-4">
+                            <h5 class="fw-bold">Cuidado & reparación del calzado</h5>
+                            <p class="text-muted small">Ejecución de limpieza, mantenimiento y reparación del calzado, para poder prolongar más su vida útil.</p>
+                            </div>
+                        </div>
+                    </div>
 
-            </div>
-        </section>
+                </div>
+            </section>
 
-        <!-- Newsletter -->
+
         <section class="bg-white rounded-3 p-4">
             <div class="d-flex flex-column align-items-center text-center gap-3 p-3">
-            <h3 class="h4 fw-bold mb-0">Stay in the know</h3>
-            <p class="text-muted small mb-0">Sign up for our newsletter to get the latest news, updates, and special offers.</p>
+            <h3 class="h4 fw-bold mb-0">Mantente informado</h3>
+            <p class="text-muted small mb-0">Registrate para recibir información sobre los lanzamientos de nuevo calzado y de ofertas especiales.</p>
             <form class="d-flex mt-3 w-100 justify-content-center">
                 <div class="input-group w-100 w-md-50" style="max-width:520px;">
-                <input type="email" class="form-control subscribe-input" placeholder="Enter your email" aria-label="Correo" />
-                <button class="btn btn-danger subscribe-btn" type="submit">Subscribe</button>
-                </div>
+                <input type="email" class="form-control subscribe-input" placeholder="Email" aria-label="Correo" />
+                <button class="btn btn-danger subscribe-btn" type="submit">Registrarse</button>
             </form>
             </div>
         </section>
@@ -194,6 +195,6 @@
             </div>
             </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script></script>
     </body>
     </html>
