@@ -3,13 +3,12 @@
     <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Quiénes Somos - Calzado Artesanal</title>
+    <title>Quiénes Somos</title>
 
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- Google Fonts & Material Symbols -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="../client/css/quienes_somos.css">
+    <link rel="stylesheet" href="../client/css/index.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
@@ -19,44 +18,55 @@
 
     <div class="d-flex flex-column min-vh-100">
     <!-- Header -->
-    <header class="sticky-top bg-light border-bottom" style="backdrop-filter: blur(6px);">
-        <div class="container-fluid">
-        <div class="d-flex align-items-center justify-content-between py-3 px-3 px-sm-4">
-            <div class="d-flex align-items-center gap-3">
-            <div style="width:36px;height:36px;" class="text-primary d-flex align-items-center justify-content-center">
-                <svg width="28" height="28" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M24 4H6V17.3333V30.6667H24V44H42V30.6667V17.3333H24V4Z" fill-rule="evenodd"></path></svg>
-            </div>
-            <h1 class="h5 mb-0 fw-bold">Calzado Artesanal</h1>
-            </div>
+    <!-- NAVBAR -->
+    <header class="w-100 position-fixed top-0 start-0 z-3" style="background-color: #042c18;">
+    <div class="container-fluid">
+        <div class="d-flex align-items-center justify-content-between py-2 px-3">
+        
+                        <div class="d-flex align-items-center gap-2">
+                        <a href="index.html" class="d-flex align-items-center logo-container">
+                            <img 
+                            src="../client/assets/img/logooriginal.webp" 
+                            alt="Logo Piel de Pie" 
+                            class="navbar-logo"></a>
+                        </div>
 
-            <div class="d-flex align-items-center gap-3 flex-grow-1 justify-content-end">
-            <nav class="d-none d-lg-flex align-items-center gap-3 me-3">
-                <a class="small text-decoration-none text-body" href="../client/index.html">Inicio</a>
-                <a class="small text-decoration-none text-body fw-bold" href="../client/quienes_somos.html">Quiénes Somos</a>
-                <a class="small text-decoration-none text-body" href="../client/catalogo.html">Catálogo</a>
-                <a class="small text-decoration-none text-body" href="../client/servicios.html">Servicios</a>
+        <!-- Navegación -->
+        <div class="d-flex align-items-center gap-4">
+            <nav class="d-none d-lg-flex align-items-center gap-4">
+            <a class="small text-decoration-none text-white" href="../client/index.html">Inicio</a>
+            <a class="small text-decoration-none text-white fw-bold border-bottom border-2 border-white pb-1" href="../client/quienes_somos.html">Quiénes Somos</a>
+            <a class="small text-decoration-none text-white" href="../client/catalogo.html">Catálogo</a>
+            <a class="small text-decoration-none text-white" href="../client/servicios.html">Servicios</a>
             </nav>
 
-            <div class="d-flex gap-2 align-items-center">
-                <button class="btn btn-light rounded-circle d-flex align-items-center justify-content-center" style="width:40px;height:40px;" aria-label="perfil">
-                <span class="material-symbols-outlined">person</span>
-                </button>
+        <div class="d-flex gap-2 align-items-center">
+        <!-- Botón de usuario -->
+        <button id="loginButton" class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
+            <span class="material-symbols-outlined text-white">person</span>
+        </button>
 
-                <div class="position-relative">
-                <button id="cartButton" class="btn btn-light rounded-circle d-flex align-items-center justify-content-center cart-icon-wrap" style="width:44px;height:44px;" aria-label="carrito">
-                    <span class="material-symbols-outlined">shopping_bag</span>
-                </button>
-                <span id="cartCountBadge" class="badge bg-danger rounded-pill cart-badge" style="display:none;">0</span>
-                </div>
+        <!-- Botón del carrito -->
+        <div class="position-relative">
+            <button id="cartButton" class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
+            <span class="material-symbols-outlined text-white">shopping_bag</span>
+            </button>
+            <span id="cartCountBadge" class="badge bg-danger rounded-pill position-absolute top-0 end-0 translate-middle" style="display:none;">0</span>
+        </div>
 
-                <button class="btn btn-light rounded-circle d-flex align-items-center justify-content-center" style="width:40px;height:40px;" aria-label="soporte">
-                <span class="material-symbols-outlined">support_agent</span>
-                </button>
-            </div>
-            </div>
+        <!-- Botón de soporte -->
+        <button class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
+            <span class="material-symbols-outlined text-white">support_agent</span>
+        </button>
+        </div>
+
         </div>
         </div>
+    </div>
     </header>
+
+<!-- Espaciado para que el contenido no quede detrás del navbar -->
+<div style="height:70px;"></div>
 
     <!-- Main content container -->
     <main class="container py-5 flex-grow-1">

@@ -9,6 +9,20 @@
     --accent-sage:#b2bba4;
     --font-display: 'Be Vietnam Pro', sans-serif;
     }
+    
+    .nav-icon-btn {
+    transition: all 0.3s ease;
+    }
+
+    .nav-icon-btn:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: scale(1.1);
+    }
+
+    .nav-icon-btn:hover span {
+    color: #ffcc00; /* color del ícono al pasar el mouse */
+    }
+
     html.light { background: var(--background-light); color: var(--text-light); }
     html.dark  { background: var(--background-dark); color: var(--text-dark); }
     body { font-family: var(--font-display); background: transparent; }

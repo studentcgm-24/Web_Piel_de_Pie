@@ -1,6 +1,6 @@
 
         :root{
-        --primary: #D2B48C;
+        --primary: #8B5E3C;
         --background-light:#F8F6F4;
         --background-dark:#221016;
         --text-light:#4A4A4A;
@@ -11,6 +11,20 @@
         --border-dark:#4A4A4A;
         --font-display: 'Manrope', sans-serif;
         }
+
+        .nav-icon-btn {
+        transition: all 0.3s ease;
+        }
+
+        .nav-icon-btn:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+        transform: scale(1.1);
+        }
+
+        .nav-icon-btn:hover span {
+        color: #ffcc00; /* color del ícono al pasar el mouse */
+        }
+
         html.light { background-color: var(--background-light); color: var(--text-light); }
         html.dark  { background-color: var(--background-dark); color: var(--text-dark); }
         body { font-family: var(--font-display); background-color: transparent; }
