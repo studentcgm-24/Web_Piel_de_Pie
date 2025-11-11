@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="stylesheet" href="../Productos/catalogo_calzado.css">
+<title>Catálogo - Calzado para Dama</title>
+
+<!-- Estilos (puedes moverlos a un archivo .css) -->
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="logo">PdP</div>
+    <div>
+      <h1>Piel de Pie</h1>
+      <div style="font-size:.82rem; color:var(--muted)">Calzado Artezanal</div>
+    </div>
+  </div>
+
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#" class="active">Catálogo</a>
+    <a href="#">Sobre Nosotros</a>
+    <a href="#">Contacto</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Catálogo de calzado para dama</h2>
+  <p>Selecciona por tipo o talla. Productos cuidadosamente seleccionados.</p>
+</section>
+
+<section class="toolbar" aria-label="Filtros">
+  <div class="filtro">
+    <label for="tipo" style="color:var(--muted);font-weight:600;margin-right:6px">Tipo</label>
+    <select id="tipo">
+      <option value="">Todos</option>
+      <option value="Tacones">Tacones</option>
+      <option value="Botines">Botines</option>
+      <option value="Sandalias">Sandalias</option>
+      <option value="Zapatillas">Zapatillas</option>
+      <option value="Bailarinas">Bailarinas</option>
+    </select>
+  </div>
+
+  <div class="filtro">
+    <label for="talla" style="color:var(--muted);font-weight:600;margin-right:6px">Talla</label>
+    <select id="talla">
+      <option value="">Todas</option>
+      <option>35</option><option>36</option><option>37</option><option>38</option><option>39</option>
+    </select>
+  </div>
+
+  <div class="buscar" style="margin-left:6px;">
+    <input id="q" type="search" placeholder="Buscar producto (ej. botines, beige)" />
+  </div>
+
+  <div>
+    <button class="filtrar" id="btnFiltrar">Aplicar filtros</button>
+  </div>
+</section>
+
+<!-- GRID DE PRODUCTOS -->
+<main class="grid" id="gridProductos" aria-live="polite">
+
+  <!-- Tarjeta 1 -->
+  <article class="card" data-tipo="Tacones" data-marca="Marca A" data-nombre="Tacones Rosados Clásicos" data-talla="36">
+    <div class="media-wrap">
+      <span class="badge">Nuevo</span>
+      <img class="media" src="../Productos/Img/Tacones Rosados Clasicos2.jpeg" alt="Tacones rosados">
+    </div>
+    <div class="card-body">
+      <h3 class="titulo">Tacones Rosados Clásicos</h3>
+      <div class="precio">$ 120.000</div>
+      <div class="row-actions">
+        <button class="btn btn-det" onclick="verDetalles(this)">Ver detalles</button>
+        <button class="btn btn-buy" onclick="comprar('Tacones Rosados Clásicos')">Comprar</button>
+      </div>
+    </div>
+  </article>
+
+  <!-- Tarjeta 2 -->
+  <article class="card" data-tipo="Botines" data-marca="Marca B" data-nombre="Botines de Cuero Marrón" data-talla="38">
+    <div class="media-wrap">
+      <img class="media" src="../Productos/Img/Botines de cuero marron.jpeg" alt="Botines de cuero marrón">
+    </div>
+    <div class="card-body">
+      <h3 class="titulo">Botines de Cuero Marrón</h3>
+      <div class="precio">$ 180.000</div>
+      <div class="row-actions">
+        <button class="btn btn-det" onclick="verDetalles(this)">Ver detalles</button>
+        <button class="btn btn-buy" onclick="comprar('Botines de Cuero Marrón')">Comprar</button>
+      </div>
+    </div>
+  </article>
+
+  <!-- Tarjeta 3 -->
+  <article class="card" data-tipo="Bailarinas" data-marca="Marca C" data-nombre="Bailarinas Beige Esenciales" data-talla="37">
+    <div class="media-wrap">
+      <img class="media" src="../Productos/Img/Bailarinas Beige Esenciales.jpeg" alt="Bailarinas beige">
+    </div>
+    <div class="card-body">
+      <h3 class="titulo">Bailarinas Beige Esenciales</h3>
+      <div class="precio">$ 95.000</div>
+      <div class="row-actions">
+        <button class="btn btn-det" onclick="verDetalles(this)">Ver detalles</button>
+        <button class="btn btn-buy" onclick="comprar('Bailarinas Beige Esenciales')">Comprar</button>
+      </div>
+    </div>
+  </article>
+
+  <!-- Tarjeta 4 -->
+  <article class="card" data-tipo="Sandalias" data-marca="Marca A" data-nombre="Sandalias Joya Veraniegas" data-talla="36">
+    <div class="media-wrap">
+      <img class="media" src="../Productos/Img/Sandalias Joya Veraniegas.jpeg" alt="Sandalias con joya">
+    </div>
+    <div class="card-body">
+      <h3 class="titulo">Sandalias Joya Veraniegas</h3>
+      <div class="precio">$ 110.000</div>
+      <div class="row-actions">
+        <button class="btn btn-det" onclick="verDetalles(this)">Ver detalles</button>
+        <button class="btn btn-buy" onclick="comprar('Sandalias Joya Veraniegas')">Comprar</button>
+      </div>
+    </div>
+  </article>
+
+  <!-- Tarjeta 5 -->
+  <article class="card" data-tipo="Zapatillas" data-marca="Marca B" data-nombre="Zapatillas Blancas Urbanas" data-talla="39">
+    <div class="media-wrap">
+      <img class="media" src="../Productos/Img/Zapatillas Blancas Urbanas.jpeg" alt="Zapatillas blancas">
+    </div>
+    <div class="card-body">
+      <h3 class="titulo">Zapatillas Blancas Urbanas</h3>
+      <div class="precio">$ 130.000</div>
+      <div class="row-actions">
+        <button class="btn btn-det" onclick="verDetalles(this)">Ver detalles</button>
+        <button class="btn btn-buy" onclick="comprar('Zapatillas Blancas Urbanas')">Comprar</button>
+      </div>
+    </div>
+  </article>
+
+  <!-- Tarjeta 6 -->
+  <article class="card" data-tipo="Mocasines" data-marca="Marca C" data-nombre="Mocasines Clásicos Negros" data-talla="38">
+    <div class="media-wrap">
+      <img class="media" src="../Productos/Img/Mocasines Clásicos Negros2.jpeg" alt="Mocasines clásicos negros">
+    </div>
+    <div class="card-body">
+      <h3 class="titulo">Mocasines Clásicos Negros</h3>
+      <div class="precio">$ 145.000</div>
+      <div class="row-actions">
+        <button class="btn btn-det" onclick="verDetalles(this)">Ver detalles</button>
+        <button class="btn btn-buy" onclick="comprar('Mocasines Clásicos Negros')">Comprar</button>
+      </div>
+    </div>
+  </article>
+
+  <!-- Puedes clonar más tarjetas abajo -->
+</main>
+
+<footer>
+  <div style="max-width:1100px;margin:0 auto;padding:6px 20px;">
+    <div style="margin-bottom:6px;">FAQs · Envíos y Devoluciones ·</div>
+    <div style="font-size:0.9rem;color:var(--muted)">© 2025 Calzado Artesanal Piel de Pie - Todos los derechos reservados.</div>
+  </div>
+</footer>
+
+<!-- Script: filtros simples y acciones -->
+<script>
+  // Filtrado simple por atributos data-*
+  const btnFiltrar = document.getElementById('btnFiltrar');
+  const grid = document.getElementById('gridProductos');
+
+  btnFiltrar.addEventListener('click', () => {
+    const tipo = document.getElementById('tipo').value.toLowerCase();
+    const talla = document.getElementById('talla').value;
+    const marca = document.getElementById('marca').value.toLowerCase();
+    const q = (document.getElementById('q').value || '').toLowerCase();
+
+    const cards = grid.querySelectorAll('.card');
+    cards.forEach(card => {
+      const nombre = card.dataset.nombre.toLowerCase();
+      const cardTipo = (card.dataset.tipo || '').toLowerCase();
+      const cardMarca = (card.dataset.marca || '').toLowerCase();
+      const cardTalla = card.dataset.talla || '';
+
+      let visible = true;
+      if (tipo && tipo !== cardTipo) visible = false;
+      if (marca && marca !== cardMarca) visible = false;
+      if (talla && talla !== cardTalla) visible = false;
+      if (q && !nombre.includes(q)) visible = false;
+
+      card.style.display = visible ? 'flex' : 'none';
+    });
+  });
+
+  // Botones de acción
+  function verDetalles(btn){
+    const card = btn.closest('.card');
+    const nombre = card.dataset.nombre;
+    const marca = card.dataset.marca;
+    const precio = card.querySelector('.precio').textContent;
+    alert(`${nombre}\nPrecio: ${precio}\n\nCalidad y Precio es nuesrto lema`);
+  }
+
+  function comprar(nombre){
+    alert(`Añadido al carrito: ${nombre}\n`);
+  }
+
+  // Buscar al escribir (Enter para filtrar rápido)
+  document.getElementById('q').addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      btnFiltrar.click();
+    }
+  });
+</script>
+</body>
+</html>
