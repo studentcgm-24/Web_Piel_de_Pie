@@ -1,48 +1,94 @@
-    :root{
-    --primary:#b87353;
-    --background-light:#f8f5f2;
-    --background-dark:#221810;
-    --text-light:#333333;
-    --text-dark:#f8f5f2;
-    --accent-beige:#d4c1a7;
-    --accent-rose:#e5d4d2;
-    --accent-sage:#b2bba4;
-    --font-display: 'Be Vietnam Pro', sans-serif;
-    }
-    
-    .nav-icon-btn {
-    transition: all 0.3s ease;
-    }
+        :root{
+        --primary:#b87353;
+        --background-light:#f8f5f2;
+        --background-dark:#221810;
+        --text-light:#333333;
+        --text-dark:#f8f5f2;
+        --accent-beige:#d4c1a7;
+        --accent-rose:#e5d4d2;
+        --accent-sage:#b2bba4;
+        --font-display: 'Be Vietnam Pro', sans-serif;
+        }
+        
+        .nav-icon-btn {
+        transition: all 0.3s ease;
+        }
 
-    .nav-icon-btn:hover {
-    background-color: rgba(255, 255, 255, 0.15);
-    transform: scale(1.1);
-    }
+        .nav-icon-btn:hover {
+        background-color: rgba(255, 255, 255, 0.15);
+        transform: scale(1.1);
+        }
 
-    .nav-icon-btn:hover span {
-    color: #ffcc00; /* color del ícono al pasar el mouse */
-    }
+        .nav-icon-btn:hover span {
+        color: #ffcc00; /* color del ícono al pasar el mouse */
+        }
 
-    html.light { background: var(--background-light); color: var(--text-light); }
-    html.dark  { background: var(--background-dark); color: var(--text-dark); }
-    body { font-family: var(--font-display); background: transparent; }
-    .material-symbols-outlined{ font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-    .bg-cover{ background-size:cover; background-position:center; }
-    .rounded-lg { border-radius: 1rem !important; }
-    .card-hover-zoom img{ transition: transform .3s ease; }
-    .card-hover-zoom:hover img{ transform: scale(1.05); }
-    .ratio-4-5{ position: relative; width:100%; padding-top: calc(5 / 4 * 100%); }
-    .ratio-4-5 > img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
-    .hero-60vh{ height:60vh; min-height:400px; }
-    .bg-accent-rose-30{ background-color: rgba(229,212,210,0.30); }
-    .btn-primary-theme{ background-color: var(--primary); border-color: var(--primary); color:#fff; }
-    .btn-primary-theme:hover{ filter:brightness(.95); }
-    /* Offcanvas specific tweaks */
-    .offcanvas-end{ width: 880px; max-width: 100%; }
-    @media(max-width:991px){ .offcanvas-end{ width:100%; } }
-    /* Preserve active button styles */
-    .btn-outline-secondary.active, .btn-outline-secondary.active:focus{ background-color:#333; color:#fff; border-color: #333; }
-    .color-swatch{ width:36px; height:36px; border-radius:50%; border:1px solid rgba(0,0,0,0.08); }
-    .color-swatch.selected{ outline:3px solid rgba(0,0,0,0.12); }
-    /* Toast positioning */
-    #cartToast{ position: fixed; right: 1rem; bottom: 1rem; z-index: 1200; }
+            .text-shadow{ text-shadow: 0 6px 18px rgba(0,0,0,0.35); }
+        .cart-badge{ position: absolute; top: -6px; right: -6px; }
+        .cart-icon-wrap{ position: relative; }
+
+                /* Media box usando background-image para garantizar cover */
+        .product-media {
+        width: 100%;
+        aspect-ratio: 4 / 5; /* mismo ratio que usabas con .ratio */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 220px; /* garantiza que no colapse */
+        }
+
+        /* pequeño ajuste para la vista lista (si la usas) */
+        .list-view .product-media { aspect-ratio: auto; min-height: 160px; }
+
+        /* visibilidad forzada para debugging (puedes quitar después) */
+        .product-media.debug { outline: 2px dashed rgba(0,0,0,0.08); }
+
+
+        /* Product card small tweaks */
+        .card-hover-zoom { transition: transform .35s ease, box-shadow .35s ease; border-radius: .75rem; overflow: hidden; }
+        .card-hover-zoom:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 10px 30px rgba(4,28,24,.12); }
+
+        /* Grid / list toggle */
+        .grid-view .product-card { display:block; }
+        .list-view .product-card { display:flex; gap:1rem; align-items:center; }
+
+        /* color swatches in offcanvas */
+        .color-swatch { width:28px; height:28px; border-radius:50%; display:inline-block; border:1px solid rgba(0,0,0,0.08); }
+        .color-swatch.selected { outline:3px solid rgba(0,0,0,0.08); transform:translateY(-2px); }
+
+        /* Filters area */
+        .filters-bar { background: #fff; border-radius: .75rem; padding: .9rem; box-shadow: 0 6px 18px rgba(4,28,24,.04); }
+
+        /* pagination */
+        .page-item .page-link { color:var(--dark); }
+
+        /* small responsive card image fix for list view */
+        .product-thumb { width:100%; height:100%; object-fit:cover; }
+        .product-thumb.list { width:160px; height:160px; object-fit:cover; border-radius:.5rem; }
+
+        footer.footer-custom { background-color: #0d3b28; color: #fff; width: 100%; }
+        footer.footer-custom a:hover { color: #c8e6c9; }
+
+        html.light { background: var(--background-light); color: var(--text-light); }
+        html.dark  { background: var(--background-dark); color: var(--text-dark); }
+        body { font-family: var(--font-display); background: transparent; }
+        .material-symbols-outlined{ font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .bg-cover{ background-size:cover; background-position:center; }
+        .rounded-lg { border-radius: 1rem !important; }
+        .card-hover-zoom img{ transition: transform .3s ease; }
+        .card-hover-zoom:hover img{ transform: scale(1.05); }
+        .ratio-4-5{ position: relative; width:100%; padding-top: calc(5 / 4 * 100%); }
+        .ratio-4-5 > img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+        .hero-60vh{ height:60vh; min-height:400px; }
+        .bg-accent-rose-30{ background-color: rgba(229,212,210,0.30); }
+        .btn-primary-theme{ background-color: var(--primary); border-color: var(--primary); color:#fff; }
+        .btn-primary-theme:hover{ filter:brightness(.95); }
+        /* Offcanvas specific tweaks */
+        .offcanvas-end{ width: 880px; max-width: 100%; }
+        @media(max-width:991px){ .offcanvas-end{ width:100%; } }
+        /* Preserve active button styles */
+        .btn-outline-secondary.active, .btn-outline-secondary.active:focus{ background-color:#333; color:#fff; border-color: #333; }
+        .color-swatch{ width:36px; height:36px; border-radius:50%; border:1px solid rgba(0,0,0,0.08); }
+        .color-swatch.selected{ outline:3px solid rgba(0,0,0,0.12); }
+        /* Toast positioning */
+        #cartToast{ position: fixed; right: 1rem; bottom: 1rem; z-index: 1200; }
