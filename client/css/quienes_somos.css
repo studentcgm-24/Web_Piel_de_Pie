@@ -25,6 +25,21 @@
         color: #ffcc00; 
         }
         
+        .nav-icon-link {
+        color: white; 
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%; 
+        text-decoration: none; 
+        transition: background-color 0.3s ease;
+        }
+        .nav-icon-link:hover {
+            background-color: rgba(255, 255, 255, 0.1); 
+        }
+        
         .banner-carousel-wrapper {
         width: 100%;
         overflow: hidden;
@@ -119,7 +134,6 @@
         align-items: stretch;
         }
 
-
         .flip-card-inner {
         width: 100%;
         position: relative;
@@ -129,7 +143,7 @@
         display: flex;
         }
 
-        /* caras */
+        /* caras de las cards */
         .flip-card-front,
         .flip-card-back {
         backface-visibility: hidden;
@@ -191,7 +205,6 @@
         .flip-card-back p { font-size: .9rem; }
         }
 
-
         html.light { background-color: var(--background-light); color: var(--text-light); }
         html.dark  { background-color: var(--background-dark); color: var(--text-dark); }
         body { font-family: var(--font-display); background-color: transparent; }
@@ -204,7 +217,6 @@
         .text-theme { color: var(--text-light) !important; }
         html.dark .text-theme { color: var(--text-dark) !important; }
 
-        /* Maintain hero proportions using padding-top trick */
         .pt-60vh { padding-top: 60vh; max-height: 600px; }
         .ratio-4-5 { position: relative; width: 100%; padding-top: calc(5 / 4 * 100%); }
         .ratio-4-5 > * { position: absolute; inset: 0; }

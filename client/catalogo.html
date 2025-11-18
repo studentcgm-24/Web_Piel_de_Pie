@@ -18,706 +18,679 @@
     <body class="bg-light text-body">
 
     <div class="d-flex flex-column min-vh-100">
-    <!-- Header -->
-    <header class="w-100 position-fixed top-0 start-0 z-3" style="background-color: #042c18;">
-        <div class="container-fluid">
-        <div class="d-flex align-items-center justify-content-between py-2 px-3">
-        
-        <!-- Logo -->
-                        <div class="d-flex align-items-center gap-2">
-                        <a href="index.html" class="d-flex align-items-center logo-container">
-                            <img 
-                            src="../client/assets/img/logooriginal.webp" 
-                            alt="Logo Piel de Pie" 
-                            class="navbar-logo"></a>
+
+                <header class="w-100 position-fixed top-0 start-0 z-3" style="background-color: #042c18;">
+                        <div class="container-fluid">
+                                <div class="d-flex align-items-center justify-content-between py-2 px-3">
+                        
+                                    <div class="d-flex align-items-center gap-2">
+                                        <a href="index.html" class="d-flex align-items-center logo-container">
+                                            <img 
+                                            src="../client/assets/img/logooriginal.webp" 
+                                            alt="Logo Piel de Pie" 
+                                            class="navbar-logo"></a>
+                                    </div>
+
+
+                                        <div class="d-flex align-items-center gap-4">
+                                            <nav class="d-none d-lg-flex align-items-center gap-4">
+                                            <a class="small text-decoration-none text-white " href="../client/index.html">Inicio</a>
+                                            <a class="small text-decoration-none text-white" href="../client/quienes_somos.html">Quiénes Somos</a>
+                                            <a class="small text-decoration-none text-white fw-bold border-bottom border-2 border-white pb-1 " href="../client/catalogo.html">Catálogo</a>
+                                            <a class="small text-decoration-none text-white" href="../client/servicios.html">Servicios</a>
+                                            </nav>
+
+                                                <div class="d-flex gap-2 align-items-center">
+
+                                                    <button id="loginButton" class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
+                                                        <span class="material-symbols-outlined text-white">person</span>
+                                                    </button>
+
+                                                    <div class="position-relative">
+                                                        <button id="cartButton" class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
+                                                        <span class="material-symbols-outlined text-white">shopping_bag</span>
+                                                        </button>
+                                                        <span id="cartCountBadge" class="badge bg-danger rounded-pill position-absolute top-0 end-0 translate-middle" style="display:none;">0</span>
+                                                    </div>
+
+                                                    <a href="../client/soporte.html" class="nav-icon-link" aria-label="Soporte al Cliente">
+                                                        <span class="material-symbols-outlined">support_agent</span>
+                                                    </a>
+                                                </div>
+                                        </div>
+                                </div>
                         </div>
 
-        <!-- Navegación -->
-        <div class="d-flex align-items-center gap-4">
-            <nav class="d-none d-lg-flex align-items-center gap-4">
-            <a class="small text-decoration-none text-white " href="../client/index.html">Inicio</a>
-            <a class="small text-decoration-none text-white" href="../client/quienes_somos.html">Quiénes Somos</a>
-            <a class="small text-decoration-none text-white fw-bold border-bottom border-2 border-white pb-1 " href="../client/catalogo.html">Catálogo</a>
-            <a class="small text-decoration-none text-white" href="../client/servicios.html">Servicios</a>
-            </nav>
+                </header>
 
-        <div class="d-flex gap-2 align-items-center">
-        <!-- Botón de usuario -->
-        <button id="loginButton" class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
-            <span class="material-symbols-outlined text-white">person</span>
-        </button>
+                <div style="height:70px;"></div>
 
-        <!-- Botón del carrito -->
-        <div class="position-relative">
-            <button id="cartButton" class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
-            <span class="material-symbols-outlined text-white">shopping_bag</span>
-            </button>
-            <span id="cartCountBadge" class="badge bg-danger rounded-pill position-absolute top-0 end-0 translate-middle" style="display:none;">0</span>
-        </div>
+                    <main class="flex-grow-1">
+                        <section class="hero-60vh position-relative bg-cover" style="background-image: url('../client/assets/img/repisacalzado_bannercatalogo.png')">
+                            <div class="position-absolute inset-0" style="background:rgba(0,0,0,0.2);"></div>
+                            <div class="container h-100 position-relative z-1 d-flex flex-column align-items-center justify-content-center text-center text-white px-3">
+                            <h2 class="display-6 fw-bold text-shadow">Catálogo de Calzado</h2>
+                            <p class="mt-3 lead">Descubre diseños únicos que combinan comodidad y sofisticación para cada ocasión.</p>
+                            </div>
+                        </section>
 
-        <!-- Botón de soporte -->
-        <button class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
-            <span class="material-symbols-outlined text-white">support_agent</span>
-        </button>
-        </div>
-        </div>
-        </div>
-    </div>
-</header>
 
-    <!-- Espaciado -->
-        <div style="height:70px;"></div>
+                        <section class="py-4">
+                            <div class="container">
+                                <div class="filters-bar d-flex gap-3 flex-column flex-md-row align-items-start align-items-md-center justify-content-between">
+                                    <div class="d-flex gap-2 align-items-center flex-wrap">
+                                        <div class="input-group" style="min-width:260px;">
+                                            <input id="q" class="form-control form-control-sm" placeholder="Buscar producto..." aria-label="Buscar">
+                                            <button id="btnQ" class="btn btn-outline-secondary btn-sm" title="Buscar (Enter)"><i class="bi bi-search"></i></button>
+                                        </div>
 
-        <main class="flex-grow-1">
+                                        <select id="tipo" class="form-select form-select-sm" style="min-width:150px;">
+                                            <option value="">Tipo (Todos)</option>
+                                        </select>
 
-        <!-- Hero -->
-        <section class="hero-60vh position-relative bg-cover" style="background-image: url('https://images.unsplash.com/photo-1519758364993-50f44582775f?q=80&w=1974&auto=format&fit=crop')">
-            <div class="position-absolute inset-0" style="background:rgba(0,0,0,0.2);"></div>
-            <div class="container h-100 position-relative z-1 d-flex flex-column align-items-center justify-content-center text-center text-white px-3">
-            <h2 class="display-6 fw-bold text-shadow">Catálogo de Calzado</h2>
-            <p class="mt-3 lead">Descubre diseños únicos que combinan comodidad y sofisticación para cada ocasión.</p>
-            </div>
-        </section>
+                                        <select id="marca" class="form-select form-select-sm" style="min-width:150px;">
+                                            <option value="">Marca (Todas)</option>
+                                        </select>
 
-        <!-- FILTROS Y CONTROLES -->
-        <section class="py-4">
-            <div class="container">
-            <div class="filters-bar d-flex gap-3 flex-column flex-md-row align-items-start align-items-md-center justify-content-between">
-                <div class="d-flex gap-2 align-items-center flex-wrap">
-                <div class="input-group" style="min-width:260px;">
-                    <input id="q" class="form-control form-control-sm" placeholder="Buscar producto..." aria-label="Buscar">
-                    <button id="btnQ" class="btn btn-outline-secondary btn-sm" title="Buscar (Enter)"><i class="bi bi-search"></i></button>
-                </div>
+                                        <select id="talla" class="form-select form-select-sm" style="min-width:110px;">
+                                            <option value="">Talla (Todas)</option>
+                                        </select>
 
-                <select id="tipo" class="form-select form-select-sm" style="min-width:150px;">
-                    <option value="">Tipo (Todos)</option>
-                </select>
+                                        <button id="btnFiltrar" class="btn btn-filtrar btn-sm">Aplicar</button>
+                                        <button id="btnLimpiar" class="btn btn-limpiar btn-sm">Limpiar</button>
 
-                <select id="marca" class="form-select form-select-sm" style="min-width:150px;">
-                    <option value="">Marca (Todas)</option>
-                </select>
+                                    </div>
 
-                <select id="talla" class="form-select form-select-sm" style="min-width:110px;">
-                    <option value="">Talla (Todas)</option>
-                </select>
+                                        <div class="d-flex gap-2 align-items-center">
+                                            <select id="sortBy" class="form-select form-select-sm">
+                                                <option value="default">Orden: Relevancia</option>
+                                                <option value="price-asc">Precio: menor a mayor</option>
+                                                <option value="price-desc">Precio: mayor a menor</option>
+                                                <option value="name-asc">Nombre A–Z</option>
+                                                <option value="name-desc">Nombre Z–A</option>
+                                            </select>
 
-                <button id="btnFiltrar" class="btn btn-primary btn-sm">Aplicar</button>
-                <button id="btnLimpiar" class="btn btn-outline-secondary btn-sm">Limpiar</button>
-                </div>
+                                            <select id="perPage" class="form-select form-select-sm" style="width:90px;">
+                                                <option value="6">6</option>
+                                                <option value="9" selected>9</option>
+                                                <option value="12">12</option>
+                                            </select>
 
-                <div class="d-flex gap-2 align-items-center">
-                <select id="sortBy" class="form-select form-select-sm">
-                    <option value="default">Orden: Relevancia</option>
-                    <option value="price-asc">Precio: menor a mayor</option>
-                    <option value="price-desc">Precio: mayor a menor</option>
-                    <option value="name-asc">Nombre A–Z</option>
-                    <option value="name-desc">Nombre Z–A</option>
-                </select>
+                                            <div class="btn-group" role="group" aria-label="view mode">
+                                                <button id="btnGrid" class="btn btn-outline-secondary btn-sm active" title="Vista en cuadrícula"><i class="bi bi-grid-3x3-gap-fill"></i></button>
+                                                <button id="btnList" class="btn btn-outline-secondary btn-sm" title="Vista en lista"><i class="bi bi-list"></i></button>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        </section>
 
-                <select id="perPage" class="form-select form-select-sm" style="width:90px;">
-                    <option value="6">6</option>
-                    <option value="9" selected>9</option>
-                    <option value="12">12</option>
-                </select>
 
-                <div class="btn-group" role="group" aria-label="view mode">
-                    <button id="btnGrid" class="btn btn-outline-secondary btn-sm active" title="Vista en cuadrícula"><i class="bi bi-grid-3x3-gap-fill"></i></button>
-                    <button id="btnList" class="btn btn-outline-secondary btn-sm" title="Vista en lista"><i class="bi bi-list"></i></button>
-                </div>
-                </div>
-            </div>
-            </div>
-        </section>
+                        <section class="py-3">
+                            <div class="container">
+                            <div id="productGridRow" class="row g-4">
+                                
+                            </div>
 
-        <!-- PRODUCTOS -->
-        <section class="py-3">
-            <div class="container">
-            <div id="productGridRow" class="row g-4">
-                <!-- aquí se renderizan las cards -->
-            </div>
+                            <nav class="mt-4 d-flex justify-content-center">
+                                <ul id="pagination" class="pagination pagination-sm"></ul>
+                            </nav>
+                            </div>
+                        </section>
 
-            <!-- paginación -->
-            <nav class="mt-4 d-flex justify-content-center">
-                <ul id="pagination" class="pagination pagination-sm"></ul>
-            </nav>
-            </div>
-        </section>
+                    </main>
 
-        </main>
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="productOffcanvas" aria-labelledby="productOffcanvasLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="productOffcanvasLabel">Detalle del producto</h5>
+                            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div class="container-fluid">
+                                <div class="row g-0">
+                                    <div class="col-md-6 d-flex align-items-center justify-content-center p-3 bg-light">
+                                        <img id="offImage" src="" alt="" class="img-fluid rounded">
+                                    </div>
+                                    <div class="col-md-6 p-4">
+                                        <h4 id="offTitle" class="fw-bold mb-1"></h4>
+                                        <p id="offBrand" class="small text-muted mb-2"></p>
+                                        <p id="offPrice" class="h5 fw-bold price-detail mb-3"></p>
+                                        <p id="offDescription" class="mb-3"></p>
 
-        <!-- Product details Offcanvas (copiado y adaptado) -->
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="productOffcanvas" aria-labelledby="productOffcanvasLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="productOffcanvasLabel">Detalle del producto</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
-        </div>
-        <div class="offcanvas-body">
-            <div class="container-fluid">
-            <div class="row g-0">
-                <div class="col-md-6 d-flex align-items-center justify-content-center p-3 bg-light">
-                <img id="offImage" src="" alt="" class="img-fluid rounded">
-                </div>
-                <div class="col-md-6 p-4">
-                <h4 id="offTitle" class="fw-bold mb-1"></h4>
-                <p id="offBrand" class="small text-muted mb-2"></p>
-                <p id="offPrice" class="h5 fw-bold text-primary mb-3"></p>
-                <p id="offDescription" class="mb-3"></p>
+                                        <div class="mb-3">
+                                            <label class="form-label small mb-2">Tallas</label>
+                                            <div id="offSizes" class="d-flex gap-2 flex-wrap"></div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label small mb-2">Colores</label>
+                                            <div id="offColors" class="d-flex gap-2 flex-wrap"></div>
+                                        </div>
 
-                <div class="mb-3">
-                    <label class="form-label small mb-2">Tallas</label>
-                    <div id="offSizes" class="d-flex gap-2 flex-wrap"></div>
-                </div>
+                                        <div class="d-flex gap-2 align-items-center">
+                                            <button id="offAddToCart" class="btn btn-primary-theme btn-lg" style="background-color: #006d0f; border:none;color:#d3d3d3">Agregar</button>
+                                            <div class="ms-3">
+                                            <label class="small">Cantidad</label>
+                                            <input id="offQuantity" type="number" min="1" value="1" class="form-control form-control-sm" style="width:80px;">
+                                        </div>
+                                    </div>
 
-                <div class="mb-3">
-                    <label class="form-label small mb-2">Colores</label>
-                    <div id="offColors" class="d-flex gap-2 flex-wrap"></div>
-                </div>
-
-                <div class="d-flex gap-2 align-items-center">
-                    <button id="offAddToCart" class="btn btn-primary-theme btn-lg" style="background:var(--brand); border:none;color:#fff">Agregar al carrito</button>
-                    <div class="ms-3">
-                    <label class="small">Cantidad</label>
-                    <input id="offQuantity" type="number" min="1" value="1" class="form-control form-control-sm" style="width:80px;">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                </div>
-            </div>
-            </div>
-        </div>
-        </div>
-
-        <!-- Cart Offcanvas (mantengo tu implementación) -->
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
-        <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="cartOffcanvasLabel">Tu carrito</h5>
-            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
-        </div>
-        <div class="offcanvas-body">
-            <div id="cartItemsContainer" class="container-fluid"></div>
-            <div class="d-flex justify-content-between align-items-center mt-4">
-            <div>
-                <p class="mb-0 small text-muted">Total:</p>
-                <p id="cartTotal" class="h5 fw-bold mb-0">0,00 €</p>
-            </div>
-            <div>
-                <button id="clearCartBtn" class="btn btn-outline-secondary me-2">Vaciar</button>
-                <button id="checkoutBtn" class="btn btn-primary-theme" style="background:var(--brand); border:none;color:#fff">Pagar</button>
-            </div>
-            </div>
-        </div>
-        </div>
-
-        <!-- Toast -->
-        <div id="cartToast" class="toast align-items-center text-bg-success border-0 position-fixed bottom-0 end-0 m-3" role="status" aria-live="polite" aria-atomic="true">
-        <div class="d-flex">
-            <div class="toast-body">Agregado al carrito</div>
-            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
-        </div>
-        </div>
-
-
-
-<footer class="footer-custom mt-5">
-            <div class="container py-5">
-                <div class="row gy-4">
-                <div class="col-6 col-md-3">
-                    <h6 class="fw-bold text-white">Tienda</h6>
-                    <ul class="list-unstyled small">
-                    <li><a class="text-white text-decoration-none" href="#">Novedades</a></li>
-                    <li><a class="text-white text-decoration-none" href="#">Más vendido</a></li>
-                    <li><a class="text-white text-decoration-none" href="#">Tacones</a></li>
-                    <li><a class="text-white text-decoration-none" href="#">Calzado Plano</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md-3">
-                    <h6 class="fw-bold text-white">Acerca de</h6>
-                    <ul class="list-unstyled small">
-                    <li><a class="text-white text-decoration-none" href="#">Nuestra Historia</a></li>
-                    <li><a class="text-white text-decoration-none" href="#">Artesanos</a></li>
-                    <li><a class="text-white text-decoration-none" href="#">Trabaja con nosotros</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md-3">
-                    <h6 class="fw-bold text-white">Soporte</h6>
-                    <ul class="list-unstyled small">
-                    <li><a class="text-white text-decoration-none" href="#">PQRS</a></li>
-                    <li><a class="text-white text-decoration-none" href="#">Envío &amp; Devoluciones</a></li>
-                    <li><a class="text-white text-decoration-none" href="#">Contactos</a></li>
-                    </ul>
-                </div>
-                <div class="col-6 col-md-3">
-                    <h6 class="fw-bold text-white">Síguenos</h6>
-                    <div class="d-flex gap-3 mt-2">
-                    <a class="text-white" href="#"><i class="bi bi-facebook"></i></a>
-                    <a class="text-white" href="#"><i class="bi bi-twitter"></i></a>
-                    <a class="text-white" href="#"><i class="bi bi-instagram"></i></a>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="cartOffcanvasLabel">Tu carrito</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                            <div id="cartItemsContainer" class="container-fluid">
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mt-4">
+                                <div>
+                                    <p class="mb-0 small text-muted">Total:</p>
+                                    <p id="cartTotal" class="h5 fw-bold mb-0">0,00 COP</p>
+                                </div>
+                                <div>
+                                    <button id="clearCartBtn" class="btn btn-outline-secondary me-2">Vaciar</button>
+                                    <button id="checkoutBtn" class="btn btn-primary-theme" style="background-color: #006d0f; border:none;color:#fff">Pagar</button>
+                                </div>
+                            </div>
                     </div>
                 </div>
+
+                <div id="cartToast" class="toast align-items-center text-bg-success border-0 position-fixed bottom-0 end-0 m-3" role="status" aria-live="polite" aria-atomic="true">
+                    <div class="d-flex">
+                        <div class="toast-body">Agregado al carrito
+                        </div>
+                            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+                    </div>
                 </div>
-                <div class="border-top border-light pt-4 text-center small text-white-50">
-                © 2025 Piel de Pie. Todos los derechos reservados.
-                </div>
+
+        <footer class="footer-custom mt-5">
+                    <div class="container py-5">
+                        <div class="row gy-4">
+                        <div class="col-6 col-md-3">
+                            <h6 class="fw-bold text-white">Tienda</h6>
+                            <ul class="list-unstyled small">
+                            <li><a class="text-white text-decoration-none" href="#">Novedades</a></li>
+                            <li><a class="text-white text-decoration-none" href="#">Más vendido</a></li>
+                            <li><a class="text-white text-decoration-none" href="#">Tacones</a></li>
+                            <li><a class="text-white text-decoration-none" href="#">Calzado Plano</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <h6 class="fw-bold text-white">Acerca de</h6>
+                            <ul class="list-unstyled small">
+                            <li><a class="text-white text-decoration-none" href="#">Nuestra Historia</a></li>
+                            <li><a class="text-white text-decoration-none" href="#">Artesanos</a></li>
+                            <li><a class="text-white text-decoration-none" href="#">Trabaja con nosotros</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <h6 class="fw-bold text-white">Soporte</h6>
+                            <ul class="list-unstyled small">
+                            <li><a class="text-white text-decoration-none" href="#">PQRS</a></li>
+                            <li><a class="text-white text-decoration-none" href="#">Envío &amp; Devoluciones</a></li>
+                            <li><a class="text-white text-decoration-none" href="#">Contactos</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <h6 class="fw-bold text-white">Síguenos</h6>
+                            <div class="d-flex gap-3 mt-2">
+                            <a class="text-white" href="#"><i class="bi bi-facebook"></i></a>
+                            <a class="text-white" href="#"><i class="bi bi-twitter"></i></a>
+                            <a class="text-white" href="#"><i class="bi bi-instagram"></i></a>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="border-top border-light pt-4 text-center small text-white-50">
+                        © 2025 Piel de Pie. Todos los derechos reservados.
+                        </div>
+                    </div>
+                    </footer>
             </div>
-            </footer>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script>
-    /* ========= DATOS DE PRODUCTOS (edítalos / amplíalos) =========
-        Cada producto tiene: id, title, type, brand, price (string), priceNum (number), image, description, sizes (array), colors (array hex)
-    */
-    const PRODUCTS = [
-        {
-        id: 'TaconAmbar-001',
-        title: 'Tacón Ámbar',
-        type: 'Tacones',
-        brand: 'Piel de Pie',
-        price: '160.000 COP',
-        priceNum: 160000, // Precio en centavos/unidad mínima si la usas, o el valor base. Se ajusta a 160000 para pesos.
-        image: "../client/assets/img/catalogo/tacon_corto_color_cafe.webp",
-        description: 'El Tacón Ámbar presenta una silueta sofisticada, su forro interno en piel suave garantiza comodidad.',
-        sizes: ['35', '36', '37', '38', '39', '40']
-        },
-        {
-            id: 'MocasínBorlas-002',
-            title: 'Mocasín Borlas Clásico',
-            type: 'Mocasines',
-            brand: 'Piel de Pie',
-            price: '185.000 COP',
-            priceNum: 185000,
-            image: "../client/assets/img/catalogo/tacon_corto_color_negro.webp",
-            description: 'El Mocasín Borlas Clásico elaborado con cuero charol negro de acabado brillante y una suela track robusta para mayor durabilidad y agarre, este mocasín combina comodidad y estilo.',
-            sizes: ['35', '36', '37', '38', '39', '40']
-        },
-        {
-        id: 'TaconAmbar-001',
-        title: 'Tacón Ámbar',
-        type: 'Tacones',
-        brand: 'Piel de Pie',
-        price: '160.000 COP',
-        priceNum: 160000, // Precio en centavos/unidad mínima si la usas, o el valor base. Se ajusta a 160000 para pesos.
-        image:"../client/assets/img/catalogo/tacon_corto_color_cafe.webp",
-        description: 'El Tacón Ámbar presenta una silueta sofisticada, su forro interno en piel suave garantiza comodidad.',
-        sizes: ['35', '36', '37', '38', '39', '40']
-        },
-        {
-        id: 'TaconAmbar-001',
-        title: 'Tacón Ámbar',
-        type: 'Tacones',
-        brand: 'Piel de Pie',
-        price: '160.000 COP',
-        priceNum: 160000, // Precio en centavos/unidad mínima si la usas, o el valor base. Se ajusta a 160000 para pesos.
-        image:"../client/assets/img/catalogo/tacon_corto_color_cafe.webp",
-        description: 'El Tacón Ámbar presenta una silueta sofisticada, su forro interno en piel suave garantiza comodidad.',
-        sizes: ['35', '36', '37', '38', '39', '40']
-        },
-        {
-        id: 'TaconAmbar-001',
-        title: 'Tacón Ámbar',
-        type: 'Tacones',
-        brand: 'Piel de Pie',
-        price: '160.000 COP',
-        priceNum: 160000, // Precio en centavos/unidad mínima si la usas, o el valor base. Se ajusta a 160000 para pesos.
-        image:"../client/assets/img/catalogo/tacon_corto_color_cafe.webp",
-        description: 'El Tacón Ámbar presenta una silueta sofisticada, su forro interno en piel suave garantiza comodidad.',
-        sizes: ['35', '36', '37', '38', '39', '40']
-        },
-        {
-        id: 'TaconAmbar-001',
-        title: 'Tacón Ámbar',
-        type: 'Tacones',
-        brand: 'Piel de Pie',
-        price: '160.000 COP',
-        priceNum: 160000, // Precio en centavos/unidad mínima si la usas, o el valor base. Se ajusta a 160000 para pesos.
-        image:"../client/assets/img/catalogo/tacon_corto_color_cafe.webp",
-        description: 'El Tacón Ámbar presenta una silueta sofisticada, su forro interno en piel suave garantiza comodidad.',
-        sizes: ['35', '36', '37', '38', '39', '40']
-        },
-    ];
+            <script>
 
-    /* ========== Estado y helpers ========== */
-    let STATE = {
-        view: 'grid',         // grid | list
-        query: '',
-        tipo: '',
-        marca: '',
-        talla: '',
-        sortBy: 'default',
-        perPage: 9,
-        page: 1,
-        filtered: PRODUCTS.slice()
-    };
+            const PRODUCTS = [
+                {
+                id: 'TaconAmbar-001',
+                title: 'Tacón Ámbar',
+                type: 'Tacones',
+                brand: 'Piel de Pie',
+                price: '$160.000 COP',
+                priceNum: 160000,
+                image: "../client/assets/img/catalogo/tacon_corto_color_cafe.webp",
+                description: 'El Tacón Ámbar presenta una silueta sofisticada, su forro interno en piel suave garantiza comodidad.',
+                sizes: ['35', '36', '37', '38', '39']
+                },
+                {
+                    id: 'MocasínBorlas-002',
+                    title: 'Mocasín Borlas Clásico',
+                    type: 'Mocasines',
+                    brand: 'Piel de Pie',
+                    price: '$185.000 COP',
+                    priceNum: 185000,
+                    image: "../client/assets/img/catalogo/tacon_corto_color_negro.webp",
+                    description: 'El Mocasín Borlas Clásico elaborado con cuero charol negro de acabado brillante y una suela track robusta para mayor durabilidad y agarre, este mocasín combina comodidad y estilo.',
+                    sizes: ['35', '36', '37', '38', '39']
+                },
+                {
+                    id: 'PlanoPerla-006',
+                    title: 'Plano Perla Comfort',
+                    type: 'Plano Casual',
+                    brand: 'Piel de Pie',
+                    price: '$140.000 COP',
+                    priceNum: 140000,
+                    image: "../client/assets/img/catalogo/zapato_plano_colo_veige_con_blanco.webp",
+                    description: 'El Plano Perla Comfort es la combinación ideal de moda y funcionalidad, confeccionado en un delicado cuero charol color perla o nude brillante, este zapato bajo tipo Monk-Strap se distingue por su correa con hebilla plateada, que le aporta un toque chic y un ajuste seguro.',
+                    sizes: ['36', '37', '38', '39', '40']
+                },
+                {
+                    id: 'TaconEleganza-004',
+                    title: 'Tacón Eleganza',
+                    type: 'Tacones',
+                    brand: 'Piel de Pie',
+                    price: '$130.000 COP',
+                    priceNum: 130000,
+                    image: "../client/assets/img/catalogo/tacon_negro.webp",
+                    description: 'El Tacón Eleganza confeccionado con un lujoso satén negro y un delicado tacón aguja, este ofrece una silueta estilizada y una presencia impactante.',
+                    sizes: ['35', '36', '37', '38', '39']
+                },
+                {
+                    id: 'TaconDelizia-005',
+                    title: 'Tacón Delizia',
+                    type: 'Sandalia con Tacón',
+                    brand: 'Piel de Pie',
+                    price: '$180.000 COP',
+                    priceNum: 180000,
+                    image: "../client/assets/img/catalogo/zapato_de_tocon_corto_blanco.webp",
+                    description: 'La sandalia Tacón Delizia está elaborado en cuero blanco puro y suave, cuenta con una punta abierta y un diseño de corte lateral que ofrece transpirabilidad.',
+                    sizes: ['35', '36', '37', '38', '39']
+                },
+                {
+                    id: 'MocasínTurquesa-003',
+                    title: 'Mocasín Turquesa Elegance',
+                    type: 'Mocasines con tacón',
+                    brand: 'Piel de Pie',
+                    price: '$195.000 COP',
+                    priceNum: 195000,
+                    image: "../client/assets/img/catalogo/tacon_corto_color_azul_turqui.webp",
+                    description: 'El Mocasín Turquesa Elegance está confeccionado en cuero charol de un vibrante color turquesa, este diseño combina la comodidad del mocasín con la altura de un tacón.',
+                    sizes: ['35', '36', '37', '38', '39']
+                },
 
-    /* form elements */
-    const el = {
-        q: null, btnQ: null, tipo: null, marca: null, talla: null,
-        btnFiltrar: null, btnLimpiar: null, productGridRow: null,
-        pagination: null, btnGrid: null, btnList: null, perPage: null, sortBy: null
-    };
+            ];
 
-    function initElements(){
-        el.q = document.getElementById('q');
-        el.btnQ = document.getElementById('btnQ');
-        el.tipo = document.getElementById('tipo');
-        el.marca = document.getElementById('marca');
-        el.talla = document.getElementById('talla');
-        el.btnFiltrar = document.getElementById('btnFiltrar');
-        el.btnLimpiar = document.getElementById('btnLimpiar');
-        el.productGridRow = document.getElementById('productGridRow');
-        el.pagination = document.getElementById('pagination');
-        el.btnGrid = document.getElementById('btnGrid');
-        el.btnList = document.getElementById('btnList');
-        el.perPage = document.getElementById('perPage');
-        el.sortBy = document.getElementById('sortBy');
-    }
+            let STATE = {
+                view: 'grid',      
+                query: '',
+                tipo: '',
+                marca: '',
+                talla: '',
+                sortBy: 'default',
+                perPage: 9,
+                page: 1,
+                filtered: PRODUCTS.slice()
+            };
 
-    /* populate filtro selects (tipo, marca, talla) */
-    function populateFilters(){
-        const tipos = new Set();
-        const marcas = new Set();
-        const tallas = new Set();
-        PRODUCTS.forEach(p => { tipos.add(p.type); marcas.add(p.brand); p.sizes.forEach(s => tallas.add(s)); });
+            const el = {
+                q: null, btnQ: null, tipo: null, marca: null, talla: null,
+                btnFiltrar: null, btnLimpiar: null, productGridRow: null,
+                pagination: null, btnGrid: null, btnList: null, perPage: null, sortBy: null
+            };
 
-        // limpiar
-        el.tipo.innerHTML = '<option value="">Tipo (Todos)</option>';
-        [...tipos].sort().forEach(t => el.tipo.insertAdjacentHTML('beforeend', `<option value="${t}">${t}</option>`));
-
-        el.marca.innerHTML = '<option value="">Marca (Todas)</option>';
-        [...marcas].sort().forEach(m => el.marca.insertAdjacentHTML('beforeend', `<option value="${m}">${m}</option>`));
-
-        el.talla.innerHTML = '<option value="">Talla (Todas)</option>';
-        [...tallas].sort((a,b)=>parseFloat(a)-parseFloat(b)).forEach(s => el.talla.insertAdjacentHTML('beforeend', `<option value="${s}">${s}</option>`));
-    }
-
-    /* render productos según STATE.filtered y paginación */
-    function renderProducts(){
-        const start = (STATE.page - 1) * STATE.perPage;
-        const end = start + STATE.perPage;
-        const pageItems = STATE.filtered.slice(start, end);
-
-        el.productGridRow.innerHTML = '';
-        if(pageItems.length === 0){
-        el.productGridRow.innerHTML = '<div class="col-12"><p class="text-center text-muted">No se encontraron productos.</p></div>';
-        renderPagination();
-        return;
-        }
-
-        pageItems.forEach(product => {
-        const col = document.createElement('div');
-        col.className = 'col-12 col-md-6 col-lg-4';
-        const imgUrl = encodeURI(product.image || '');
-        col.innerHTML = `
-        <div class="card border-0 bg-transparent product-card card-hover-zoom">
-            <a href="#" class="text-decoration-none text-body product-link" data-id="${product.id}">
-            <!-- USO BACKGROUND para asegurar cover y tamaño -->
-            <div class="product-media rounded-lg overflow-hidden" style="background-image:url('${imgUrl}');"></div>
-
-            <div class="mt-3 text-center">
-                <h5 class="mb-1 fw-semibold">${escapeHtml(product.title)}</h5>
-                <p class="small text-muted mb-1">${escapeHtml(product.brand)}</p>
-                <p class="fw-bold mb-0">${product.price}</p>
-            </div>
-            </a>
-
-            <div class="d-flex gap-2 mt-2 justify-content-center">
-            <button class="btn btn-sm btn-outline-secondary btn-det" data-id="${product.id}">Ver detalles</button>
-            <button class="btn btn-sm btn-primary" data-buy="${product.id}">Comprar</button>
-            </div>
-        </div>
-        `;
-
-
-        el.productGridRow.appendChild(col);
-        });
-
-        // attach handlers for links/buttons
-        el.productGridRow.querySelectorAll('.product-link, .btn-det').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            const id = e.currentTarget.dataset.id;
-            const p = PRODUCTS.find(x=>x.id===id);
-            if(p) renderProductOffcanvas(p);
-        });
-        });
-
-        el.productGridRow.querySelectorAll('[data-buy]').forEach(btn=>{
-        btn.addEventListener('click', (e)=>{
-            const id = e.currentTarget.dataset.buy;
-            const p = PRODUCTS.find(x=>x.id===id);
-            if(p){
-            // add with default qty 1, no size/color selected
-            addToCartItem({ id: p.id, title: p.title, brand: p.brand, price: p.price, priceNum: p.priceNum, qty:1, size:null, color:null, image: p.image });
+            function initElements(){
+                el.q = document.getElementById('q');
+                el.btnQ = document.getElementById('btnQ');
+                el.tipo = document.getElementById('tipo');
+                el.marca = document.getElementById('marca');
+                el.talla = document.getElementById('talla');
+                el.btnFiltrar = document.getElementById('btnFiltrar');
+                el.btnLimpiar = document.getElementById('btnLimpiar');
+                el.productGridRow = document.getElementById('productGridRow');
+                el.pagination = document.getElementById('pagination');
+                el.btnGrid = document.getElementById('btnGrid');
+                el.btnList = document.getElementById('btnList');
+                el.perPage = document.getElementById('perPage');
+                el.sortBy = document.getElementById('sortBy');
             }
-        });
-        });
 
-        // apply view class on container for list/grid
-        const container = document.querySelector('main .container');
-        if(STATE.view==='list') container.classList.add('list-view'); else container.classList.remove('list-view');
+            /*selección de filtros (tipo, marca, talla) */
+            function populateFilters(){
+                const tipos = new Set();
+                const marcas = new Set();
+                const tallas = new Set();
+                PRODUCTS.forEach(p => { tipos.add(p.type); marcas.add(p.brand); p.sizes.forEach(s => tallas.add(s)); });
 
-        renderPagination();
-    }
+                // limpiar
+                el.tipo.innerHTML = '<option value="">Tipo (Todos)</option>';
+                [...tipos].sort().forEach(t => el.tipo.insertAdjacentHTML('beforeend', `<option value="${t}">${t}</option>`));
 
-    /* pagination rendering */
-    function renderPagination(){
-        const total = STATE.filtered.length;
-        const pages = Math.max(1, Math.ceil(total / STATE.perPage));
-        el.pagination.innerHTML = '';
+                el.marca.innerHTML = '<option value="">Marca (Todas)</option>';
+                [...marcas].sort().forEach(m => el.marca.insertAdjacentHTML('beforeend', `<option value="${m}">${m}</option>`));
 
-        const makePageItem = (n, active=false) => {
-        return `<li class="page-item ${active?'active':''}"><a class="page-link" href="#" data-page="${n}">${n}</a></li>`;
-        };
+                el.talla.innerHTML = '<option value="">Talla (Todas)</option>';
+                [...tallas].sort((a,b)=>parseFloat(a)-parseFloat(b)).forEach(s => el.talla.insertAdjacentHTML('beforeend', `<option value="${s}">${s}</option>`));
+            }
 
-        // simple: prev, numeric (max 7), next
-        const prevDisabled = STATE.page<=1 ? ' disabled' : '';
-        el.pagination.insertAdjacentHTML('beforeend', `<li class="page-item ${prevDisabled}"><a class="page-link" href="#" data-page="${STATE.page-1}">Prev</a></li>`);
+            /* render productos según STATE.filtrado y paginación */
+            function renderProducts(){
+                const start = (STATE.page - 1) * STATE.perPage;
+                const end = start + STATE.perPage;
+                const pageItems = STATE.filtered.slice(start, end);
 
-        const range = 3;
-        let start = Math.max(1, STATE.page - range);
-        let end = Math.min(pages, STATE.page + range);
-        if(end - start < range*2){
-        start = Math.max(1, end - range*2);
-        end = Math.min(pages, start + range*2);
-        }
+                el.productGridRow.innerHTML = '';
+                if(pageItems.length === 0){
+                el.productGridRow.innerHTML = '<div class="col-12"><p class="text-center text-muted">No se encontraron productos.</p></div>';
+                renderPagination();
+                return;
+                }
 
-        for(let i=start;i<=end;i++){
-        el.pagination.insertAdjacentHTML('beforeend', makePageItem(i, i===STATE.page));
-        }
+                pageItems.forEach(product => {
+                const col = document.createElement('div');
+                col.className = 'col-12 col-md-6 col-lg-4';
+                const imgUrl = encodeURI(product.image || '');
+                col.innerHTML = `
+                <div class="card border-0 bg-transparent product-card card-hover-zoom">
+                    <a href="#" class="text-decoration-none text-body product-link" data-id="${product.id}">
+                    <!-- USO BACKGROUND para asegurar cover y tamaño -->
+                    <div class="product-media rounded-lg overflow-hidden" style="background-image:url('${imgUrl}');"></div>
 
-        const nextDisabled = STATE.page>=pages ? ' disabled' : '';
-        el.pagination.insertAdjacentHTML('beforeend', `<li class="page-item ${nextDisabled}"><a class="page-link" href="#" data-page="${STATE.page+1}">Next</a></li>`);
+                    <div class="mt-3 text-center">
+                        <h5 class="mb-1 fw-semibold">${escapeHtml(product.title)}</h5>
+                        <p class="small text-muted mb-1">${escapeHtml(product.brand)}</p>
+                        <p class="fw-bold mb-0">${product.price}</p>
+                    </div>
+                    </a>
 
-        // attach click
-        el.pagination.querySelectorAll('[data-page]').forEach(a=>{
-        a.addEventListener('click', (e)=>{
-            e.preventDefault();
-            const page = Math.max(1, parseInt(e.currentTarget.dataset.page));
-            STATE.page = page;
-            renderProducts();
-            window.scrollTo({ top: 300, behavior: 'smooth' });
-        });
-        });
-    }
+                    <div class="d-flex gap-2 mt-2 justify-content-center">
+                    <button class="btn btn-sm btn-outline-secondary btn-det" data-id="${product.id}">Ver detalles</button>
+                    <button class="btn btn-sm btn-buy" data-buy="${product.id}">Comprar</button>
 
-    /* filtering + sorting */
-    function applyFilters(){
-        const q = (STATE.query || '').trim().toLowerCase();
-        const tipo = (STATE.tipo || '').toLowerCase();
-        const marca = (STATE.marca || '').toLowerCase();
-        const talla = (STATE.talla || '').toLowerCase();
-
-        let list = PRODUCTS.filter(p=>{
-        let ok = true;
-        if(tipo && p.type.toLowerCase() !== tipo) ok = false;
-        if(marca && p.brand.toLowerCase() !== marca) ok = false;
-        if(talla && !p.sizes.includes(talla)) ok = false;
-        if(q){
-            if(!(p.title.toLowerCase().includes(q) || (p.description || '').toLowerCase().includes(q) || p.brand.toLowerCase().includes(q))) ok = false;
-        }
-        return ok;
-        });
-
-        // sort
-        switch(STATE.sortBy){
-        case 'price-asc': list.sort((a,b)=>a.priceNum - b.priceNum); break;
-        case 'price-desc': list.sort((a,b)=>b.priceNum - a.priceNum); break;
-        case 'name-asc': list.sort((a,b)=>a.title.localeCompare(b.title)); break;
-        case 'name-desc': list.sort((a,b)=>b.title.localeCompare(a.title)); break;
-        default: break;
-        }
-
-        STATE.filtered = list;
-        STATE.page = 1; // reset page
-        renderProducts();
-    }
-
-    /* helpers: escape */
-    function escapeHtml(text){ return String(text||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
-
-    /* ========== Offcanvas & cart logic (adaptado de tu implementación) ========== */
-    const productOffcanvasEl = document.getElementById('productOffcanvas');
-    const productOffcanvas = new bootstrap.Offcanvas(productOffcanvasEl);
-    const cartOffcanvasEl = document.getElementById('cartOffcanvas');
-    const cartOffcanvas = new bootstrap.Offcanvas(cartOffcanvasEl);
-
-    function getCart(){ try{ return JSON.parse(localStorage.getItem('cart')||'[]'); }catch{ return []; } }
-    function saveCart(cart){ localStorage.setItem('cart', JSON.stringify(cart)); updateCartCounter(); renderCart(); }
-    function addToCartItem(item){
-        const cart = getCart();
-        cart.push(item);
-        saveCart(cart);
-        const toastEl = document.getElementById('cartToast');
-        const toast = new bootstrap.Toast(toastEl);
-        toast.show();
-    }
-    function clearCart(){ saveCart([]); renderCart(); }
-
-    function updateCartCounter(){
-        const cart = getCart();
-        const count = cart.reduce((s,i)=>s + (i.qty||0), 0);
-        const badge = document.getElementById('cartCountBadge');
-        if(count>0){ badge.style.display='inline-block'; badge.textContent = count; } else { badge.style.display='none'; }
-    }
-
-    function renderCart(){
-        const container = document.getElementById('cartItemsContainer');
-        const cart = getCart();
-        container.innerHTML = '';
-        if(cart.length===0){ container.innerHTML = '<p class="text-center text-muted">Tu carrito está vacío.</p>'; document.getElementById('cartTotal').textContent = '0,00 €'; return; }
-
-        let total = 0;
-        cart.forEach((item, idx) =>{
-        total += (item.priceNum || parseFloat(String(item.price).replace(/[€,\s]/g,'').replace(',','.'))) * (item.qty||1);
-        const row = document.createElement('div'); row.className = 'd-flex align-items-center gap-3 mb-3';
-        row.innerHTML = `
-            <img src="${item.image}" alt="" style="width:84px;height:84px;object-fit:cover;border-radius:.5rem;" />
-            <div class="flex-grow-1">
-            <div class="d-flex justify-content-between align-items-start">
-                <div>
-                <div class="fw-semibold">${item.title}</div>
-                <div class="small text-muted">${item.brand||''}</div>
+                    </div>
                 </div>
-                <div class="text-end">
-                <div class="fw-bold">${item.price}</div>
-                <button class="btn btn-sm btn-link text-danger remove-item" data-idx="${idx}">Eliminar</button>
-                </div>
-            </div>
-            <div class="d-flex gap-2 align-items-center mt-2">
-                <div class="small text-muted">Talla: ${item.size||'-'}</div>
-                <div class="small text-muted">| Color: <span style="display:inline-block;width:16px;height:16px;background:${item.color||'transparent'};border-radius:50%;margin-left:6px;border:1px solid rgba(0,0,0,0.08);"></span></div>
-                <div class="ms-auto d-flex align-items-center gap-2">
-                <input type="number" min="1" value="${item.qty||1}" class="form-control form-control-sm qty-input" style="width:72px;" data-idx="${idx}" />
-                </div>
-            </div>
-            </div>
-        `;
-        container.appendChild(row);
-        });
+                `;
 
-        const totalStr = total.toFixed(2).replace('.',',') + ' €';
-        document.getElementById('cartTotal').textContent = totalStr;
 
-        // handlers
-        container.querySelectorAll('.remove-item').forEach(btn=> btn.addEventListener('click', (e)=>{
-        const idx = parseInt(e.currentTarget.dataset.idx);
-        const cart = getCart(); cart.splice(idx,1); saveCart(cart); renderCart();
-        }));
+                el.productGridRow.appendChild(col);
+                });
 
-        container.querySelectorAll('.qty-input').forEach(input => input.addEventListener('change', (e)=>{
-        const idx = parseInt(e.currentTarget.dataset.idx);
-        const val = Math.max(1, parseInt(e.currentTarget.value) || 1);
-        const cart = getCart(); cart[idx].qty = val; saveCart(cart); renderCart();
-        }));
-    }
+                // links/botones
+                el.productGridRow.querySelectorAll('.product-link, .btn-det').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const id = e.currentTarget.dataset.id;
+                    const p = PRODUCTS.find(x=>x.id===id);
+                    if(p) renderProductOffcanvas(p);
+                });
+                });
 
-    /* checkout behavior */
-    function handleCheckout(){
-        const user = localStorage.getItem('user');
-        if(!user){
-        window.location.href = 'login.html';
-        return;
-        }
-        window.location.href = 'checkout.html';
-    }
+                el.productGridRow.querySelectorAll('[data-buy]').forEach(btn=>{
+                btn.addEventListener('click', (e)=>{
+                    const id = e.currentTarget.dataset.buy;
+                    const p = PRODUCTS.find(x=>x.id===id);
+                    if(p){
+                    addToCartItem({ id: p.id, title: p.title, brand: p.brand, price: p.price, priceNum: p.priceNum, qty:1, size:null, color:null, image: p.image });
+                    }
+                });
+                });
 
-    /* show product in offcanvas */
-    function renderProductOffcanvas(product){
-        document.getElementById('offImage').src = product.image;
-        document.getElementById('offImage').alt = product.title;
-        document.getElementById('offTitle').textContent = product.title;
-        document.getElementById('offBrand').textContent = product.brand || '';
-        document.getElementById('offPrice').textContent = product.price || '';
-        document.getElementById('offDescription').textContent = product.description || '';
+                const container = document.querySelector('main .container');
+                if(STATE.view==='list') container.classList.add('list-view'); else container.classList.remove('list-view');
 
-        const sizesContainer = document.getElementById('offSizes'); sizesContainer.innerHTML='';
-        (product.sizes || []).forEach(size => {
-        const btn = document.createElement('button');
-        btn.type='button'; btn.className='btn btn-outline-secondary btn-sm'; btn.textContent = size; btn.dataset.size = size;
-        btn.style.minWidth = '44px';
-        btn.addEventListener('click', ()=>{ Array.from(sizesContainer.children).forEach(c=>c.classList.remove('active')); btn.classList.add('active'); });
-        sizesContainer.appendChild(btn);
-        });
+                renderPagination();
+            }
 
-        const colorsContainer = document.getElementById('offColors'); colorsContainer.innerHTML='';
-        (product.colors || []).forEach(color => {
-        const sw = document.createElement('button'); sw.type='button'; sw.className='btn p-0'; sw.style.border='none';
-        sw.style.background='transparent';
-        sw.innerHTML = `<span class="color-swatch" style="background:${color}"></span>`;
-        sw.addEventListener('click', ()=>{ Array.from(colorsContainer.querySelectorAll('.color-swatch')).forEach(c=>c.classList.remove('selected')); sw.querySelector('.color-swatch').classList.add('selected'); });
-        colorsContainer.appendChild(sw);
-        });
+            function renderPagination(){
+                const total = STATE.filtered.length;
+                const pages = Math.max(1, Math.ceil(total / STATE.perPage));
+                el.pagination.innerHTML = '';
 
-        document.getElementById('offQuantity').value = 1;
+                const makePageItem = (n, active=false) => {
+                return `<li class="page-item ${active?'active':''}"><a class="page-link" href="#" data-page="${n}">${n}</a></li>`;
+                };
 
-        const offAdd = document.getElementById('offAddToCart');
-        offAdd.onclick = ()=>{
-        const qty = parseInt(document.getElementById('offQuantity').value) || 1;
-        const sizeBtn = document.querySelector('#offSizes .active');
-        const colorSw = document.querySelector('#offColors .color-swatch.selected');
-        const item = { id: product.id, title: product.title, brand: product.brand, price: product.price, priceNum: product.priceNum, qty, size: sizeBtn?sizeBtn.dataset.size:null, color: colorSw?colorSw.style.backgroundColor:null, image: product.image };
-        addToCartItem(item);
-        productOffcanvas.hide();
-        };
+                const prevDisabled = STATE.page<=1 ? ' disabled' : '';
+                el.pagination.insertAdjacentHTML('beforeend', `<li class="page-item ${prevDisabled}"><a class="page-link" href="#" data-page="${STATE.page-1}"><</a></li>`);
 
-        productOffcanvas.show();
-    }
+                const range = 3;
+                let start = Math.max(1, STATE.page - range);
+                let end = Math.min(pages, STATE.page + range);
+                if(end - start < range*2){
+                start = Math.max(1, end - range*2);
+                end = Math.min(pages, start + range*2);
+                }
 
-    /* ========== UI bindings ========== */
-    function attachUI(){
-        el.btnFiltrar.addEventListener('click', ()=>{
-        STATE.query = el.q.value || '';
-        STATE.tipo = el.tipo.value || '';
-        STATE.marca = el.marca.value || '';
-        STATE.talla = el.talla.value || '';
-        STATE.sortBy = el.sortBy.value || 'default';
-        STATE.perPage = parseInt(el.perPage.value) || 9;
-        applyFilters();
-        });
+                for(let i=start;i<=end;i++){
+                el.pagination.insertAdjacentHTML('beforeend', makePageItem(i, i===STATE.page));
+                }
 
-        el.btnLimpiar.addEventListener('click', ()=>{
-        el.q.value=''; el.tipo.value=''; el.marca.value=''; el.talla.value='';
-        el.sortBy.value='default'; el.perPage.value='9';
-        STATE = {...STATE, query:'', tipo:'', marca:'', talla:'', sortBy:'default', perPage:9, page:1};
-        applyFilters();
-        });
+                const nextDisabled = STATE.page>=pages ? ' disabled' : '';
+                el.pagination.insertAdjacentHTML('beforeend', `<li class="page-item ${nextDisabled}"><a class="page-link" href="#" data-page="${STATE.page+1}">></a></li>`);
 
-        el.btnQ.addEventListener('click', ()=>{ el.btnFiltrar.click(); });
+                el.pagination.querySelectorAll('[data-page]').forEach(a=>{
+                a.addEventListener('click', (e)=>{
+                    e.preventDefault();
+                    const page = Math.max(1, parseInt(e.currentTarget.dataset.page));
+                    STATE.page = page;
+                    renderProducts();
+                    window.scrollTo({ top: 300, behavior: 'smooth' });
+                });
+                });
+            }
 
-        el.q.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ e.preventDefault(); el.btnFiltrar.click(); } });
+            function applyFilters(){
+                const q = (STATE.query || '').trim().toLowerCase();
+                const tipo = (STATE.tipo || '').toLowerCase();
+                const marca = (STATE.marca || '').toLowerCase();
+                const talla = (STATE.talla || '').toLowerCase();
 
-        el.btnGrid.addEventListener('click', ()=>{ STATE.view='grid'; el.btnGrid.classList.add('active'); el.btnList.classList.remove('active'); renderProducts(); });
-        el.btnList.addEventListener('click', ()=>{ STATE.view='list'; el.btnList.classList.add('active'); el.btnGrid.classList.remove('active'); renderProducts(); });
+                let list = PRODUCTS.filter(p=>{
+                let ok = true;
+                if(tipo && p.type.toLowerCase() !== tipo) ok = false;
+                if(marca && p.brand.toLowerCase() !== marca) ok = false;
+                if(talla && !p.sizes.includes(talla)) ok = false;
+                if(q){
+                    if(!(p.title.toLowerCase().includes(q) || (p.description || '').toLowerCase().includes(q) || p.brand.toLowerCase().includes(q))) ok = false;
+                }
+                return ok;
+                });
 
-        el.perPage.addEventListener('change', ()=>{ STATE.perPage = parseInt(el.perPage.value); STATE.page = 1; renderProducts(); });
-        el.sortBy.addEventListener('change', ()=>{ STATE.sortBy = el.sortBy.value; applyFilters(); });
+                // sort
+                switch(STATE.sortBy){
+                case 'price-asc': list.sort((a,b)=>a.priceNum - b.priceNum); break;
+                case 'price-desc': list.sort((a,b)=>b.priceNum - a.priceNum); break;
+                case 'name-asc': list.sort((a,b)=>a.title.localeCompare(b.title)); break;
+                case 'name-desc': list.sort((a,b)=>b.title.localeCompare(a.title)); break;
+                default: break;
+                }
 
-        document.getElementById('cartButton').addEventListener('click', ()=>{
-        renderCart();
-        cartOffcanvas.show();
-        });
-        document.getElementById('clearCartBtn').addEventListener('click', ()=>{ if(confirm('¿Vaciar el carrito?')) clearCart(); });
-        document.getElementById('checkoutBtn').addEventListener('click', handleCheckout);
-    }
+                STATE.filtered = list;
+                STATE.page = 1; 
+                renderProducts();
+            }
 
-    /* init app */
-    function init(){
-        initElements();
-        populateFilters();
-        attachUI();
-        // initial apply
-        STATE.filtered = PRODUCTS.slice();
-        renderProducts();
-        updateCartCounter();
-    }
 
-    /* small helper to prefill filter selects if wanting to load from the other HTML's data-* - not needed now
-        but left for extensibility.
-    */
+            function escapeHtml(text){ return String(text||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
 
-    init();
 
-    </script>
+            const productOffcanvasEl = document.getElementById('productOffcanvas');
+            const productOffcanvas = new bootstrap.Offcanvas(productOffcanvasEl);
+            const cartOffcanvasEl = document.getElementById('cartOffcanvas');
+            const cartOffcanvas = new bootstrap.Offcanvas(cartOffcanvasEl);
+
+            function getCart(){ try{ return JSON.parse(localStorage.getItem('cart')||'[]'); }catch{ return []; } }
+            function saveCart(cart){ localStorage.setItem('cart', JSON.stringify(cart)); updateCartCounter(); renderCart(); }
+            function addToCartItem(item){
+                const cart = getCart();
+                cart.push(item);
+                saveCart(cart);
+                const toastEl = document.getElementById('cartToast');
+                const toast = new bootstrap.Toast(toastEl);
+                toast.show();
+            }
+            function clearCart(){ saveCart([]); renderCart(); }
+
+            function updateCartCounter(){
+                const cart = getCart();
+                const count = cart.reduce((s,i)=>s + (i.qty||0), 0);
+                const badge = document.getElementById('cartCountBadge');
+                if(count>0){ badge.style.display='inline-block'; badge.textContent = count; } else { badge.style.display='none'; }
+            }
+
+            function renderCart(){
+                const container = document.getElementById('cartItemsContainer');
+                const cart = getCart();
+                container.innerHTML = '';
+                if(cart.length===0){ container.innerHTML = '<p class="text-center text-muted">Tu carrito está vacío.</p>'; document.getElementById('cartTotal').textContent = '0,00 COP'; return; }
+
+                let total = 0;
+                cart.forEach((item, idx) =>{
+                total += (item.priceNum || parseFloat(String(item.price).replace(/[COP,\s]/g,'').replace(',','.'))) * (item.qty||1);
+                const row = document.createElement('div'); row.className = 'd-flex align-items-center gap-3 mb-3';
+                row.innerHTML = `
+                    <img src="${item.image}" alt="" style="width:84px;height:84px;object-fit:cover;border-radius:.5rem;" />
+                    <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div>
+                        <div class="fw-semibold">${item.title}</div>
+                        <div class="small text-muted">${item.brand||''}</div>
+                        </div>
+                        <div class="text-end">
+                        <div class="fw-bold">${item.price}</div>
+                        <button class="btn btn-sm btn-link text-danger remove-item" data-idx="${idx}">Eliminar</button>
+                        </div>
+                    </div>
+                    <div class="d-flex gap-2 align-items-center mt-2">
+                        <div class="small text-muted">Talla: ${item.size||'-'}</div>
+                        <div class="ms-auto d-flex align-items-center gap-2">
+                        <input type="number" min="1" value="${item.qty||1}" class="form-control form-control-sm qty-input" style="width:72px;" data-idx="${idx}" />
+                        </div>
+                    </div>
+                    </div>
+                `;
+                container.appendChild(row);
+                });
+
+                const totalStr = total.toFixed(2).replace('.',',') + ' COP';
+                document.getElementById('cartTotal').textContent = totalStr;
+
+                // handlers
+                container.querySelectorAll('.remove-item').forEach(btn=> btn.addEventListener('click', (e)=>{
+                const idx = parseInt(e.currentTarget.dataset.idx);
+                const cart = getCart(); cart.splice(idx,1); saveCart(cart); renderCart();
+                }));
+
+                container.querySelectorAll('.qty-input').forEach(input => input.addEventListener('change', (e)=>{
+                const idx = parseInt(e.currentTarget.dataset.idx);
+                const val = Math.max(1, parseInt(e.currentTarget.value) || 1);
+                const cart = getCart(); cart[idx].qty = val; saveCart(cart); renderCart();
+                }));
+            }
+
+            function handleCheckout(){
+                const user = localStorage.getItem('user');
+                if(!user){
+                window.location.href = 'login.html';
+                return;
+                }
+                window.location.href = 'checkout.html';
+            }
+
+            /* ver cards productos */
+            function renderProductOffcanvas(product){
+                document.getElementById('offImage').src = product.image;
+                document.getElementById('offImage').alt = product.title;
+                document.getElementById('offTitle').textContent = product.title;
+                document.getElementById('offBrand').textContent = product.brand || '';
+                document.getElementById('offPrice').textContent = product.price || '';
+                document.getElementById('offDescription').textContent = product.description || '';
+
+                const sizesContainer = document.getElementById('offSizes'); sizesContainer.innerHTML='';
+                (product.sizes || []).forEach(size => {
+                const btn = document.createElement('button');
+                btn.type='button'; btn.className='btn btn-outline-secondary btn-sm'; btn.textContent = size; btn.dataset.size = size;
+                btn.style.minWidth = '44px';
+                btn.addEventListener('click', ()=>{ Array.from(sizesContainer.children).forEach(c=>c.classList.remove('active')); btn.classList.add('active'); });
+                sizesContainer.appendChild(btn);
+                });
+
+                const colorsContainer = document.getElementById('offColors'); colorsContainer.innerHTML='';
+                (product.colors || []).forEach(color => {
+                const sw = document.createElement('button'); sw.type='button'; sw.className='btn p-0'; sw.style.border='none';
+                sw.style.background='transparent';
+                sw.innerHTML = `<span class="color-swatch" style="background:${color}"></span>`;
+                sw.addEventListener('click', ()=>{ Array.from(colorsContainer.querySelectorAll('.color-swatch')).forEach(c=>c.classList.remove('selected')); sw.querySelector('.color-swatch').classList.add('selected'); });
+                colorsContainer.appendChild(sw);
+                });
+
+                document.getElementById('offQuantity').value = 1;
+
+                const offAdd = document.getElementById('offAddToCart');
+                offAdd.onclick = ()=>{
+                const qty = parseInt(document.getElementById('offQuantity').value) || 1;
+                const sizeBtn = document.querySelector('#offSizes .active');
+                const colorSw = document.querySelector('#offColors .color-swatch.selected');
+                const item = { id: product.id, title: product.title, brand: product.brand, price: product.price, priceNum: product.priceNum, qty, size: sizeBtn?sizeBtn.dataset.size:null, color: colorSw?colorSw.style.backgroundColor:null, image: product.image };
+                addToCartItem(item);
+                productOffcanvas.hide();
+                };
+
+                productOffcanvas.show();
+            }
+
+            function attachUI(){
+                el.btnFiltrar.addEventListener('click', ()=>{
+                STATE.query = el.q.value || '';
+                STATE.tipo = el.tipo.value || '';
+                STATE.marca = el.marca.value || '';
+                STATE.talla = el.talla.value || '';
+                STATE.sortBy = el.sortBy.value || 'default';
+                STATE.perPage = parseInt(el.perPage.value) || 9;
+                applyFilters();
+                });
+
+                el.btnLimpiar.addEventListener('click', ()=>{
+                el.q.value=''; el.tipo.value=''; el.marca.value=''; el.talla.value='';
+                el.sortBy.value='default'; el.perPage.value='9';
+                STATE = {...STATE, query:'', tipo:'', marca:'', talla:'', sortBy:'default', perPage:9, page:1};
+                applyFilters();
+                });
+
+                el.btnQ.addEventListener('click', ()=>{ el.btnFiltrar.click(); });
+
+                el.q.addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ e.preventDefault(); el.btnFiltrar.click(); } });
+
+                el.btnGrid.addEventListener('click', ()=>{ STATE.view='grid'; el.btnGrid.classList.add('active'); el.btnList.classList.remove('active'); renderProducts(); });
+                el.btnList.addEventListener('click', ()=>{ STATE.view='list'; el.btnList.classList.add('active'); el.btnGrid.classList.remove('active'); renderProducts(); });
+
+                el.perPage.addEventListener('change', ()=>{ STATE.perPage = parseInt(el.perPage.value); STATE.page = 1; renderProducts(); });
+                el.sortBy.addEventListener('change', ()=>{ STATE.sortBy = el.sortBy.value; applyFilters(); });
+
+                document.getElementById('cartButton').addEventListener('click', ()=>{
+                renderCart();
+                cartOffcanvas.show();
+                });
+                document.getElementById('clearCartBtn').addEventListener('click', ()=>{ if(confirm('¿Vaciar el carrito?')) clearCart(); });
+                document.getElementById('checkoutBtn').addEventListener('click', handleCheckout);
+            }
+
+            function init(){
+                initElements();
+                populateFilters();
+                attachUI();
+                STATE.filtered = PRODUCTS.slice();
+                renderProducts();
+                updateCartCounter();
+            }
+            init();
+
+            </script>
     </body>
-    </html>
+</html>

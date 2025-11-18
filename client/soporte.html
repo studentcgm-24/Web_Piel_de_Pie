@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Soporte</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="../client/css/index.css">
+<link rel="stylesheet" href="../client/css/soporte.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+</head>
+    <body class="bg-light text-body">
+                <header class="w-100 position-fixed top-0 start-0 z-3" style="background-color: #042c18;">
+                    <div class="container-fluid">
+                        <div class="d-flex align-items-center justify-content-between py-2 px-3">
+                
+                            <div class="d-flex align-items-center gap-2">
+                                <a href="index.html" class="d-flex align-items-center logo-container">
+                                    <img 
+                                    src="../client/assets/img/logooriginal.webp" 
+                                    alt="Logo Piel de Pie" 
+                                    class="navbar-logo"></a>
+                            </div>
+                            <div class="d-flex align-items-center gap-4">
+                                <nav class="d-none d-lg-flex align-items-center gap-4">
+                                <a class="small text-decoration-none text-white" href="../client/index.html">Inicio</a>
+                                <a class="small text-decoration-none text-white" href="../client/quienes_somos.html">Quiénes Somos</a>
+                                <a class="small text-decoration-none text-white" href="../client/catalogo.html">Catálogo</a>
+                                <a class="small text-decoration-none text-white" href="../client/servicios.html">Servicios</a>
+                                </nav>
+
+                                <div class="d-flex gap-2 align-items-center">
+                                    <button id="loginButton" class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
+                                        <span class="material-symbols-outlined text-white">person</span>
+                                    </button>
+
+                                    <div class="position-relative">
+                                        <button id="cartButton" class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
+                                        <span class="material-symbols-outlined text-white">shopping_bag</span>
+                                        </button>
+                                        <span id="cartCountBadge" class="badge bg-danger rounded-pill position-absolute top-0 end-0 translate-middle" style="display:none;">0</span>
+                                    </div>
+
+                                    <button class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
+                                    <span class="material-symbols-outlined text-white">support_agent</span>
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div style="height:70px;"></div>
+                    <div style="height:70px;">
+                    </div> 
+                    <section class="hero-support-banner">
+                        <div class="content">
+                            <h1 class="display-4 fw-bold mb-3">Estamos Aquí para Ti.</h1>
+                            <p class="lead">En Piel de Pie, tu satisfacción es nuestra prioridad, comunicate con nuestro equipo de soporte.</p>
+                            <a href="#contact-info" class="btn btn-primary-theme rounded-pill mt-3 px-4 py-2">Contactar Ahora</a>
+                        </div>
+                    </section>
+
+                <main class="py-5">
+                    <div class="container">
+
+                            <section id="contact-info" class="mb-5">
+                                <h2 class="h3 fw-bold text-center mb-4">Información de Contacto</h2>
+                                <div class="row g-4 justify-content-center">
+                                    <div class="col-md-4 text-center">
+                                        <div class="p-4 bg-white rounded-3 shadow-sm">
+                                            <i class="bi bi-telephone-fill icon mb-3"></i>
+                                            <h5 class="fw-bold">Teléfono</h5>
+                                            <p class="text-muted">Llámanos de 8:00 AM - 5:30 PM.</p>
+                                            <p class="h6 fw-bold">+(57) 310 555 1234</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="p-4 bg-white rounded-3 shadow-sm">
+                                            <i class="bi bi-envelope-fill icon mb-3"></i>
+                                            <h5 class="fw-bold">Email</h5>
+                                            <p class="text-muted">Envíanos tus consultas.</p>
+                                            <p class="h6 fw-bold">soporte@pieldepie.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 text-center">
+                                        <div class="p-4 bg-white rounded-3 shadow-sm">
+                                            <i class="bi bi-clock-fill icon mb-3"></i>
+                                            <h5 class="fw-bold">Horario de Atención</h5>
+                                            <p class="text-muted">Lunes a Viernes: 8:00 AM - 5:30 PM</p>
+                                            <p class="text-muted">Sábados: 9:00 AM - 1:00 PM</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="mb-5">
+                                    <h2 class="h3 fw-bold text-center mb-4">Preguntas Frecuentes</h2>
+                                    <div class="accordion" id="faqAccordion">
+
+                                            <div class="accordion-item faq-item bg-white rounded-3 shadow-sm mb-3">
+                                                <h2 class="accordion-header" id="headingOne">
+                                                <button class="accordion-button faq-question collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                    ¿Cuál es la política de devoluciones?
+                                                </button>
+                                                </h2>
+                                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                                    <div class="accordion-body faq-answer">
+                                                        Aceptamos devoluciones de productos sin usar en su estado original dentro de los 30 días posteriores a la compra.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item faq-item bg-white rounded-3 shadow-sm mb-3">
+                                                <h2 class="accordion-header" id="headingTwo">
+                                                <button class="accordion-button faq-question collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    ¿Cuánto tiempo tarda el envío?
+                                                </button>
+                                                </h2>
+                                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                                    <div class="accordion-body faq-answer">
+                                                        El envío estándar dentro de Colombia suele tardar de 3 a 5 días hábiles.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item faq-item bg-white rounded-3 shadow-sm mb-3">
+                                                <h2 class="accordion-header" id="headingThree">
+                                                <button class="accordion-button faq-question collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                    ¿Ofrecen diseños personalizados?
+                                                </button>
+                                                </h2>
+                                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                                    <div class="accordion-body faq-answer">
+                                                        ¡Sí!,Contamos con un servicio de diseño a medida donde puedes colaborar con nuestros artesanos para crear el calzado de tus sueños. Ponte en contacto con nosotros para agendar una consulta y discutir tus ideas.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion-item faq-item bg-white rounded-3 shadow-sm mb-3">
+                                                <h2 class="accordion-header" id="headingFour">
+                                                <button class="accordion-button faq-question collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                                    ¿Cómo puedo cuidar mis zapatos Piel de Pie?
+                                                </button>
+                                                </h2>
+                                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                                    <div class="accordion-body faq-answer">
+                                                        Recomendamos limpiarlos con un paño suave y húmedo, evitar la exposición directa al sol y almacenarlos en un lugar fresco y seco, es importante recordar que cada par de zapatos viene con instrucciones de cuidado específicas según el material.
+                                                    </div>
+                                                </div>
+                                            </div>
+                            </section>
+
+                            <section class="mb-5">
+                                <h2 class="h3 fw-bold text-center mb-4">Visítanos en Cali</h2>
+                                <div class="row align-items-center g-4">
+                                    <div class="col-md-6">
+                                        <div class="p-4 bg-white rounded-3 shadow-sm">
+                                            <h5 class="fw-bold mb-3">Nuestra Boutique Principal</h5>
+                                            <p class="mb-2"><strong>Dirección:</strong> Calle 5 # 38 - 25, Cali, Valle del Cauca, Colombia</p>
+                                            <p class="mb-2">Estamos ubicados en el corazón de Cali, un espacio donde la elegancia y la artesanía se encuentran. Ven y descubre nuestra colección en persona, recibe asesoría personalizada y sumérgete en el mundo de Piel de Pie.</p>
+                                            <p class="mb-0">¡Te esperamos para brindarte una experiencia de compra única\! <a href="https://www.google.com/maps/search/Calle+5+%23+38+-+25,+Cali,+Valle+del+Cauca,+Colombia" target="_blank" class="text-decoration-underline text-primary">Ver en Google Maps</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="map-container">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.992830843343!2d-76.54128958461715!3d3.4475438522306893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a6c22c09191d%3A0x6a0f6e5e0d7c7b8c!2sCra.+39+%235-25%2C+Cali%2C+Valle+del+Cauca!5e0!3m2!1ses-419!2sco!4v1678930438699!5m2!1ses-419!2sco" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                    </div>
+                </main>
+                <footer class="footer-custom mt-5">
+                    <div class="container py-5">
+                        <div class="row gy-4">
+                        <div class="col-6 col-md-3">
+                            <h6 class="fw-bold text-white">Tienda</h6>
+                            <ul class="list-unstyled small">
+                            <li><a class="text-white text-decoration-none" href="#">Novedades</a></li>
+                            <li><a class="text-white text-decoration-none" href="#">Más vendido</a></li>
+                            <li><a class="text-white text-decoration-none" href="#">Tacones</a></li>
+                            <li><a class="text-white text-decoration-none" href="#">Calzado Plano</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <h6 class="fw-bold text-white">Acerca de</h6>
+                            <ul class="list-unstyled small">
+                            <li><a class="text-white text-decoration-none" href="#">Nuestra Historia</a></li>
+                            <li><a class="text-white text-decoration-none" href="#">Artesanos</a></li>
+                            <li><a class="text-white text-decoration-none" href="#">Trabaja con nosotros</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <h6 class="fw-bold text-white">Soporte</h6>
+                            <ul class="list-unstyled small">
+                            <li><a class="text-white text-decoration-none" href="#">PQRS</a></li>
+                            <li><a class="text-white text-decoration-none" href="#">Envío & Devoluciones</a></li>
+                            <li><a class="text-white text-decoration-none" href="#">Contactos</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <h6 class="fw-bold text-white">Síguenos</h6>
+                            <div class="d-flex gap-3 mt-2">
+                            <a class="text-white" href="#"><i class="bi bi-facebook"></i></a>
+                            <a class="text-white" href="#"><i class="bi bi-twitter"></i></a>
+                            <a class="text-white" href="#"><i class="bi bi-instagram"></i></a>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="border-top border-light pt-4 text-center small text-white-50">
+                        © 2025 Piel de Pie. Todos los derechos reservados.
+                        </div>
+                    </div>
+                    </footer>
+
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

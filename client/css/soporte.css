@@ -1,0 +1,146 @@
+        body { font-family: 'Manrope', sans-serif; }
+        
+        .nav-icon-link {
+        color: white; 
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%; 
+        text-decoration: none; 
+        transition: background-color 0.3s ease;
+        }
+        .nav-icon-link:hover {
+            background-color: rgba(255, 255, 255, 0.1); 
+        }
+
+        .hero-support-banner {
+            background-image: url('../assets/img/soporte.webp'); 
+            background-size: cover; 
+            background-position: center; 
+            color: #fff; 
+            padding: 60px 20px; 
+            border-radius: 15px; 
+            text-align: center;
+            margin-top: 30px; 
+            margin-bottom: 50px; 
+            max-width: 1200px; 
+            margin-left: auto; 
+            margin-right: auto; 
+            position: relative;
+            overflow: hidden; 
+        }
+
+        /* Permite oscurecer un poco la imagen para mejor legibilidad del texto */
+        .hero-support-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.4); 
+            border-radius: 15px; 
+            z-index: 1;
+        }
+
+        .hero-support-banner .content {
+            position: relative;
+            z-index: 2; 
+        }
+
+        .hero-support-banner h1 {
+            font-size: 3.5rem; 
+            font-weight: 800; 
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+        }
+
+        .hero-support-banner p {
+            font-size: 1.25rem; 
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4); 
+        }
+
+        .hero-support-banner .btn-primary-theme {
+            background-color: #8B5E3C; 
+            border-color: #8B5E3C;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+        .hero-support-banner .btn-primary-theme:hover {
+            background-color: #042c18; 
+            border-color: #042c18;
+        }
+
+        @media (max-width: 768px) {
+            .hero-support-banner h1 {
+                font-size: 2.5rem;
+            }
+            .hero-support-banner p {
+                font-size: 1rem;
+            }
+        }
+        .contact-info .icon {
+            font-size: 2rem;
+            color: #8B5E3C; 
+        }
+        .map-container {
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            height: 400px; 
+            width: 100%;
+        }
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 1rem 0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        .faq-question {
+            font-weight: 600;
+            cursor: pointer;
+            color: #333;
+        }
+        .faq-answer {
+            color: #666;
+            padding-top: 0.5rem;
+        }
+
+        .hero-visual { min-height:480px; background-size:cover; background-position:center; border-radius:1rem; }
+        .service-card .bg-img { height:220px; background-size:cover; background-position:center; border-radius:.6rem; }
+        .subscribe-input { border-radius: .6rem 0 0 .6rem; }
+        .subscribe-btn { border-radius: 0 .6rem .6rem 0; }
+        .btn-primary-theme {
+            background-color: #8B5E3C; 
+            color: #fff; 
+            border: none; 
+            transition: all 0.3s ease; 
+        }
+        .btn-primary-theme:hover {
+            background-color: #042c18; 
+            color: #fff;
+        }
+
+        .accordion-button:not(.collapsed) {
+            color: #333; 
+            background-color: #fff; 
+            box-shadow: none; 
+        }
+
+        .accordion-button:focus {
+            border-color: transparent; 
+            box-shadow: none; 
+        }
+        .accordion-button:not(.collapsed)::after {
+            background-image: var(--bs-accordion-btn-icon); 
+            transform: var(--bs-accordion-btn-icon-transform); 
+        }
+
+        .accordion-item {
+            background-color: #fff; 
+        }
