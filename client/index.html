@@ -413,16 +413,17 @@
                     }
                 }
 
-                    const imagenes = document.querySelectorAll('.container_imagenes img')
-                    imagenes.forEach(img => { 
-                        img.addEventListener('click', () => {
-                        imagenes.forEach(i => i.style.width = '50px'); // tamaño base
-                        img.style.width = '500px'; // la seleccionada
-                     });
 });
                 togglePasswordVisibility('toggleLoginPassword', 'loginPassword');
                 togglePasswordVisibility('toggleRegPassword', 'regPassword');
             });
+
+            imagenes.forEach(img => {
+    img.addEventListener('click', () => {
+        imagenes.forEach(i => i.classList.remove('activo'));
+        img.classList.add('activo');
+    });
+});
         </script>
     </body>
     </html>
