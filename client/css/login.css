@@ -1,0 +1,92 @@
+section{
+    width: 100%;
+    margin-top: 120px;
+}
+
+.container{
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.registro{
+    width: 50%;
+    padding: 30px;
+    box-shadow: #242424 0px 0px 30px -20px;
+}
+
+.botones{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botones button{
+    width: 50%;
+    border: none;
+    font-weight: 500;
+    background-color: #ffffff;
+}
+
+#i-sesion{
+    border-bottom: #042c18 solid 2px;
+}
+
+.registrarse{
+    display: none;
+}
+
+.login, 
+.registrarse{
+    width: 100%;
+    margin-top: 30px;
+}
+
+.login form, 
+.registrarse form{
+    width: 100%;
+    padding: 20px;
+}
+
+.login form label, 
+.registrarse form label{
+    font-weight: 500;
+}
+
+.login form input, 
+.registrarse form input{
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 5px;
+    background-color: #e7e7e7;
+}
+
+.login form div, 
+.registrarse form div{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.login form .entrar, 
+.registrarse form ._registro{
+    font-weight: 500;
+    margin-top: 40px;
+    color: #ffffff;
+    background-color: #0a6b3b;
+    transition: all ease-in .3s;
+}
+
+.login form .entrar:hover, 
+.registrarse form ._registro:hover{
+    background-color: #042c18;
+}
+
+.parrafo{
+    width: 50%;
+    font-size: 30px;
+    font-weight: 500;
+}
