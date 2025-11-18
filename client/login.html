@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piel de Pie - Login</title>
+    <link rel="stylesheet" href="./css/login.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="../client/css/index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Work+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<body>
+
+    <header class="w-100 position-fixed top-0 start-0 z-3" style="background-color: #042c18;">
+        <div class="container-fluid">
+            <div class="d-flex align-items-center justify-content-between py-2 px-3">
+                <div class="d-flex align-items-center gap-2">
+                    <a href="index.html" class="d-flex align-items-center logo-container">
+                        <img src="../client/assets/img/logooriginal.webp" alt="Logo Piel de Pie" class="navbar-logo"></a>
+                </div>
+                <div class="d-flex align-items-center gap-4">
+                    <nav class="d-none d-lg-flex align-items-center gap-4">
+                        <a class="small text-decoration-none text-white" href="../client/index.html">Inicio</a>
+                        <a class="small text-decoration-none text-white" href="../client/quienes_somos.html">Quiénes Somos</a>
+                        <a class="small text-decoration-none text-white" href="../client/catalogo.html">Catálogo</a>
+                        <a class="small text-decoration-none text-white" href="../client/servicios.html">Servicios</a>
+                    </nav>
+                    <div class="d-flex gap-2 align-items-center">
+                        <button id="loginButton" class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
+                            <a href="./login.html" class="material-symbols-outlined text-white   border-bottom border-2 border-white pb-1" style="text-decoration: none;">person</a>
+                        </button>
+                        <div class="position-relative">
+                            <button id="cartButton" class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
+                                <a href="#" class="material-symbols-outlined text-white" style="text-decoration: none;">shopping_bag</a>
+                            </button>
+                            <span id="cartCountBadge" class="badge bg-danger rounded-pill position-absolute top-0 end-0 translate-middle" style="display:none;">0</span>
+                        </div>
+                        <button class="btn btn-transparent rounded-circle d-flex align-items-center justify-content-center nav-icon-btn" style="width:40px;height:40px;">
+                            <a href="./soport.html" class="material-symbols-outlined text-white" style="text-decoration: none;">support_agent</a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="registro">
+                <div class="botones">
+                    <button id="i-sesion" class="activo">Iniciar Sesión</button>
+                    <button id="registrarse">Registrarse</button>
+                </div>
+
+                <div class="login" id="form_login">
+                    <form action="">
+                        <div class="email">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email" placeholder="Ingresa tu email">
+                        </div>
+                        <div class="clave">
+                            <label for="clave">Contreseña</label>
+                            <input type="password" name="clave" id="clave" placeholder="Ingresa tu contraseña">
+                        </div>
+                        <a href="">¿Olvidaste tu contraseña?</a><br>
+                        <input type="submit" class="entrar" value="Entrar">
+                    </form>
+                </div>
+
+                <div class="registrarse" id="form_registro">
+                    <form action="">
+                        <div class="nombre">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" name="nombre" id="nombre" placeholder="Ingresa tu nombre completo">
+                        </div>
+                        <div class="email">
+                            <label for="email">Email</label>
+                            <input type="text" name="email" id="email" placeholder="Ingresa tu email">
+                        </div>
+                        <div class="direccion">
+                            <label for="direccion">Dirección</label>
+                            <input type="text" name="direccion" id="direccion" placeholder="Ingresa tu dirección">
+                        </div>
+                        <div class="clave">
+                            <label for="clave">Contreseña</label>
+                            <input type="password" name="clave" id="clave" placeholder="Ingresa tu contraseña">
+                        </div>
+                        <input type="submit" class="_registro" value="Registrarse">
+                    </form>
+                </div>
+            </div>
+            <p class="parrafo">
+                <span style="color: #042c18; font-weight: 600;">Inicia sesión</span> para acceder a tu cuenta y disfrutar de una experiencia personalizada. Gestiona tus pedidos, guarda tus productos favoritos y descubre novedades diseñadas especialmente para ti. Tu información está segura y protegida en todo momento.
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer-custom mt-5">
+        <div class="container py-5">
+            <div class="row gy-4">
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold text-white">Tienda</h6>
+                    <ul class="list-unstyled small">
+                    <li><a class="text-white text-decoration-none" href="#">Novedades</a></li>
+                    <li><a class="text-white text-decoration-none" href="#">Más vendido</a></li>
+                    <li><a class="text-white text-decoration-none" href="#">Tacones</a></li>
+                    <li><a class="text-white text-decoration-none" href="#">Calzado Plano</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold text-white">Acerca de</h6>
+                    <ul class="list-unstyled small">
+                    <li><a class="text-white text-decoration-none" href="#">Nuestra Historia</a></li>
+                    <li><a class="text-white text-decoration-none" href="#">Artesanos</a></li>
+                    <li><a class="text-white text-decoration-none" href="#">Trabaja con nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold text-white">Soporte</h6>
+                    <ul class="list-unstyled small">
+                    <li><a class="text-white text-decoration-none" href="#">PQRS</a></li>
+                    <li><a class="text-white text-decoration-none" href="#">Envío &amp; Devoluciones</a></li>
+                    <li><a class="text-white text-decoration-none" href="#">Contactos</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-3">
+                    <h6 class="fw-bold text-white">Síguenos</h6>
+                    <div class="d-flex gap-3 mt-2">
+                    <a class="text-white" href="#"><i class="bi bi-facebook"></i></a>
+                    <a class="text-white" href="#"><i class="bi bi-twitter"></i></a>
+                    <a class="text-white" href="#"><i class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+            <div class="border-top border-light pt-4 text-center small text-white-50">
+                © 2025 Piel de Pie. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+    
+
+
+    <script src="./js/script.js"></script>
+</body>
+</html>
