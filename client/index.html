@@ -418,6 +418,8 @@
                 togglePasswordVisibility('toggleRegPassword', 'regPassword');
             });
 
+            const imagenes = document.querySelectorAll('.container_imagenes img');
+
             imagenes.forEach(img => {
     img.addEventListener('click', () => {
         imagenes.forEach(i => i.classList.remove('activo'));
