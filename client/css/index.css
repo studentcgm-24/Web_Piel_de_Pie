@@ -241,7 +241,6 @@
         @media (min-width: 864px) { .two-col-lg { display: flex; gap: 2rem; } }
 
 
-
 .galeria{
     width: 100%;
     padding: 20px;
@@ -258,33 +257,83 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 20px;
 }
 
 .galeria .container_imagenes{
+    display: flex;
+    gap: 10px;
     width: 60%;
 }
 
+/* Imagenes base */
 .container_imagenes img{
     width: 50px;
-    height: 500px;
+    height: 400px;
     object-fit: cover;
     cursor: pointer;
-    border-radius: 25px;
+    border-radius: 20px;
     transition: all .3s ease-out;
     border: solid 1px #042c18;
 }
 
+/* Imagen activa */
 .container_imagenes img.activo{
-    width: 500px;
-}
-
-.container_imagenes img:hover{
-    transform: scale(.98);
+    width: 450px;
 }
 
 .parrafo{
     width: 38%;
     font-size: 25px;
+    line-height: 1.4;
 }
 
+/* ──────────────── RESPONSIVE ──────────────── */
 
+/* Tablets */
+@media (max-width: 1261px){
+    .container_galeria{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .galeria .container_imagenes{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .parrafo{
+        width: 90%;
+        font-size: 20px;
+    }
+
+    .container_imagenes img{
+        height: 300px;
+        width: 40px;
+    }
+
+    .container_imagenes img.activo{
+        width: 300px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 576px){
+    .container_galeria{
+        flex-direction: column;
+    }
+
+    .container_imagenes img{
+        height: 200px;
+        width: 30px;
+    }
+
+    .container_imagenes img.activo{
+        width: 200px;
+    }
+
+    .parrafo{
+        width: 100%;
+        font-size: 18px;
+    }
+}
