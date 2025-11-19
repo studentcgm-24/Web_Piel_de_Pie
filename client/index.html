@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Piel de Pie</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="../client/assets/icons/P-logo-ico.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="../client/css/index.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -109,7 +110,7 @@
                             </section>
 
                             <section class="mt-4">
-                                    <h2 class="h3 text-center fw-bold">Novedades</h2>
+                                    <h2 class="h3 text-center fw-bold" id="novedades">Novedades</h2>
                                 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3 mt-3">
 
                                     <div class="col">
@@ -196,7 +197,7 @@
                 </div>
             </div>
 
-       <section class="galeria">
+            <section class="galeria">
                 <div class="container_galeria">
                     <div class="container_imagenes">
                         <img src="./assets/galeria/1.webp" alt="modelo 1">
@@ -207,7 +208,7 @@
                         <img src="./assets/galeria/6.webp" alt="modelo 6">
                     </div>
                     <p class="parrafo">
-                        Inspírate con nuestra colección de zapatos creados para acompañarte en tu día a día. Diseños cómodos, femeninos y versátiles que reflejan tu estilo en cada paso.
+                        Inspírate con nuestra colección de zapatos creados para acompañarte en tu día a día. Diseños cómodos y versátiles que reflejan tu estilo en cada paso.
                     </p>
                 </div>
             </section>
@@ -219,33 +220,30 @@
                 <div class="col-6 col-md-3">
                     <h6 class="fw-bold text-white">Tienda</h6>
                     <ul class="list-unstyled small">
-                    <li><a class="text-white text-decoration-none" href="#">Novedades</a></li>
-                    <li><a class="text-white text-decoration-none" href="#">Más vendido</a></li>
-                    <li><a class="text-white text-decoration-none" href="#">Tacones</a></li>
-                    <li><a class="text-white text-decoration-none" href="#">Calzado Plano</a></li>
+                    <li><a class="text-white text-decoration-none" href="index.html#novedades">Novedades</a></li>
+                    <li><a class="text-white text-decoration-none" href="catalogo.html">Catálogo de Calzado</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md-3">
                     <h6 class="fw-bold text-white">Acerca de</h6>
                     <ul class="list-unstyled small">
-                    <li><a class="text-white text-decoration-none" href="#">Nuestra Historia</a></li>
-                    <li><a class="text-white text-decoration-none" href="#">Artesanos</a></li>
-                    <li><a class="text-white text-decoration-none" href="#">Trabaja con nosotros</a></li>
+                    <li><a class="text-white text-decoration-none" href="../client/quienes_somos.html">Historia</a></li>
+                    <li><a class="text-white text-decoration-none" href="../client/quienes_somos.html">Filosofía</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md-3">
                     <h6 class="fw-bold text-white">Soporte</h6>
                     <ul class="list-unstyled small">
-                    <li><a class="text-white text-decoration-none" href="#">PQRS</a></li>
-                    <li><a class="text-white text-decoration-none" href="#">Envío &amp; Devoluciones</a></li>
-                    <li><a class="text-white text-decoration-none" href="#">Contactos</a></li>
+                    <li><a class="text-white text-decoration-none" href="../client/soporte.html">PQRS</a></li>
+                    <li><a class="text-white text-decoration-none" href="../client/soporte.html">Envío &amp; Devoluciones</a></li>
+                    <li><a class="text-white text-decoration-none" href="../client/soporte.html">Contactos</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md-3">
                     <h6 class="fw-bold text-white">Síguenos</h6>
                     <div class="d-flex gap-3 mt-2">
-                    <a class="text-white" href="#"><i class="bi bi-facebook"></i></a>
-                    <a class="text-white" href="#"><i class="bi bi-twitter"></i></a>
+                    <a class="text-white" href="https://www.facebook.com/profile.php?id=61583705141412" target="_blank"><i class="bi bi-facebook"></i></a>
+                    <a class="text-white" href="https://x.com/PieldePie19" target="_blank"><i class="bi bi-twitter"></i></a>
                     <a class="text-white" href="#"><i class="bi bi-instagram"></i></a>
                     </div>
                 </div>
@@ -369,63 +367,65 @@
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
         <script>
-            //LOGIN/REGISTER
-            document.addEventListener('DOMContentLoaded', function() {
-                var authModal = document.getElementById('authModal');
-                
-                authModal.addEventListener('show.bs.modal', function () {
-                    const loginTab = document.getElementById('login-tab');
-                    const loginContent = document.getElementById('login-content');
-                    const registerTab = document.getElementById('register-tab');
-                    const registerContent = document.getElementById('register-content');
+                document.addEventListener('DOMContentLoaded', function() {
 
-                    new bootstrap.Tab(loginTab).show();
-                    loginTab.classList.add('active-tab');
-                    registerTab.classList.remove('active-tab');
+                    // LOGIN / REGISTER
+                    var authModal = document.getElementById('authModal');
+                    
+                    authModal.addEventListener('show.bs.modal', function () {
+                        const loginTab = document.getElementById('login-tab');
+                        const loginContent = document.getElementById('login-content');
+                        const registerTab = document.getElementById('register-tab');
+                        const registerContent = document.getElementById('register-content');
 
-                    loginContent.classList.add('show', 'active');
-                    registerContent.classList.remove('show', 'active');
+                        new bootstrap.Tab(loginTab).show();
+                        loginTab.classList.add('active-tab');
+                        registerTab.classList.remove('active-tab');
+
+                        loginContent.classList.add('show', 'active');
+                        registerContent.classList.remove('show', 'active');
+                    });
+
+                    const navLinks = document.querySelectorAll('.nav-link-custom');
+                    navLinks.forEach(link => {
+                        link.addEventListener('click', function() {
+                            navLinks.forEach(l => l.classList.remove('active-tab'));
+                            this.classList.add('active-tab');
+                        });
+                    });
+
+                    function togglePasswordVisibility(buttonId, inputId) {
+                        const button = document.getElementById(buttonId);
+                        const input = document.getElementById(inputId);
+
+                        if (button && input) {
+                            button.addEventListener('click', function() {
+                                const icon = this.querySelector('.material-symbols-outlined');
+                                if (input.type === 'password') {
+                                    input.type = 'text';
+                                    icon.textContent = 'visibility_off';
+                                } else {
+                                    input.type = 'password';
+                                    icon.textContent = 'visibility';
+                                }
+                            });
+                        }
+                    }
+
+                    togglePasswordVisibility('toggleLoginPassword', 'loginPassword');
+                    togglePasswordVisibility('toggleRegPassword', 'regPassword');
+
                 });
 
-                const navLinks = document.querySelectorAll('.nav-link-custom');
-                navLinks.forEach(link => {
-                    link.addEventListener('click', function() {
-                        navLinks.forEach(l => l.classList.remove('active-tab'));
-                        this.classList.add('active-tab');
+                const imagenes = document.querySelectorAll('.container_imagenes img');
+
+                imagenes.forEach(img => {
+                    img.addEventListener('click', () => {
+                        imagenes.forEach(i => i.classList.remove('activo'));
+                        img.classList.add('activo');
                     });
                 });
+                </script>
 
-                function togglePasswordVisibility(buttonId, inputId) {
-                    const button = document.getElementById(buttonId);
-                    const input = document.getElementById(inputId);
-
-                    if (button && input) {
-                        button.addEventListener('click', function() {
-                            const icon = this.querySelector('.material-symbols-outlined');
-                            if (input.type === 'password') {
-                                input.type = 'text';
-                                icon.textContent = 'visibility_off';
-                            } else {
-                                input.type = 'password';
-                                icon.textContent = 'visibility';
-                            }
-                        });
-                    }
-                }
-
-});
-                togglePasswordVisibility('toggleLoginPassword', 'loginPassword');
-                togglePasswordVisibility('toggleRegPassword', 'regPassword');
-            });
-
-            const imagenes = document.querySelectorAll('.container_imagenes img');
-
-imagenes.forEach(img => {
-    img.addEventListener('click', () => {
-        imagenes.forEach(i => i.classList.remove('activo'));
-        img.classList.add('activo');
-    });
-});
-        </script>
     </body>
     </html>

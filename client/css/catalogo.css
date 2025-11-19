@@ -92,28 +92,82 @@
 
         .page-item .page-link { color:var(--dark); }
 
-        .btn-det {
-        border-color: #8B5E3C;
-        color: #8B5E3C;
-        transition: all 0.2s ease-in-out;
+        /* --- Estilos para la barra de filtros --- */
+        .filters-card {
+            background-color: #f8f9fa; 
+            border: 1px solid #dee2e6;
         }
 
-        .btn-det:hover {
-        background-color: #8b5e3ca0;
-        color: #fff;
+        /* Ajustes de color para los botones "Aplicar" y "Limpiar" */
+        .btn-filtrar {
+            background-color: #042c18; 
+            color: #fff;
+            border-color: #042c18;
+            transition: background-color 0.2s ease;
+        }
+        .btn-filtrar:hover {
+            background-color: #031e11; 
+            color: #fff;
+            border-color: #031e11;
         }
 
-        .btn-buy {
-        background-color: #006d0f;  
-        border-color: #006d0f;
-        color: #fff;
-        transition: all 0.2s ease-in-out;
+        .btn-limpiar {
+            background-color: #6c757d; 
+            color: #fff;
+            border-color: #6c757d;
+            transition: background-color 0.2s ease;
+        }
+        .btn-limpiar:hover {
+            background-color: #5a6268; 
+            color: #fff;
+            border-color: #5a6268;
         }
 
-        .btn-buy:hover {
-        background-color: #006d0fb5;  
-        border-color: #006d0fb5;
-        color: #fff;
+        
+        .form-select-sm {
+            height: calc(1.5em + .5rem + 2px); /* Altura por defecto para sm */
+            padding-top: .25rem;
+            padding-bottom: .25rem;
+            font-size: .875rem;
+        }
+
+        .form-select-sm {
+            min-width: unset !important; 
+        }
+
+        .btn-group .btn-outline-secondary {
+            border-color: #dee2e6; 
+            color: #495057; 
+        }
+        .btn-group .btn-outline-secondary.active {
+            background-color: #042c18; 
+            border-color: #042c18;
+            color: #fff;
+        }
+        .btn-group .btn-outline-secondary:hover:not(.active) {
+            background-color: #e9ecef; 
+            color: #495057;
+        }
+
+        /* Responsive ajuste de cards */
+        @media (max-width: 991.98px) { 
+            .filters-card .row > div {
+                display: flex; 
+                flex-direction: column; 
+                align-items: center; 
+            }
+            .filters-card .d-flex.flex-wrap {
+                justify-content: center !important; 
+            }
+            .filters-card .input-group,
+            .filters-card select {
+                width: 100% !important; 
+                max-width: 300px !important; 
+            }
+            .filters-card .btn-group {
+                width: 100%; 
+                max-width: 150px; 
+            }
         }
 
         .pagination .page-item.active .page-link {

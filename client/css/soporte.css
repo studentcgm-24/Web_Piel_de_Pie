@@ -1,19 +1,7 @@
         body { font-family: 'Manrope', sans-serif; }
+
         
-        .nav-icon-link {
-        color: white; 
-        display: flex; 
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%; 
-        text-decoration: none; 
-        transition: background-color 0.3s ease;
-        }
-        .nav-icon-link:hover {
-            background-color: rgba(255, 255, 255, 0.1); 
-        }
+
 
         .hero-support-banner {
             background-image: url('../assets/img/soporte.webp'); 
